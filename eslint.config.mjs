@@ -6,7 +6,7 @@ export default defineConfig(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    ignores: ['dist/**', '.astro/**', 'node_modules/**', 'public/previews/**'],
+    ignores: ['dist/**', '.astro/**', 'node_modules/**', 'output/**', 'public/previews/**'],
   },
   {
     files: ['**/*.ts', '**/*.mjs'],
