@@ -1,5 +1,7 @@
 import { expect, test } from '@playwright/test';
 
+const rendererTimeout = process.env.CI ? 60_000 : 30_000;
+
 test('首页与归档在桌面和移动视口均不横向溢出', async ({ page }) => {
   await page.goto('./');
   await expect(page.locator('main')).toBeVisible();
@@ -27,7 +29,7 @@ test('已提交案例可通过 WebGL2 后备路径启动', async ({ page }) => {
   await firstCase.click();
   await page.goto(`${page.url()}?renderer=webgl`);
   await expect(page.locator('[data-shader-stage]')).toHaveAttribute('data-backend', 'webgl2', {
-    timeout: 30_000,
+    timeout: rendererTimeout,
   });
   await expect(page.locator('[data-renderer-badge]')).toHaveText('WebGL2');
 
@@ -49,7 +51,7 @@ test.describe('减少动态效果', () => {
       'data-backend',
       /webgpu|webgl2/,
       {
-        timeout: 30_000,
+        timeout: rendererTimeout,
       },
     );
   });

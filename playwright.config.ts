@@ -4,6 +4,8 @@ export default defineConfig({
   testDir: './tests/browser',
   outputDir: './output/playwright/test-results',
   fullyParallel: false,
+  workers: process.env.CI ? 1 : undefined,
+  timeout: process.env.CI ? 60_000 : 30_000,
   retries: process.env.CI ? 1 : 0,
   reporter: process.env.CI ? [['list'], ['html', { outputFolder: 'playwright-report' }]] : 'list',
   use: {
