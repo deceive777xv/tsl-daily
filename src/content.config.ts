@@ -1,8 +1,9 @@
 import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const shaders = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/index.md', base: './src/data/shaders' }),
   schema: z.object({
     title: z.string().min(1),
     subtitle: z.string().min(1),

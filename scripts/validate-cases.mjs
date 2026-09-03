@@ -2,7 +2,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const root = process.cwd();
-const contentRoot = join(root, 'src', 'content', 'shaders');
+const contentRoot = join(root, 'src', 'data', 'shaders');
 const shaderRoot = join(root, 'src', 'shaders', 'cases');
 const previewRoot = join(root, 'public', 'previews');
 
