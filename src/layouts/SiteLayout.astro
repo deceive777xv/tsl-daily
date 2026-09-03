@@ -1,0 +1,32 @@
+---
+import '@/styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  bodyClass?: string;
+}
+
+const {
+  title = 'TSL Daily — 每天读懂一个 Shader',
+  description = '用 Three.js TSL 重写并赏析 Shadertoy 作品的非商业数字画廊。',
+  bodyClass = '',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#090a0d" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} type="image/svg+xml" />
+    <title>{title}</title>
+  </head>
+  <body class={bodyClass}>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <slot />
+  </body>
+</html>

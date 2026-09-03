@@ -1,0 +1,42 @@
+{
+  "name": "tsl-daily",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "cross-env ASTRO_TELEMETRY_DISABLED=1 astro check && cross-env ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "cross-env ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "check": "cross-env ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "lint": "eslint .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:browser": "playwright test",
+    "validate:cases": "node scripts/validate-cases.mjs",
+    "quality": "npm run format:check && npm run lint && npm run validate:cases && npm run test && npm run build"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "astro": "^7.2.10",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.4.1",
+    "@types/three": "^0.185.4",
+    "cross-env": "^10.1.0",
+    "eslint": "^10.9.1",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.69.0",
+    "vitest": "^4.1.11"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

@@ -1,0 +1,31 @@
+---
+import { getCollection, render } from 'astro:content';
+import CaseExperience from '@/components/CaseExperience.astro';
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import { caseSlug, sortCases } from '@/lib/cases';
+
+export async function getStaticPaths() {
+  const cases = sortCases(await getCollection('shaders'));
+  return cases.map((entry, index) => ({
+    params: { slug: caseSlug(entry) },
+    props: {
+      entry,
+      previous: cases[index + 1],
+      next: cases[index - 1],
+    },
+  }));
+}
+
+const { entry, previous, next } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<SiteLayout
+  title={`${entry.data.title} — TSL Daily`}
+  description={entry.data.description}
+  bodyClass="immersive-page"
+>
+  <CaseExperience entry={entry} previous={previous} next={next}>
+    <Content />
+  </CaseExperience>
+</SiteLayout>

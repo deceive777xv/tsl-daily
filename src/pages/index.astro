@@ -1,0 +1,24 @@
+---
+import { getCollection, render } from 'astro:content';
+import CaseExperience from '@/components/CaseExperience.astro';
+import EmptyStage from '@/components/EmptyStage.astro';
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import { sortCases } from '@/lib/cases';
+
+const cases = sortCases(await getCollection('shaders'));
+const latest = cases[0];
+const rendered = latest ? await render(latest) : undefined;
+const Content = rendered?.Content;
+---
+
+<SiteLayout bodyClass="immersive-page">
+  {
+    latest && Content ? (
+      <CaseExperience entry={latest} previous={cases[1]}>
+        <Content />
+      </CaseExperience>
+    ) : (
+      <EmptyStage />
+    )
+  }
+</SiteLayout>

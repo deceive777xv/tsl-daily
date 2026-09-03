@@ -1,0 +1,180 @@
+---
+import type { ShaderEntry } from '@/lib/cases';
+import { casePath, caseSlug, withBase } from '@/lib/cases';
+import Icon from './Icon.astro';
+
+interface Props {
+  entry: ShaderEntry;
+  previous?: ShaderEntry;
+  next?: ShaderEntry;
+}
+
+const { entry, previous, next } = Astro.props;
+const slug = caseSlug(entry);
+const date = new Intl.DateTimeFormat('zh-CN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(entry.data.publishedAt);
+const poster = withBase(entry.data.preview.poster);
+const loop = withBase(entry.data.preview.loop);
+---
+
+<main class="case-experience" data-case-experience data-case-slug={slug} id="main-content">
+  <section class="shader-stage" data-shader-stage aria-labelledby="case-title">
+    <img class="shader-poster" src={poster} alt="" aria-hidden="true" data-poster />
+    <canvas
+      class="shader-canvas"
+      aria-label={`《${entry.data.title}》实时 Shader 画面`}
+      data-shader-canvas
+      role="img"
+    >
+      当前浏览器无法显示实时 Shader。赏析内容与静态画面仍然可用。
+    </canvas>
+    <div class="stage-vignette" aria-hidden="true"></div>
+
+    <div class="stage-chrome stage-chrome--top">
+      <a class="brand" href={withBase('')} aria-label="TSL Daily 首页">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span>TSL Daily</span>
+      </a>
+      <div class="top-actions">
+        <span class="backend-badge" data-renderer-badge>正在检测渲染器</span>
+        <a class="icon-button" href={withBase('archive/')} aria-label="浏览归档">
+          <Icon name="archive" />
+        </a>
+      </div>
+    </div>
+
+    <div class="stage-chrome stage-chrome--hero">
+      <div class="case-kicker">
+        <span>{date}</span>
+        <span aria-hidden="true">·</span>
+        <span>{entry.data.difficulty}</span>
+        <span aria-hidden="true">·</span>
+        <span>{entry.data.caseType}</span>
+      </div>
+      <h1 id="case-title">{entry.data.title}</h1>
+      <p>{entry.data.subtitle}</p>
+      <a class="source-link" href={entry.data.source.url} rel="noreferrer" target="_blank">
+        原作：{entry.data.source.title} · {entry.data.source.author}
+        <Icon name="external" size={16} />
+      </a>
+    </div>
+
+    <div class="stage-chrome stage-chrome--controls" aria-label="Shader 播放控制">
+      <nav class="case-nav" aria-label="前后案例">
+        {
+          previous ? (
+            <a class="icon-button" href={withBase(casePath(previous))} aria-label="查看上一个案例">
+              <Icon name="arrow-left" />
+            </a>
+          ) : (
+            <span class="icon-button is-disabled" aria-hidden="true">
+              <Icon name="arrow-left" />
+            </span>
+          )
+        }
+        {
+          next ? (
+            <a class="icon-button" href={withBase(casePath(next))} aria-label="查看下一个案例">
+              <Icon name="arrow-right" />
+            </a>
+          ) : (
+            <span class="icon-button is-disabled" aria-hidden="true">
+              <Icon name="arrow-right" />
+            </span>
+          )
+        }
+      </nav>
+      <div class="playback-controls">
+        <button class="icon-button" type="button" data-action="play" aria-label="暂停动画">
+          <span data-icon-play hidden><Icon name="play" /></span>
+          <span data-icon-pause><Icon name="pause" /></span>
+        </button>
+        <button class="icon-button" type="button" data-action="reset" aria-label="恢复默认参数">
+          <Icon name="reset" />
+        </button>
+        <label class="quality-control">
+          <span>画质</span>
+          <select data-quality aria-label="选择画质">
+            <option value="auto">自动</option>
+            <option value="low">低</option>
+            <option value="medium">中</option>
+            <option value="high">高</option>
+          </select>
+        </label>
+      </div>
+      <button class="analysis-button" type="button" data-open-notes>
+        <Icon name="info" />
+        <span>阅读赏析</span>
+      </button>
+    </div>
+
+    <details class="parameter-panel stage-chrome" data-parameter-panel hidden>
+      <summary>探索参数</summary>
+      <div class="parameter-list" data-parameter-list></div>
+    </details>
+
+    <p class="sr-only" role="status" aria-live="polite" data-shader-status>正在准备实时 Shader。</p>
+  </section>
+
+  <dialog class="notes-dialog" data-notes-dialog aria-labelledby="notes-title">
+    <article class="notes-panel">
+      <header class="notes-header">
+        <div>
+          <p class="eyebrow">分层赏析</p>
+          <h2 id="notes-title">{entry.data.title}</h2>
+        </div>
+        <form method="dialog">
+          <button class="icon-button" type="submit" aria-label="关闭赏析">
+            <Icon name="close" />
+          </button>
+        </form>
+      </header>
+      <p class="notes-lede">{entry.data.description}</p>
+      <div class="tag-list" aria-label="技术标签">
+        {entry.data.tags.map((tag) => <span>{tag}</span>)}
+      </div>
+      <div class="article-content">
+        <slot />
+      </div>
+      <footer class="source-card">
+        <p class="eyebrow">来源与许可</p>
+        <h3>{entry.data.source.title}</h3>
+        <dl>
+          <div><dt>作者</dt><dd>{entry.data.source.author}</dd></div>
+          <div><dt>许可证</dt><dd>{entry.data.source.license}</dd></div>
+          <div><dt>证据</dt><dd>{entry.data.source.evidence}</dd></div>
+        </dl>
+        <div class="source-card__links">
+          <a href={entry.data.source.url} rel="noreferrer" target="_blank">查看 Shadertoy 原作</a>
+          <a href={entry.data.source.licenseUrl} rel="noreferrer" target="_blank">阅读许可证</a>
+          <a
+            href={`https://github.com/deceive777xv/tsl-daily/tree/main/src/content/shaders/${slug}`}
+            >查看完整源码</a
+          >
+        </div>
+      </footer>
+    </article>
+  </dialog>
+
+  <a class="sr-only" href={loop}>下载本案例的短循环预览</a>
+</main>
+
+<script>
+  import { bootShaderExperience } from '@/shaders/runtime';
+
+  for (const experience of document.querySelectorAll<HTMLElement>('[data-case-experience]')) {
+    bootShaderExperience(experience);
+
+    const dialog = experience.querySelector<HTMLDialogElement>('[data-notes-dialog]');
+    const trigger = experience.querySelector<HTMLButtonElement>('[data-open-notes]');
+    if (!dialog || !trigger) continue;
+
+    trigger.addEventListener('click', () => dialog.showModal());
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+</script>

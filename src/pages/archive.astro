@@ -1,0 +1,140 @@
+---
+import { getCollection } from 'astro:content';
+import Icon from '@/components/Icon.astro';
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import { casePath, sortCases, uniqueTags, withBase } from '@/lib/cases';
+
+const cases = sortCases(await getCollection('shaders'));
+const tags = uniqueTags(cases);
+---
+
+<SiteLayout title="归档 — TSL Daily" bodyClass="archive-page">
+  <main class="archive-shell" id="main-content">
+    <header class="archive-header">
+      <a class="brand" href={withBase('')} aria-label="TSL Daily 首页">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span>TSL Daily</span>
+      </a>
+      <div>
+        <p class="eyebrow">案例归档</p>
+        <h1>按日期发现灵感</h1>
+        <p>没有规定路线。选择一种技术，或从最新案例开始。</p>
+      </div>
+    </header>
+
+    {
+      cases.length > 0 ? (
+        <>
+          <section class="archive-filters" aria-label="筛选案例">
+            <div class="filter-group" role="group" aria-label="按技术标签筛选">
+              <button
+                class="filter-chip is-active"
+                type="button"
+                data-tag="all"
+                aria-pressed="true"
+              >
+                全部
+              </button>
+              {tags.map((tag) => (
+                <button class="filter-chip" type="button" data-tag={tag} aria-pressed="false">
+                  {tag}
+                </button>
+              ))}
+            </div>
+            <label class="difficulty-filter">
+              <span>难度</span>
+              <select data-difficulty>
+                <option value="all">全部</option>
+                <option value="入门">入门</option>
+                <option value="进阶">进阶</option>
+                <option value="高级">高级</option>
+              </select>
+            </label>
+          </section>
+
+          <p class="result-count" role="status" aria-live="polite" data-result-count>
+            {cases.length} 个案例
+          </p>
+
+          <section class="case-grid" aria-label="案例列表">
+            {cases.map((entry) => (
+              <article
+                class="case-card"
+                data-case-card
+                data-tags={entry.data.tags.join('|')}
+                data-difficulty={entry.data.difficulty}
+              >
+                <a href={withBase(casePath(entry))}>
+                  <div class="case-card__media">
+                    <img
+                      src={withBase(entry.data.preview.poster)}
+                      alt={entry.data.preview.alt}
+                      loading="lazy"
+                    />
+                    <span>{entry.data.difficulty}</span>
+                  </div>
+                  <div class="case-card__body">
+                    <p>
+                      {new Intl.DateTimeFormat('zh-CN', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric',
+                      }).format(entry.data.publishedAt)}
+                    </p>
+                    <h2>{entry.data.title}</h2>
+                    <span class="card-action">
+                      打开案例 <Icon name="arrow-right" size={16} />
+                    </span>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </section>
+        </>
+      ) : (
+        <section class="archive-empty">
+          <p class="eyebrow">0 个案例</p>
+          <h2>首发集正在准备</h2>
+          <p>三个案例通过独立 Pull Request 审批后，会按发布日期出现在这里。</p>
+          <a class="primary-link" href={withBase('')}>
+            返回首页
+          </a>
+        </section>
+      )
+    }
+  </main>
+</SiteLayout>
+
+<script>
+  const tagButtons = [...document.querySelectorAll<HTMLButtonElement>('[data-tag]')];
+  const difficulty = document.querySelector<HTMLSelectElement>('[data-difficulty]');
+  const cards = [...document.querySelectorAll<HTMLElement>('[data-case-card]')];
+  const resultCount = document.querySelector<HTMLElement>('[data-result-count]');
+  let activeTag = 'all';
+
+  function applyFilters() {
+    const activeDifficulty = difficulty?.value ?? 'all';
+    let visible = 0;
+    for (const card of cards) {
+      const matchesTag = activeTag === 'all' || card.dataset.tags?.split('|').includes(activeTag);
+      const matchesDifficulty =
+        activeDifficulty === 'all' || card.dataset.difficulty === activeDifficulty;
+      card.hidden = !(matchesTag && matchesDifficulty);
+      if (!card.hidden) visible += 1;
+    }
+    if (resultCount) resultCount.textContent = `${visible} 个案例`;
+  }
+
+  for (const button of tagButtons) {
+    button.addEventListener('click', () => {
+      activeTag = button.dataset.tag ?? 'all';
+      for (const peer of tagButtons) {
+        const selected = peer === button;
+        peer.classList.toggle('is-active', selected);
+        peer.setAttribute('aria-pressed', String(selected));
+      }
+      applyFilters();
+    });
+  }
+  difficulty?.addEventListener('change', applyFilters);
+</script>

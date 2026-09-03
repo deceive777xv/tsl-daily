@@ -1,0 +1,28 @@
+---
+import Icon from './Icon.astro';
+import { withBase } from '@/lib/cases';
+---
+
+<main class="empty-stage" id="main-content">
+  <div class="empty-stage__grid" aria-hidden="true"></div>
+  <header class="empty-stage__header">
+    <a class="brand" href={withBase('')} aria-label="TSL Daily 首页">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>TSL Daily</span>
+    </a>
+    <a class="icon-button icon-button--text" href={withBase('archive/')}>
+      <Icon name="archive" />
+      <span>浏览归档</span>
+    </a>
+  </header>
+  <section class="empty-stage__message" aria-labelledby="empty-title">
+    <p class="eyebrow">每天读懂一个 Shader</p>
+    <h1 id="empty-title">首发案例正在准备</h1>
+    <p>
+      三个案例将分别拆解重复图案、噪声与分形、SDF 与 Ray Marching。每个案例通过独立 Pull Request
+      审批后才会出现在这里。
+    </p>
+    <a class="primary-link" href="https://github.com/deceive777xv/tsl-daily">查看公开仓库</a>
+  </section>
+  <p class="empty-stage__footnote">Three.js TSL · WebGPU / WebGL2</p>
+</main>
