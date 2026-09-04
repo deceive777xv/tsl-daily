@@ -31,8 +31,15 @@ for (const directory of caseDirectories) {
 
   if (!existsSync(articlePath)) continue;
   const article = readFileSync(articlePath, 'utf8');
+  const frontmatterEnd = article.indexOf('\n---', 3);
+  const frontmatter = frontmatterEnd > 0 ? article.slice(0, frontmatterEnd) : article;
   for (const field of ['caseType:', 'source:', 'license:', 'licenseUrl:', 'evidence:']) {
     if (!article.includes(field)) errors.push(`[${slug}] Frontmatter 缺少 ${field}`);
+  }
+  for (const genericTag of ['TSL', 'Three.js', 'Shader']) {
+    if (new RegExp(`^\\s*-\\s+${genericTag.replace('.', '\\.')}\\s*$`, 'm').test(frontmatter)) {
+      errors.push(`[${slug}] 标签 ${genericTag} 是全站共有属性，应改为本案例的关键方法或技术`);
+    }
   }
   if (!article.includes(`poster: /previews/${slug}.webp`)) {
     errors.push(`[${slug}] 静态预览路径必须与 slug 一致`);

@@ -9,7 +9,6 @@ tags:
   - SDF
   - Raymarching
   - 空间重复
-  - TSL
 source:
   title: Octagrams
   author: whisky_shusuky

@@ -9,7 +9,6 @@ tags:
   - fBM
   - Domain Warp
   - Value Noise
-  - TSL
 source:
   title: Base warp fBM
   author: trinketMage

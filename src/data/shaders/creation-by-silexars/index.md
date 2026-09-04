@@ -9,7 +9,6 @@ tags:
   - 周期重复
   - 距离场
   - 极坐标
-  - TSL
 source:
   title: Creation by Silexars
   author: Danguafer（Danilo Guanabara / Silexars）
