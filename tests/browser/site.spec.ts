@@ -55,6 +55,48 @@ test('已提交案例可通过 WebGL2 后备路径启动', async ({ page }) => {
   );
 });
 
+test('Star Nest 页面明确展示原作的 MIT 许可', async ({ page }) => {
+  await page.goto('./shaders/star-nest/?renderer=webgl');
+  await expect(page.locator('[data-shader-stage]')).toHaveAttribute('data-backend', 'webgl2', {
+    timeout: rendererTimeout,
+  });
+  await expect(page.getByRole('heading', { name: '星巢' })).toBeVisible();
+
+  await page.getByRole('button', { name: '阅读赏析' }).click();
+  await expect(page.getByText('MIT（源码顶部显式声明）', { exact: true })).toBeVisible();
+  await expect(page.getByRole('link', { name: '查看 Shadertoy 原作' })).toHaveAttribute(
+    'href',
+    'https://www.shadertoy.com/view/XlfGRj',
+  );
+});
+
+test('visibilitychange 会暂停并恢复实时渲染', async ({ page }) => {
+  await page.goto('./shaders/star-nest/');
+  await expect(page.locator('[data-shader-stage]')).toHaveAttribute(
+    'data-backend',
+    /webgpu|webgl2/,
+    { timeout: rendererTimeout },
+  );
+
+  await page.evaluate(() => {
+    const testWindow = window as typeof window & { __tslDailyDocumentHidden?: boolean };
+    testWindow.__tslDailyDocumentHidden = true;
+    Object.defineProperty(document, 'hidden', {
+      configurable: true,
+      get: () => Boolean(testWindow.__tslDailyDocumentHidden),
+    });
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await expect(page.getByRole('button', { name: '播放动画' })).toBeVisible();
+
+  await page.evaluate(() => {
+    const testWindow = window as typeof window & { __tslDailyDocumentHidden?: boolean };
+    testWindow.__tslDailyDocumentHidden = false;
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await expect(page.getByRole('button', { name: '暂停动画' })).toBeVisible();
+});
+
 test.describe('减少动态效果', () => {
   test('先显示静态替身，再由用户主动播放', async ({ page }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' });
