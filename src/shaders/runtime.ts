@@ -257,19 +257,40 @@ export function bootShaderExperience(root: HTMLElement): void {
     announce(`画质已切换为${qualitySelect.selectedOptions[0]?.textContent ?? '自动'}。`);
   });
 
+  let dragPointerId: number | undefined;
+
+  function finishPointerDrag(event: PointerEvent): void {
+    if (event.pointerId !== dragPointerId) return;
+    dragPointerId = undefined;
+    if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
+  }
+
   canvas.addEventListener('pointermove', (event) => {
+    if (event.pointerId !== dragPointerId) return;
+    if ((event.buttons & 1) === 0) {
+      finishPointerDrag(event);
+      return;
+    }
     const bounds = canvas.getBoundingClientRect();
     pointerNode.value.set(
       THREE.MathUtils.clamp((event.clientX - bounds.left) / bounds.width, 0, 1),
       THREE.MathUtils.clamp(1 - (event.clientY - bounds.top) / bounds.height, 0, 1),
     );
+    renderOnce();
   });
 
   let swipeStart: [number, number] | undefined;
   canvas.addEventListener('pointerdown', (event) => {
-    if (event.pointerType === 'touch') swipeStart = [event.clientX, event.clientY];
+    if (event.pointerType === 'touch') {
+      swipeStart = [event.clientX, event.clientY];
+      return;
+    }
+    if (!event.isPrimary || event.button !== 0) return;
+    dragPointerId = event.pointerId;
+    canvas.setPointerCapture(event.pointerId);
   });
   canvas.addEventListener('pointerup', (event) => {
+    finishPointerDrag(event);
     if (!swipeStart || event.pointerType !== 'touch') return;
     const [startX, startY] = swipeStart;
     swipeStart = undefined;
@@ -279,6 +300,10 @@ export function bootShaderExperience(root: HTMLElement): void {
     const selector = deltaX > 0 ? '[aria-label="查看上一个案例"]' : '[aria-label="查看下一个案例"]';
     const destination = root.querySelector<HTMLAnchorElement>(selector)?.href;
     if (destination) window.location.href = destination;
+  });
+  canvas.addEventListener('pointercancel', finishPointerDrag);
+  canvas.addEventListener('lostpointercapture', (event) => {
+    if (event.pointerId === dragPointerId) dragPointerId = undefined;
   });
 
   document.addEventListener('keydown', (event) => {

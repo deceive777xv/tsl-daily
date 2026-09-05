@@ -70,6 +70,42 @@ test('Star Nest 页面明确展示原作的 MIT 许可', async ({ page }) => {
   );
 });
 
+test('Star Nest 只在按下拖动时更新观察方向', async ({ page }) => {
+  await page.goto('./shaders/star-nest/?renderer=webgl');
+  await expect(page.locator('[data-shader-stage]')).toHaveAttribute('data-backend', 'webgl2', {
+    timeout: rendererTimeout,
+  });
+
+  await page.getByRole('button', { name: '暂停动画' }).click();
+  await page.getByRole('button', { name: '恢复默认参数' }).click();
+  const canvas = page.locator('[data-shader-canvas]');
+  const bounds = await canvas.boundingBox();
+  expect(bounds).not.toBeNull();
+  if (!bounds) return;
+  await page.addStyleTag({
+    content: '[data-shader-stage] > :not([data-shader-canvas]) { visibility: hidden !important; }',
+  });
+  await page.waitForTimeout(400);
+
+  const initialFrame = await canvas.screenshot();
+  await page.mouse.move(bounds.x + bounds.width * 0.78, bounds.y + bounds.height * 0.38);
+  await page.locator('[data-quality]').selectOption('auto', { force: true });
+  await page.waitForTimeout(100);
+  const hoverFrame = await canvas.screenshot();
+  expect(hoverFrame.equals(initialFrame)).toBe(true);
+
+  await page.mouse.move(bounds.x + bounds.width * 0.5, bounds.y + bounds.height * 0.5);
+  await page.mouse.down();
+  await page.mouse.move(bounds.x + bounds.width * 0.78, bounds.y + bounds.height * 0.38, {
+    steps: 4,
+  });
+  await page.mouse.up();
+  await page.locator('[data-quality]').selectOption('auto', { force: true });
+  await page.waitForTimeout(100);
+  const dragFrame = await canvas.screenshot();
+  expect(dragFrame.equals(initialFrame)).toBe(false);
+});
+
 test('visibilitychange 会暂停并恢复实时渲染', async ({ page }) => {
   await page.goto('./shaders/star-nest/');
   await expect(page.locator('[data-shader-stage]')).toHaveAttribute(
