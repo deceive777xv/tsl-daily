@@ -3,3 +3,4 @@ dist/
 node_modules/
 public/previews/
 package-lock.json
+src/data/shaders/seascape/mirror.json

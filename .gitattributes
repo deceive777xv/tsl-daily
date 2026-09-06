@@ -1,3 +1,7 @@
 * text=auto eol=lf
 *.webm binary
 *.webp binary
+# Preserve the approved evidence snapshot byte-for-byte, including its CRLFs.
+src/data/shaders/seascape/mirror.json -text whitespace=cr-at-eol
+# Keep upstream GLSL whitespace intact in this source evidence file.
+src/data/shaders/seascape/original.glsl -whitespace
