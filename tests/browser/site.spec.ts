@@ -309,41 +309,108 @@ test('CineShader Lava 旧镜像许可、后备渲染与参数恢复一致', asyn
   expect(errors).toEqual([]);
 });
 
-test('Star Nest 只在按下拖动时更新观察方向', async ({ page }) => {
-  await page.goto('./shaders/star-nest/?renderer=webgl');
-  await expect(page.locator('[data-shader-stage]')).toHaveAttribute('data-backend', 'webgl2', {
+test('Lens Flare 显式许可、无外部素材及鬼影参数恢复一致', async ({ page }, testInfo) => {
+  const errors: string[] = [];
+  const externalRequests: string[] = [];
+  page.on('request', (request) => {
+    if (new URL(request.url()).hostname !== '127.0.0.1') externalRequests.push(request.url());
+  });
+  page.on('pageerror', (error) => errors.push(error.message));
+  page.on('console', (message) => {
+    if (message.type() === 'error') errors.push(message.text());
+  });
+  await page.goto('./shaders/lens-flare-example/?renderer=webgl');
+  await expect(page.locator('[data-shader-stage]')).toHaveClass(/is-ready/, {
     timeout: rendererTimeout,
   });
-
+  await expect(page.locator('[data-renderer-badge]')).toHaveText('WebGL2');
+  await page.getByRole('button', { name: '阅读赏析' }).click();
+  await expect(page.getByText('Unlicense（旧镜像源码显式声明）', { exact: true })).toBeVisible();
+  await expect(page.getByRole('link', { name: '查看 Shadertoy 原作' })).toHaveAttribute(
+    'href',
+    'https://www.shadertoy.com/view/4sX3Rs',
+  );
+  await expect(page.locator('audio, video')).toHaveCount(0);
+  await page.keyboard.press('Escape');
   await page.getByRole('button', { name: '暂停动画' }).click();
   await page.getByRole('button', { name: '恢复默认参数' }).click();
-  const canvas = page.locator('[data-shader-canvas]');
-  const bounds = await canvas.boundingBox();
-  expect(bounds).not.toBeNull();
-  if (!bounds) return;
+  const sliders = page.locator('[data-parameter-list] input[type="range"]');
+  await expect(sliders).toHaveCount(5);
+  await page.locator('[data-quality]').selectOption('medium');
+  const baseline = await sliders.evaluateAll((inputs) =>
+    inputs.map((input) => (input as HTMLInputElement).value),
+  );
+  // Freeze time and isolate canvas pixels so UI changes cannot satisfy this assertion.
   await page.addStyleTag({
-    content: '[data-shader-stage] > :not([data-shader-canvas]) { visibility: hidden !important; }',
+    content: '[data-shader-stage] > :not(canvas) { visibility: hidden !important; }',
   });
-  await page.waitForTimeout(400);
-
-  const initialFrame = await canvas.screenshot();
-  await page.mouse.move(bounds.x + bounds.width * 0.78, bounds.y + bounds.height * 0.38);
-  await page.locator('[data-quality]').selectOption('auto', { force: true });
-  await page.waitForTimeout(100);
-  const hoverFrame = await canvas.screenshot();
-  expect(hoverFrame.equals(initialFrame)).toBe(true);
-
-  await page.mouse.move(bounds.x + bounds.width * 0.5, bounds.y + bounds.height * 0.5);
-  await page.mouse.down();
-  await page.mouse.move(bounds.x + bounds.width * 0.78, bounds.y + bounds.height * 0.38, {
-    steps: 4,
+  const canvas = page.locator('[data-shader-canvas]');
+  const before = await canvas.screenshot({ animations: 'disabled' });
+  await page.locator('#flare-ghosts').evaluate((element) => {
+    const input = element as HTMLInputElement;
+    input.value = input.max;
+    input.dispatchEvent(new Event('input', { bubbles: true }));
   });
-  await page.mouse.up();
-  await page.locator('[data-quality]').selectOption('auto', { force: true });
-  await page.waitForTimeout(100);
-  const dragFrame = await canvas.screenshot();
-  expect(dragFrame.equals(initialFrame)).toBe(false);
+  await page.locator('[data-quality]').selectOption('medium', { force: true });
+  expect((await canvas.screenshot({ animations: 'disabled' })).equals(before)).toBe(false);
+  await page
+    .locator('[data-action="reset"]')
+    .evaluate((element) => (element as HTMLButtonElement).click());
+  await expect
+    .poll(() =>
+      sliders.evaluateAll((inputs) => inputs.map((input) => (input as HTMLInputElement).value)),
+    )
+    .toEqual(baseline);
+  await page.locator('[data-quality]').selectOption('medium', { force: true });
+  const restored = await canvas.screenshot({ animations: 'disabled' });
+  if (!restored.equals(before)) {
+    await testInfo.attach('before-reset', { body: before, contentType: 'image/png' });
+    await testInfo.attach('after-reset', { body: restored, contentType: 'image/png' });
+  }
+  expect(restored.equals(before)).toBe(true);
+  expect(errors).toEqual([]);
+  expect(externalRequests).toEqual([]);
 });
+
+for (const slug of ['star-nest', 'lens-flare-example']) {
+  test(slug + ' 只在按下拖动时更新观察方向', async ({ page }) => {
+    await page.goto('./shaders/' + slug + '/?renderer=webgl');
+    await expect(page.locator('[data-shader-stage]')).toHaveAttribute('data-backend', 'webgl2', {
+      timeout: rendererTimeout,
+    });
+
+    await page.getByRole('button', { name: '暂停动画' }).click();
+    await page.getByRole('button', { name: '恢复默认参数' }).click();
+    const canvas = page.locator('[data-shader-canvas]');
+    const bounds = await canvas.boundingBox();
+    expect(bounds).not.toBeNull();
+    if (!bounds) return;
+    await page.addStyleTag({
+      content:
+        '[data-shader-stage] > :not([data-shader-canvas]) { visibility: hidden !important; }',
+    });
+    await page.waitForTimeout(400);
+
+    await page.locator('[data-quality]').selectOption('medium', { force: true });
+    const initialFrame = await canvas.screenshot();
+    await page.mouse.move(bounds.x + bounds.width * 0.78, bounds.y + bounds.height * 0.38);
+    await page.locator('[data-quality]').selectOption('medium', { force: true });
+    await page.waitForTimeout(100);
+    const hoverFrame = await canvas.screenshot();
+    expect(hoverFrame.equals(initialFrame)).toBe(true);
+
+    await page.mouse.move(bounds.x + bounds.width * 0.5, bounds.y + bounds.height * 0.5);
+    await page.mouse.down();
+    await page.mouse.move(bounds.x + bounds.width * 0.78, bounds.y + bounds.height * 0.38, {
+      steps: 4,
+    });
+    await page.mouse.up();
+    await page.locator('[data-quality]').selectOption('medium', { force: true });
+    await page.waitForTimeout(100);
+    const dragFrame = await canvas.screenshot();
+    expect(dragFrame.equals(initialFrame)).toBe(false);
+  });
+}
 
 for (const slug of [
   'star-nest',
@@ -351,6 +418,7 @@ for (const slug of [
   'the-universe-within',
   'cyber-fuji-2020',
   'cineshader-lava',
+  'lens-flare-example',
 ]) {
   test(`${slug} visibilitychange 会暂停并恢复实时渲染`, async ({ page }) => {
     await page.goto(`./shaders/${slug}/`);
