@@ -11,3 +11,5 @@ src/data/shaders/cyber-fuji-2020/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/cyber-fuji-2020/original.glsl -whitespace
 src/data/shaders/cineshader-lava/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/cineshader-lava/original.glsl -whitespace
+src/data/shaders/lens-flare-example/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/lens-flare-example/original.glsl -whitespace
