@@ -372,6 +372,71 @@ test('Lens Flare 显式许可、无外部素材及鬼影参数恢复一致', asy
   expect(externalRequests).toEqual([]);
 });
 
+test('Pretty Hip 原作署名、两版融合与参数恢复一致', async ({ page }, testInfo) => {
+  const errors: string[] = [];
+  const externalRequests: string[] = [];
+  page.on('request', (request) => {
+    if (new URL(request.url()).hostname !== '127.0.0.1') externalRequests.push(request.url());
+  });
+  page.on('pageerror', (error) => errors.push(error.message));
+  page.on('console', (message) => {
+    if (message.type() === 'error') errors.push(message.text());
+  });
+  await page.goto('./shaders/pretty-hip/?renderer=webgl');
+  await expect(page.locator('[data-shader-stage]')).toHaveClass(/is-ready/, {
+    timeout: rendererTimeout,
+  });
+  await expect(page.locator('[data-renderer-badge]')).toHaveText('WebGL2');
+  await page.getByRole('button', { name: '阅读赏析' }).click();
+  await expect(
+    page.getByText('CC BY-NC-SA 3.0（基于旧镜像的默认许可判断）', { exact: true }),
+  ).toBeVisible();
+  await expect(page.getByRole('link', { name: '查看 Shadertoy 原作' })).toHaveAttribute(
+    'href',
+    'https://www.shadertoy.com/view/XsBfRW',
+  );
+  await expect(page.locator('audio, video')).toHaveCount(0);
+  await page.keyboard.press('Escape');
+  await page.getByRole('button', { name: '暂停动画' }).click();
+  await page.getByRole('button', { name: '恢复默认参数' }).click();
+  const sliders = page.locator('[data-parameter-list] input[type="range"]');
+  await expect(sliders).toHaveCount(5);
+  await page.locator('[data-quality]').selectOption('medium');
+  const baseline = await sliders.evaluateAll((inputs) =>
+    inputs.map((input) => (input as HTMLInputElement).value),
+  );
+  // Freeze time and isolate canvas pixels so UI changes cannot satisfy this assertion.
+  await page.addStyleTag({
+    content: '[data-shader-stage] > :not(canvas) { visibility: hidden !important; }',
+  });
+  const canvas = page.locator('[data-shader-canvas]');
+  const before = await canvas.screenshot({ animations: 'disabled' });
+  await page.locator('#hip-style').evaluate((element) => {
+    const input = element as HTMLInputElement;
+    input.value = input.min;
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  });
+  await page.locator('[data-quality]').selectOption('medium', { force: true });
+  expect((await canvas.screenshot({ animations: 'disabled' })).equals(before)).toBe(false);
+  await page
+    .locator('[data-action="reset"]')
+    .evaluate((element) => (element as HTMLButtonElement).click());
+  await expect
+    .poll(() =>
+      sliders.evaluateAll((inputs) => inputs.map((input) => (input as HTMLInputElement).value)),
+    )
+    .toEqual(baseline);
+  await page.locator('[data-quality]').selectOption('medium', { force: true });
+  const restored = await canvas.screenshot({ animations: 'disabled' });
+  if (!restored.equals(before)) {
+    await testInfo.attach('before-reset', { body: before, contentType: 'image/png' });
+    await testInfo.attach('after-reset', { body: restored, contentType: 'image/png' });
+  }
+  expect(restored.equals(before)).toBe(true);
+  expect(errors).toEqual([]);
+  expect(externalRequests).toEqual([]);
+});
+
 for (const slug of ['star-nest', 'lens-flare-example']) {
   test(slug + ' 只在按下拖动时更新观察方向', async ({ page }) => {
     await page.goto('./shaders/' + slug + '/?renderer=webgl');
@@ -419,6 +484,7 @@ for (const slug of [
   'cyber-fuji-2020',
   'cineshader-lava',
   'lens-flare-example',
+  'pretty-hip',
 ]) {
   test(`${slug} visibilitychange 会暂停并恢复实时渲染`, async ({ page }) => {
     await page.goto(`./shaders/${slug}/`);

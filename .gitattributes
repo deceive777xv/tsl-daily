@@ -13,3 +13,7 @@ src/data/shaders/cineshader-lava/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/cineshader-lava/original.glsl -whitespace
 src/data/shaders/lens-flare-example/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/lens-flare-example/original.glsl -whitespace
+
+src/data/shaders/pretty-hip/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/pretty-hip/original.glsl -whitespace
+src/data/shaders/pretty-hip/user-variant.glsl -text -whitespace
