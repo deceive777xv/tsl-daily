@@ -17,3 +17,5 @@ src/data/shaders/lens-flare-example/original.glsl -whitespace
 src/data/shaders/pretty-hip/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/pretty-hip/original.glsl -whitespace
 src/data/shaders/pretty-hip/user-variant.glsl -text -whitespace
+src/data/shaders/io-monochrome/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/io-monochrome/original.glsl -whitespace

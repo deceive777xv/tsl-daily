@@ -1,0 +1,54 @@
+{
+  "browserVersion": "151.0.7922.34",
+  "results": [
+    {
+      "mobile": false,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "1440x900",
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "mobile": false,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "1440x900",
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "mobile": true,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "412x915",
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "canvas": "618x1373",
+      "effectiveDpr": 1.5,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "mobile": true,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "412x915",
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "canvas": "618x1373",
+      "effectiveDpr": 1.5,
+      "overflow": 0,
+      "errors": []
+    }
+  ],
+  "autoDprUnderLoad": { "before": 0.9999999152289568, "after": 0.7999999321831655 }
+}
