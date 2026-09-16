@@ -485,6 +485,7 @@ for (const slug of [
   'cineshader-lava',
   'lens-flare-example',
   'pretty-hip',
+  'io-monochrome',
 ]) {
   test(`${slug} visibilitychange 会暂停并恢复实时渲染`, async ({ page }) => {
     await page.goto(`./shaders/${slug}/`);
