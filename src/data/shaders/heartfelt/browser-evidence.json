@@ -1,0 +1,161 @@
+{
+  "parameters": [
+    {
+      "backend": "webgpu",
+      "id": "rain-speed",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "rain-amount",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "rain-fog",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "rain-refraction",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "rain-scale",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "rain-speed",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "rain-amount",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "rain-fog",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "rain-refraction",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "rain-scale",
+      "changed": true,
+      "restored": true,
+      "exact": false,
+      "difference": {
+        "max": 2,
+        "mean": 0.00015123456790123457,
+        "differingChannels": 781
+      }
+    }
+  ],
+  "visibility": {
+    "start": {
+      "hidden": false,
+      "count": 38,
+      "label": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "count": 42
+    },
+    "paused": false,
+    "resumed": {
+      "hidden": false,
+      "count": 382,
+      "label": "暂停动画"
+    }
+  },
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "device": "",
+    "description": "",
+    "fallback": false
+  },
+  "browserVersion": "151.0.7922.34",
+  "controlledVisibility": {
+    "start": {
+      "count": 26,
+      "label": "播放动画"
+    },
+    "end": 26,
+    "resumed": {
+      "count": 290,
+      "label": "暂停动画"
+    },
+    "controlled": true
+  }
+}
