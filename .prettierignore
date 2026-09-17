@@ -10,3 +10,5 @@ src/data/shaders/cineshader-lava/mirror.json
 src/data/shaders/lens-flare-example/mirror.json
 src/data/shaders/pretty-hip/mirror.json
 src/data/shaders/io-monochrome/mirror.json
+src/data/shaders/heartfelt/mirror.json
+src/data/shaders/heartfelt/hash-mirror.json

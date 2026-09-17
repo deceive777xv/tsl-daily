@@ -486,6 +486,7 @@ for (const slug of [
   'lens-flare-example',
   'pretty-hip',
   'io-monochrome',
+  'heartfelt',
 ]) {
   test(`${slug} visibilitychange 会暂停并恢复实时渲染`, async ({ page }) => {
     await page.goto(`./shaders/${slug}/`);
