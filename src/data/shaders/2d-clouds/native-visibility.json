@@ -1,0 +1,22 @@
+{
+  "start": {
+    "hidden": false,
+    "count": 100,
+    "events": [],
+    "label": "暂停动画"
+  },
+  "end": {
+    "hidden": false,
+    "count": 102,
+    "events": [],
+    "label": "暂停动画"
+  },
+  "resumed": {
+    "hidden": false,
+    "count": 304,
+    "events": [],
+    "label": "暂停动画"
+  },
+  "passed": false,
+  "method": "Headed Chromium; background throttling defaults removed, focus emulation disabled, second tab brought to foreground"
+}

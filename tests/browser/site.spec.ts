@@ -17,9 +17,19 @@ test('首页与归档在桌面和移动视口均不横向溢出', async ({ page 
 
   const firstCard = page.locator('[data-case-card]:visible').first();
   const initialCardWidth = (await firstCard.boundingBox())?.width;
-  const singleCaseTag = page.getByRole('button', { name: 'Domain Warp', exact: true });
-  if (initialCardWidth && (await singleCaseTag.count()) > 0) {
-    await singleCaseTag.click();
+  // A technique may gain more cases; select a genuinely unique tag from the archive.
+  const uniqueTag = await page.locator('[data-case-card]').evaluateAll((cards) => {
+    const counts = new Map<string, number>();
+    for (const card of cards) {
+      for (const tag of (card.getAttribute('data-tags') ?? '').split('|')) {
+        if (tag) counts.set(tag, (counts.get(tag) ?? 0) + 1);
+      }
+    }
+    return [...counts].find(([, count]) => count === 1)?.[0];
+  });
+  expect(uniqueTag, 'Archive must contain a single-case filter fixture').toBeTruthy();
+  if (initialCardWidth && uniqueTag) {
+    await page.getByRole('button', { name: uniqueTag, exact: true }).click();
     await expect(page.locator('[data-case-card]:visible')).toHaveCount(1);
     const filteredCardWidth = (await firstCard.boundingBox())?.width;
     expect(filteredCardWidth).toBeCloseTo(initialCardWidth, 0);

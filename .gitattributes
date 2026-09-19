@@ -25,3 +25,6 @@ src/data/shaders/heartfelt/original.glsl -text -whitespace
 src/data/shaders/heartfelt/hash-common.glsl -text -whitespace
 src/data/shaders/shader-art-introduction/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/shader-art-introduction/original.glsl -text -whitespace
+
+src/data/shaders/2d-clouds/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/2d-clouds/original.glsl -text -whitespace
