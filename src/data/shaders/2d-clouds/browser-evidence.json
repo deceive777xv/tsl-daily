@@ -1,0 +1,166 @@
+{
+  "parameters": [
+    {
+      "backend": "webgpu",
+      "id": "cloud-speed",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "cloud-scale",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "cloud-cover",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "cloud-alpha",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "cloud-light",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "cloud-speed",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "cloud-scale",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "cloud-cover",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "cloud-alpha",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "cloud-light",
+      "changed": true,
+      "restored": true,
+      "exact": false,
+      "difference": {
+        "max": 1,
+        "mean": 0.0000617283950617284,
+        "differingChannels": 320
+      }
+    }
+  ],
+  "visibility": {
+    "start": {
+      "hidden": false,
+      "count": 18,
+      "label": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "count": 20
+    },
+    "paused": false,
+    "resumed": {
+      "hidden": false,
+      "count": 188,
+      "label": "暂停动画"
+    }
+  },
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "device": "",
+    "description": "",
+    "fallback": false
+  },
+  "browserVersion": "151.0.7922.34",
+  "controlledVisibility": {
+    "start": {
+      "count": 8,
+      "label": "播放动画"
+    },
+    "end": 8,
+    "resumed": {
+      "count": 144,
+      "label": "暂停动画"
+    },
+    "controlled": true
+  },
+  "reducedMotion": {
+    "initialBackend": null,
+    "poster": true,
+    "manual": "暂停动画"
+  }
+}
