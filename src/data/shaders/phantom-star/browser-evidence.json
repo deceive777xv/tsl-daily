@@ -1,0 +1,166 @@
+{
+  "parameters": [
+    {
+      "backend": "webgpu",
+      "id": "phantom-speed",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "phantom-sectors",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "phantom-folds",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "phantom-falloff",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgpu",
+      "id": "phantom-pulse",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "phantom-speed",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "phantom-sectors",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "phantom-folds",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "phantom-falloff",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    },
+    {
+      "backend": "webgl",
+      "id": "phantom-pulse",
+      "changed": true,
+      "restored": true,
+      "exact": true,
+      "difference": {
+        "max": 0,
+        "mean": 0,
+        "differingChannels": 0
+      }
+    }
+  ],
+  "visibility": {
+    "start": {
+      "hidden": false,
+      "count": 20,
+      "label": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "count": 22
+    },
+    "paused": false,
+    "resumed": {
+      "hidden": false,
+      "count": 190,
+      "label": "暂停动画"
+    }
+  },
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "device": "",
+    "description": "",
+    "fallback": false
+  },
+  "browserVersion": "151.0.7922.34",
+  "controlledVisibility": {
+    "start": {
+      "count": 10,
+      "label": "播放动画"
+    },
+    "end": 10,
+    "resumed": {
+      "count": 144,
+      "label": "暂停动画"
+    },
+    "controlled": true
+  },
+  "reducedMotion": {
+    "initialBackend": null,
+    "poster": true,
+    "manual": "暂停动画"
+  }
+}

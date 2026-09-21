@@ -58,7 +58,7 @@ test('已提交案例可通过 WebGL2 后备路径启动', async ({ page }) => {
 
   await page.getByRole('button', { name: '阅读赏析' }).click();
   await expect(page.locator('[data-notes-dialog]')).toBeVisible();
-  await expect(page.getByText('来源与许可', { exact: true })).toBeVisible();
+  await expect(page.locator('.source-card').getByText('来源与许可', { exact: true })).toBeVisible();
   await expect(page.getByRole('link', { name: '查看 TSL 源码' })).toHaveAttribute(
     'href',
     /\/src\/shaders\/cases\/.+\.ts$/,
