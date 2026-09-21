@@ -14,3 +14,5 @@ src/data/shaders/heartfelt/mirror.json
 src/data/shaders/heartfelt/hash-mirror.json
 src/data/shaders/shader-art-introduction/mirror.json
 src/data/shaders/2d-clouds/mirror.json
+
+src/data/shaders/phantom-star/*mirror.json
