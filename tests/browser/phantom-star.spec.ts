@@ -14,6 +14,10 @@ for (const backend of ['webgl', 'webgpu']) {
       page.on('request', (r) => {
         if (new URL(r.url()).hostname !== '127.0.0.1') external.push(r.url());
       });
+      // Freeze requestAnimationFrame before loading: slow renderers must not queue
+      // autoplay frames while Playwright waits for controls and screenshots.
+      await page.clock.install({ time: new Date('2026-01-01T00:00:00Z') });
+      await page.clock.pauseAt(new Date('2026-01-01T01:00:00Z'));
       await page.goto('./shaders/phantom-star/' + (backend === 'webgl' ? '?renderer=webgl' : ''));
       await expect(page.locator('[data-shader-stage]')).toHaveClass(/is-ready/, {
         timeout: 60_000,
@@ -95,22 +99,19 @@ for (const backend of ['webgl', 'webgpu']) {
         // Advance time before comparing speed values; reset starts at elapsed=0.
         if (id === 'phantom-speed') {
           await page.locator('[data-action=play]').evaluate((e: HTMLButtonElement) => e.click());
-          await page.waitForTimeout(250);
+          await page.clock.runFor(32);
           await page.locator('[data-action=play]').evaluate((e: HTMLButtonElement) => e.click());
         }
-        await page.locator('[data-quality]').selectOption('medium', { force: true });
         const before = await inspect();
         await input.evaluate((el: HTMLInputElement) => {
           el.value = el.max;
           el.dispatchEvent(new Event('input'));
         });
-        await page.locator('[data-quality]').selectOption('medium', { force: true });
         expect((await inspect()).shot.equals(before.shot)).toBe(false);
         await input.evaluate((el: HTMLInputElement, v) => {
           el.value = v;
           el.dispatchEvent(new Event('input'));
         }, value);
-        await page.locator('[data-quality]').selectOption('medium', { force: true });
         const restored = await inspect();
         const difference = await page.evaluate(
           async ([a, b]) => {
