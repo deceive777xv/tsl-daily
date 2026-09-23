@@ -1,8 +1,16 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
 const rendererTimeout = process.env.CI ? 60_000 : 30_000;
 
+async function freezeAnimationTime(page: Page): Promise<void> {
+  // These UI checks need the initial rendered frame, not continuous autoplay
+  // competing with navigation and actionability checks on software renderers.
+  await page.clock.install({ time: new Date('2026-01-01T00:00:00Z') });
+  await page.clock.pauseAt(new Date('2026-01-01T01:00:00Z'));
+}
+
 test('首页与归档在桌面和移动视口均不横向溢出', async ({ page }) => {
+  await freezeAnimationTime(page);
   await page.goto('./');
   await expect(page.locator('main')).toBeVisible();
   const homeOverflow = await page.evaluate(
@@ -42,6 +50,7 @@ test('首页与归档在桌面和移动视口均不横向溢出', async ({ page 
 });
 
 test('已提交案例可通过 WebGL2 后备路径启动', async ({ page }) => {
+  await freezeAnimationTime(page);
   await page.goto('./archive/');
   const firstCase = page.locator('[data-case-card] a').first();
   if ((await firstCase.count()) === 0) {
@@ -49,8 +58,11 @@ test('已提交案例可通过 WebGL2 后备路径启动', async ({ page }) => {
     return;
   }
 
-  await firstCase.click();
-  await page.goto(`${page.url()}?renderer=webgl`);
+  const href = await firstCase.getAttribute('href');
+  expect(href).toBeTruthy();
+  const target = new URL(href!, page.url());
+  target.searchParams.set('renderer', 'webgl');
+  await page.goto(target.href);
   await expect(page.locator('[data-shader-stage]')).toHaveAttribute('data-backend', 'webgl2', {
     timeout: rendererTimeout,
   });
