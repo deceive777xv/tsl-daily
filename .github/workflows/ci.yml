@@ -9,9 +9,14 @@ permissions:
   contents: read
 
 jobs:
-  verify:
+  browser:
+    name: Browser (${{ matrix.project }})
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [desktop-chromium, mobile-chromium]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -21,14 +26,25 @@ jobs:
       - run: npm ci
       - run: npm run quality
       - run: npx playwright install --with-deps chromium
-      - run: npm run test:browser
+      - run: npm run test:browser -- --project=${{ matrix.project }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: site-preview-${{ github.event.pull_request.number || github.sha }}
+          name: site-preview-${{ github.event.pull_request.number || github.sha }}-${{ matrix.project }}
           path: |
             dist
             playwright-report
             output/playwright/test-results
           if-no-files-found: ignore
           retention-days: 14
+
+  verify:
+    if: always()
+    needs: browser
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Require every browser project to pass
+        env:
+          BROWSER_RESULT: ${{ needs.browser.result }}
+        run: test "$BROWSER_RESULT" = success

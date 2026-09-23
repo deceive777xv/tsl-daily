@@ -51,15 +51,19 @@ function createControlRows(
       input.step = String(control.step);
       input.value = String(control.initial);
       output.value = control.initial.toFixed(control.step < 0.1 ? 2 : 1);
-      input.addEventListener('input', () => {
+      const updateValue = () => {
         const value = Number(input.value);
         control.uniform.value = value;
         output.value = value.toFixed(control.step < 0.1 ? 2 : 1);
+      };
+      input.addEventListener('input', () => {
+        updateValue();
         renderOnce();
       });
       resetters.push(() => {
         input.value = String(control.initial);
-        input.dispatchEvent(new Event('input'));
+        // The reset button draws once after every control has its final value.
+        updateValue();
       });
       label.append(heading, input);
     } else {
@@ -68,14 +72,18 @@ function createControlRows(
       input.type = 'color';
       input.value = control.initial;
       output.value = control.initial.toUpperCase();
-      input.addEventListener('input', () => {
+      const updateValue = () => {
         control.uniform.value.set(input.value);
         output.value = input.value.toUpperCase();
+      };
+      input.addEventListener('input', () => {
+        updateValue();
         renderOnce();
       });
       resetters.push(() => {
         input.value = control.initial;
-        input.dispatchEvent(new Event('input'));
+        // The reset button draws once after every control has its final value.
+        updateValue();
       });
       label.append(heading, input);
     }
