@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-24",
+  "browserVersion": "151.0.7922.34",
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "device": "",
+    "description": "",
+    "fallback": false
+  },
+  "runs": [
+    {
+      "mobile": false,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "1440x900",
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": false,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "1440x900",
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "averageMs": 6.06,
+      "p95Ms": 6.2,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": true,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "412x915",
+      "canvas": "618x1372",
+      "effectiveDpr": 1.5,
+      "averageMs": 6.06,
+      "p95Ms": 6.2,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": true,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "412x915",
+      "canvas": "618x1372",
+      "effectiveDpr": 1.5,
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "horizontalOverflow": 0
+    }
+  ],
+  "autoDprUnderLoad": {
+    "before": 1,
+    "after": 0.8
+  },
+  "errors": []
+}

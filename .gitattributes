@@ -31,3 +31,6 @@ src/data/shaders/2d-clouds/original.glsl -text -whitespace
 
 src/data/shaders/phantom-star/*mirror.json -text whitespace=cr-at-eol
 src/data/shaders/phantom-star/*.glsl -text -whitespace
+
+src/data/shaders/spiraled-layers/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/spiraled-layers/original.glsl -text -whitespace
