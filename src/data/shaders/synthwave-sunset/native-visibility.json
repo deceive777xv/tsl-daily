@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-07",
+  "browserVersion": "153.0.8010.53",
+  "focusEmulationDisabled": true,
+  "tab": {
+    "start": {
+      "hidden": false,
+      "state": "visible",
+      "submits": 78,
+      "events": [],
+      "playLabel": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "state": "visible",
+      "submits": 78,
+      "events": [],
+      "playLabel": "暂停动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "state": "visible",
+      "submits": 212,
+      "events": [],
+      "playLabel": "暂停动画"
+    },
+    "verified": false
+  },
+  "minimized": {
+    "start": {
+      "hidden": false,
+      "state": "visible",
+      "submits": 226,
+      "events": [],
+      "playLabel": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "state": "visible",
+      "submits": 228,
+      "events": [],
+      "playLabel": "暂停动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "state": "visible",
+      "submits": 364,
+      "events": [],
+      "playLabel": "暂停动画"
+    },
+    "verified": false
+  },
+  "verified": false
+}
