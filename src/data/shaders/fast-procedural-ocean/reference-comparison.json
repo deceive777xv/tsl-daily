@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-08",
+  "sourceTime": 7,
+  "sourceResult": {
+    "id": "MdXyzX",
+    "time": 7,
+    "width": 1440,
+    "height": 900,
+    "glError": 0,
+    "passes": 1,
+    "inputs": 0,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36"
+  },
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 234,
+    "meanRGBByteDifference": 4.837247942386831,
+    "fractionChannelsOver10": 0.13740612139917696,
+    "skyMean": 0.02940182245737801,
+    "seaMean": 7.426088160810383
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 85,
+    "meanRGBByteDifference": 0.040165123456790124,
+    "fractionChannelsOver10": 0.0005864197530864197,
+    "skyMean": 0.00005584950029394474,
+    "seaMean": 0.061762424817980374
+  },
+  "errors": [],
+  "note": "Same defaults and 1440x900, no mouse. Same source mathematics with guarded coincident plane hits. Native shader compilation and floating-point evaluation differ, especially in fine reflected highlights; not a claim of exact identity. Structural mean error guard is 3.5 percent of the RGB byte range; individual bright pixels can differ much more."
+}
