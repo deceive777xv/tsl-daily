@@ -20,3 +20,4 @@ src/data/shaders/spiraled-layers/mirror.json
 src/data/shaders/synthwave-sunset/mirror.json
 src/data/shaders/fast-procedural-ocean/*mirror.json
 src/data/shaders/fast-procedural-ocean/upstream/
+src/data/shaders/menger-sponge/mirror.json

@@ -41,3 +41,6 @@ src/data/shaders/synthwave-sunset/original.glsl -text -whitespace
 src/data/shaders/fast-procedural-ocean/*mirror.json -text whitespace=cr-at-eol
 src/data/shaders/fast-procedural-ocean/*.glsl -text -whitespace
 src/data/shaders/fast-procedural-ocean/upstream/* -text -whitespace
+
+src/data/shaders/menger-sponge/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/menger-sponge/original.glsl -text -whitespace
