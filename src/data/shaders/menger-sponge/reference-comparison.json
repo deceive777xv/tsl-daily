@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-09",
+  "sourceTime": 2,
+  "sourceResult": {
+    "id": "4sX3Rn",
+    "time": 2,
+    "width": 1440,
+    "height": 900,
+    "glError": 0,
+    "passes": 1,
+    "inputs": 0,
+    "aa": 1,
+    "sourceUnchanged": true
+  },
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 148,
+    "meanRGBByteDifference": 0.03612114197530864,
+    "fractionChannelsOver10": 0.0004619341563786008
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 169,
+    "meanRGBByteDifference": 0.03351851851851852,
+    "fractionChannelsOver10": 0.0007235082304526749
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Same defaults, 1440x900, no mouse, original HW_PERFORMANCE=0 (AA1). Original render-pass bytes unchanged. Source display-space output clamped through the shared renderer; floating-point/compiler differences remain. Structural mean guard is 3.5 percent of the RGB byte range, alongside visual review; not a claim of pixel identity or AA2 equivalence."
+}

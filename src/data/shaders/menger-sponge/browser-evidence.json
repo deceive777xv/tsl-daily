@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-09",
+  "nativeTab": {
+    "start": {
+      "hidden": false,
+      "submits": 374,
+      "playLabel": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "submits": 374,
+      "playLabel": "暂停动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 474,
+      "playLabel": "暂停动画"
+    },
+    "verified": false,
+    "note": "Automated native tab switching still reports document.hidden=false. Even a temporary submit plateau cannot verify native Page Visibility pause; controlled event evidence is independent."
+  },
+  "controlled": {
+    "start": {
+      "hidden": true,
+      "submits": 478,
+      "playLabel": "播放动画"
+    },
+    "end": {
+      "hidden": true,
+      "submits": 478,
+      "playLabel": "播放动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 616,
+      "playLabel": "暂停动画"
+    },
+    "verified": true
+  },
+  "reducedMotion": {
+    "initialBackend": null,
+    "posterLoaded": true,
+    "manualBackend": "webgpu",
+    "manualLabel": "暂停动画"
+  }
+}
