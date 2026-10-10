@@ -44,3 +44,6 @@ src/data/shaders/fast-procedural-ocean/upstream/* -text -whitespace
 
 src/data/shaders/menger-sponge/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/menger-sponge/original.glsl -text -whitespace
+
+src/data/shaders/glowing-marbling-black/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/glowing-marbling-black/original.glsl -text -whitespace
