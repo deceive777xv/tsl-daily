@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-10",
+  "sourceTime": 7,
+  "sourceResult": {
+    "id": "WtdXR8",
+    "time": 7,
+    "width": 1440,
+    "height": 900,
+    "glError": 0,
+    "passes": 1,
+    "inputs": 0,
+    "sourceUnchanged": true
+  },
+  "sourceMatches": true,
+  "browserVersion": "154.0.8037.99",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 1,
+    "meanRGBByteDifference": 0.009274691358024691,
+    "fractionChannelsOver10": 0
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 1,
+    "meanRGBByteDifference": 0.00018441358024691358,
+    "fractionChannelsOver10": 0
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Unmodified sole Image pass, same defaults at 1440x900 and source time 7. Sequential x then y mutation is retained. Mean RGB difference guarded below 1/255 and visually reviewed; floating-point differences remain, not a pixel identity claim."
+}

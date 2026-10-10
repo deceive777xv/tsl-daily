@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-10",
+  "browserVersion": "154.0.8037.99",
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "device": "",
+    "description": "",
+    "fallback": false
+  },
+  "runs": [
+    {
+      "mobile": false,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "1440x900",
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": false,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "1440x900",
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": true,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "412x915",
+      "canvas": "618x1372",
+      "effectiveDpr": 1.5,
+      "averageMs": 6.06,
+      "p95Ms": 6.2,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": true,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "412x915",
+      "canvas": "618x1372",
+      "effectiveDpr": 1.5,
+      "averageMs": 6.06,
+      "p95Ms": 6.2,
+      "horizontalOverflow": 0
+    }
+  ],
+  "autoDprUnderLoad": {
+    "before": 1,
+    "after": 0.8
+  },
+  "errors": [],
+  "machine": {
+    "cpu": "AMD Ryzen 9 7950X3D",
+    "os": "Windows",
+    "gpu": "NVIDIA GeForce RTX 4080 SUPER"
+  },
+  "methodology": {
+    "warmupSeconds": 3,
+    "rafIntervalsPerRun": 120,
+    "measurement": "RAF scheduling intervals, not GPU timestamps or physical mobile performance",
+    "controlledLoad": "45 ms main-thread busy wait per frame, 130 frames"
+  }
+}
