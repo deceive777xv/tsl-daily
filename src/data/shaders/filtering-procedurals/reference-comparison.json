@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-11",
+  "sourceTime": 7,
+  "sourceResult": {
+    "id": "MdjGR1",
+    "time": 7,
+    "width": 1440,
+    "height": 900,
+    "glError": 0,
+    "passes": 1,
+    "inputs": 0
+  },
+  "sourceMatches": true,
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 5,
+    "meanRGBByteDifference": 0.009646347736625514,
+    "fractionChannelsOver10": 0
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 57,
+    "meanRGBByteDifference": 0.00173559670781893,
+    "fractionChannelsOver10": 7.716049382716049e-7
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Unmodified sole Image pass, same defaults at 1440x900 and source time 7. Adaptive material-only filtering and the default tangent-plane footprint path are retained. Sin-based gradient hashing is sensitive to backend float arithmetic; measured differences are reported, with visual and filtering-effect validation separately."
+}

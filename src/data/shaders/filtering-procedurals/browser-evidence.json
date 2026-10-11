@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-11",
+  "nativeTab": {
+    "start": {
+      "hidden": false,
+      "submits": 376,
+      "playLabel": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "submits": 376,
+      "playLabel": "暂停动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 480,
+      "playLabel": "暂停动画"
+    },
+    "verified": false,
+    "note": "Actual other-tab foreground attempt reported document.hidden=false throughout. Native background-tab visibility pause remains unverified; controlled event below independently checks the runtime pause/resume path."
+  },
+  "controlled": {
+    "start": {
+      "hidden": true,
+      "submits": 484,
+      "playLabel": "播放动画"
+    },
+    "end": {
+      "hidden": true,
+      "submits": 484,
+      "playLabel": "播放动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 620,
+      "playLabel": "暂停动画"
+    },
+    "verified": true
+  },
+  "reducedMotion": {
+    "initialBackend": null,
+    "posterLoaded": true,
+    "manualBackend": "webgpu",
+    "manualLabel": "暂停动画"
+  },
+  "browserSuite": {
+    "command": "npm run test:browser -- --config output/playwright/filtering.config.ts --workers=2",
+    "startTime": "2026-10-11T13:52:20.013Z",
+    "duration": 141501.913,
+    "expected": 90,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0,
+    "skippedReason": "Two pre-existing Pretty Hip sharpness tests intentionally require a fixed desktop pixel width.",
+    "cases": [
+      {
+        "project": "desktop-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 2816,
+        "textureVariation": {
+          "raw": {
+            "mean": 126.20377604166667,
+            "variation": 25.005555555555556
+          },
+          "filtered": {
+            "mean": 129.98990885416666,
+            "variation": 8.673686758654078
+          }
+        }
+      },
+      {
+        "project": "desktop-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 2868,
+        "textureVariation": {
+          "raw": {
+            "mean": 126.20381221064815,
+            "variation": 25.00543451948681
+          },
+          "filtered": {
+            "mean": 129.98986062885803,
+            "variation": 8.673602033405954
+          }
+        }
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 7458,
+        "textureVariation": {
+          "raw": {
+            "mean": 121.69891040029928,
+            "variation": 6.8279069767441865
+          },
+          "filtered": {
+            "mean": 125.91170033670033,
+            "variation": 1.903199436222692
+          }
+        }
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 7425,
+        "textureVariation": {
+          "raw": {
+            "mean": 121.6974279835391,
+            "variation": 6.827582804792107
+          },
+          "filtered": {
+            "mean": 125.91074635241301,
+            "variation": 1.90302560488607
+          }
+        }
+      }
+    ],
+    "metric": "Frozen camera, all other controls at defaults; compare split=1 unfiltered with split=0 filtered in canvas x=75%..95%, y=55%..70%. Variation is mean horizontal neighboring RGB byte difference, not a full-image quality score.",
+    "initialRun": {
+      "workers": 4,
+      "passed": 88,
+      "skipped": 2,
+      "failed": 2,
+      "failures": [
+        "Existing Ocean desktop WebGL speed restore max error 235",
+        "Existing Phantom Star mobile WebGL parameter restore max error 4"
+      ],
+      "note": "Released this run's independent browser and lowered concurrency. No existing test/runtime or tolerance changed. Final full-suite pass does not establish a root-cause fix for intermittent restore differences."
+    }
+  }
+}

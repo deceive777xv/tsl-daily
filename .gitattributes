@@ -47,3 +47,6 @@ src/data/shaders/menger-sponge/original.glsl -text -whitespace
 
 src/data/shaders/glowing-marbling-black/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/glowing-marbling-black/original.glsl -text -whitespace
+
+src/data/shaders/filtering-procedurals/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/filtering-procedurals/original.glsl -text -whitespace
