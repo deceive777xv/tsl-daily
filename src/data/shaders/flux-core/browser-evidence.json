@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-12",
+  "nativeTab": {
+    "start": {
+      "hidden": false,
+      "submits": 366,
+      "playLabel": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "submits": 366,
+      "playLabel": "暂停动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 466,
+      "playLabel": "暂停动画"
+    },
+    "verified": false,
+    "note": "Actual foregrounding of another tab reported document.hidden=false. Native background Page Visibility pause remains unverified; controlled event separately validates the runtime path."
+  },
+  "controlled": {
+    "start": {
+      "hidden": true,
+      "submits": 468,
+      "playLabel": "播放动画"
+    },
+    "end": {
+      "hidden": true,
+      "submits": 468,
+      "playLabel": "播放动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 604,
+      "playLabel": "暂停动画"
+    },
+    "verified": true
+  },
+  "reducedMotion": {
+    "initialBackend": null,
+    "posterLoaded": true,
+    "manualBackend": "webgpu",
+    "manualLabel": "暂停动画"
+  },
+  "browserSuite": {
+    "command": "npm run test:browser -- --config output/playwright/flux.config.ts --workers=2 --reporter=list,json",
+    "startTime": "2026-10-12T12:51:56.789Z",
+    "duration": 155427.787,
+    "expected": 94,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0,
+    "skippedReason": "Two pre-existing Pretty Hip sharpness tests require a fixed desktop pixel width.",
+    "cases": [
+      {
+        "project": "desktop-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 4833,
+        "appearance": {
+          "mean": 142.2528255208315,
+          "variance": 3100.690990008683,
+          "blackFraction": 0,
+          "whiteFraction": 0.027682291666666668
+        },
+        "restores": [
+          {
+            "id": "flux-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-structure",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-carving",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-glow",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-rust",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "desktop-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 4195,
+        "appearance": {
+          "mean": 142.25437319154878,
+          "variance": 3100.866122398231,
+          "blackFraction": 0,
+          "whiteFraction": 0.027735460069444443
+        },
+        "restores": [
+          {
+            "id": "flux-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-structure",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-carving",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-glow",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-rust",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 10708,
+        "appearance": {
+          "mean": 152.2038168404457,
+          "variance": 2389.87112170985,
+          "blackFraction": 0,
+          "whiteFraction": 0.021909589836831247
+        },
+        "restores": [
+          {
+            "id": "flux-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-structure",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-carving",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-glow",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-rust",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 10111,
+        "appearance": {
+          "mean": 152.2056308525619,
+          "variance": 2390.3890538099113,
+          "blackFraction": 0,
+          "whiteFraction": 0.021893640632528653
+        },
+        "restores": [
+          {
+            "id": "flux-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-structure",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-carving",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-glow",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "flux-rust",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      }
+    ],
+    "metric": "Frozen default time20 brightness/variance and dark/white pixel fractions guard against blank or globally overexposed output. All five controls change pixels; restored maximum RGB(A) byte difference<=2 and mean<0.001."
+  },
+  "media": {
+    "posterBytes": 167098,
+    "loopBytes": 3964145,
+    "dimensions": "960x600",
+    "videoCodec": "vp9",
+    "fps": 25,
+    "frames": 188,
+    "durationSeconds": 7.52,
+    "audioStreams": 0,
+    "method": "Real TSL WebGPU canvas recording, speed0.6; first3.76 seconds plus reversal, CRF32. Visually inspected source/backend canvases, WebP, midpoint, desktop/mobile views."
+  }
+}

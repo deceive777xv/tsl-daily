@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-12",
+  "sourceTime": 20,
+  "sourceResult": {
+    "id": "ltlSWf",
+    "time": 20,
+    "width": 1440,
+    "height": 900,
+    "glError": 0,
+    "passes": 1,
+    "inputs": 0
+  },
+  "sourceMatches": true,
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 160,
+    "meanRGBByteDifference": 0.13924845679012346,
+    "fractionChannelsOver10": 0.0015738168724279836
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 203,
+    "meanRGBByteDifference": 0.21005066872427983,
+    "fractionChannelsOver10": 0.002501800411522634
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Unmodified sole Image pass, same defaults at 1440x900 and source time 20. Log-polar geometry, original ray/extra-query glow ordering and default realtime timeline retained. Reversed smoothstep expanded algebraically and radius guarded at 1e-6. Reported differences need visual review; no pixel identity claim."
+}
