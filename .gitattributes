@@ -53,3 +53,6 @@ src/data/shaders/filtering-procedurals/original.glsl -text -whitespace
 
 src/data/shaders/flux-core/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/flux-core/original.glsl -text -whitespace
+
+src/data/shaders/voronoi-distances/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/voronoi-distances/original.glsl -text -whitespace

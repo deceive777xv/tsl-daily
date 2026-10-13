@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-13",
+  "sourceTime": 7,
+  "sourceResult": {
+    "id": "ldl3W8",
+    "time": 7,
+    "width": 1440,
+    "height": 900,
+    "glError": 0
+  },
+  "sourceMatches": true,
+  "sourceUnmodified": false,
+  "sourceVariant": "author-provided procedural hash",
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 1,
+    "meanRGBByteDifference": 0.005146347736625515,
+    "fractionChannelsOver10": 0
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 1,
+    "meanRGBByteDifference": 0.00013760288065843622,
+    "fractionChannelsOver10": 0
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Input-modified sole Image pass, same defaults at 1440x900 and source time 7. Author-provided procedural hash replaces unverified texture input in the GLSL reference and TSL; source snapshot is unchanged. Two-pass border construction retained. Sine hash amplifies backend rounding; figures are diagnostic and require visual review, not pixel identity."
+}
