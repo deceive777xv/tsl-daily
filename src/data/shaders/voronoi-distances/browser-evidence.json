@@ -1,0 +1,286 @@
+{
+  "date": "2026-10-13",
+  "nativeTab": {
+    "start": {
+      "hidden": false,
+      "submits": 376,
+      "playLabel": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "submits": 376,
+      "playLabel": "暂停动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 478,
+      "playLabel": "暂停动画"
+    },
+    "verified": false,
+    "note": "Actual foregrounding of another tab reported document.hidden=false. Native Page Visibility pause remains unverified, regardless of the submit count; controlled event separately validates the runtime path."
+  },
+  "controlled": {
+    "start": {
+      "hidden": true,
+      "submits": 482,
+      "playLabel": "播放动画"
+    },
+    "end": {
+      "hidden": true,
+      "submits": 482,
+      "playLabel": "播放动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 624,
+      "playLabel": "暂停动画"
+    },
+    "verified": true
+  },
+  "reducedMotion": {
+    "initialBackend": null,
+    "posterLoaded": true,
+    "manualBackend": "webgpu",
+    "manualLabel": "暂停动画"
+  },
+  "media": {
+    "posterBytes": 106478,
+    "loopBytes": 932329,
+    "dimensions": "960x600",
+    "videoCodec": "vp9",
+    "fps": 25,
+    "frames": 188,
+    "durationSeconds": 7.52,
+    "audioStreams": 0,
+    "method": "Real TSL WebGPU canvas recording, speed0.6; first3.76 seconds plus reversal, CRF32. Visually inspected procedural GLSL/source variant, backend canvases, WebP, midpoint and mobile controls."
+  },
+  "browserSuite": {
+    "command": "npm run test:browser -- --config output/playwright/voronoi.config.ts --workers=1 --retries=1 --reporter=list,json",
+    "startTime": "2026-10-13T13:06:40.129Z",
+    "duration": 333330.588,
+    "expected": 98,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0,
+    "skippedReason": "Two pre-existing Pretty Hip sharpness tests require a fixed desktop pixel width.",
+    "cases": [
+      {
+        "project": "desktop-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 2749,
+        "appearance": {
+          "mean": 49.86200593171152,
+          "variance": 2313.9804389757433,
+          "goldFraction": 0.1959027777777778,
+          "grayFraction": 0.5341265190972222,
+          "whiteFraction": 0
+        },
+        "restores": [
+          {
+            "id": "voronoi-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-density",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-border",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-contours",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-motion",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "desktop-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 2830,
+        "appearance": {
+          "mean": 49.862005570021694,
+          "variance": 2313.980249471021,
+          "goldFraction": 0.1959027777777778,
+          "grayFraction": 0.5341286892361111,
+          "whiteFraction": 0
+        },
+        "restores": [
+          {
+            "id": "voronoi-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-density",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-border",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-contours",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-motion",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 7065,
+        "appearance": {
+          "mean": 50.07008486096066,
+          "variance": 2142.187184947935,
+          "goldFraction": 0.19522203810684624,
+          "grayFraction": 0.5737692670585134,
+          "whiteFraction": 0
+        },
+        "restores": [
+          {
+            "id": "voronoi-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-density",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-border",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-contours",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-motion",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 7401,
+        "appearance": {
+          "mean": 50.06994705423924,
+          "variance": 2142.188762557178,
+          "goldFraction": 0.19522119867504084,
+          "grayFraction": 0.5737738839334431,
+          "whiteFraction": 0
+        },
+        "restores": [
+          {
+            "id": "voronoi-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-density",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-border",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-contours",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voronoi-motion",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      }
+    ],
+    "metric": "Frozen default time7 golden cell borders, gray contours, brightness/variance and white fraction guard against blank/wrong-color/overexposed output. All five controls change pixels; restored maximum RGB(A) byte difference<=2 and mean<0.001.",
+    "initialRun": {
+      "workers": 2,
+      "expected": 95,
+      "skipped": 2,
+      "unexpected": 3,
+      "failures": [
+        {
+          "case": "Filtering procedurals",
+          "project": "desktop-chromium",
+          "backend": "webgl2",
+          "control": "filtering-samples",
+          "max": 3
+        },
+        {
+          "case": "Flux Core",
+          "project": "mobile-chromium",
+          "backend": "webgl2",
+          "control": "flux-glow",
+          "max": 82
+        },
+        {
+          "case": "Menger Sponge",
+          "project": "mobile-chromium",
+          "backend": "webgl2",
+          "control": "menger-palette",
+          "max": 132
+        }
+      ],
+      "newCase": "All four new-case tests passed; all five controls restored with zero byte differences.",
+      "followup": "Same three failed tests passed in isolation at workers=1, unchanged assertions (20.4s). Final complete suite uses workers=1. Initial JSON report and text log retained under ignored output/playwright; initial trace files were cleared by the subsequent runner. No runtime/source/test root-cause fix claimed."
+    },
+    "serialWithoutRetry": {
+      "workers": 1,
+      "retries": 0,
+      "expected": 96,
+      "skipped": 2,
+      "unexpected": 2,
+      "durationMs": 332236.76,
+      "failures": [
+        {
+          "case": "Filtering procedurals",
+          "project": "desktop-chromium",
+          "backend": "webgl2",
+          "control": "filtering-samples",
+          "max": 3
+        },
+        {
+          "case": "I/O",
+          "project": "desktop-chromium",
+          "backend": "webgl2",
+          "max": 32
+        }
+      ],
+      "note": "Four new-case tests passed. Serial execution alone did not remove existing restore-test instability. JSON report, log and both trace archives retained under ignored output/playwright. Final run uses the same one-retry policy as repository CI, without changing assertions."
+    },
+    "retryCases": []
+  }
+}
