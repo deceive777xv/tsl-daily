@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-14",
+  "sourceTime": 7,
+  "sourceResult": {
+    "id": "3ttSzr",
+    "time": 7,
+    "width": 1440,
+    "height": 900,
+    "passes": 1,
+    "inputs": 0,
+    "sourceUnmodified": true,
+    "glError": 0,
+    "readError": 0,
+    "blackFraction": 0.04316898148148148,
+    "whiteFraction": 0.012516203703703703,
+    "meanRGB": [54.28990895061728, 103.14804783950618, 184.2094174382716],
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36"
+  },
+  "sourceMatches": true,
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 1,
+    "meanRGBByteDifference": 0.008510030864197531,
+    "fractionChannelsOver10": 0
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 1,
+    "meanRGBByteDifference": 0.00004218106995884774,
+    "fractionChannelsOver10": 0
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Unmodified sole Image pass, same defaults at 1440x900 and source time 7. Sequential y updates, seven constant-amplitude sine-product layers and direct RGB mapping are retained. Mean RGB difference guarded below 1/255 and visually reviewed; floating-point differences remain, not a pixel identity claim."
+}

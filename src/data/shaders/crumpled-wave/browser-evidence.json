@@ -1,0 +1,318 @@
+{
+  "date": "2026-10-14",
+  "nativeTab": {
+    "start": {
+      "hidden": false,
+      "submits": 374,
+      "playLabel": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "submits": 374,
+      "playLabel": "暂停动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 474,
+      "playLabel": "暂停动画"
+    },
+    "verified": false,
+    "note": "Actual foregrounding of another tab reported document.hidden=false. Native Page Visibility pause remains unverified; the controlled event separately validates the runtime path."
+  },
+  "controlled": {
+    "start": {
+      "hidden": true,
+      "submits": 476,
+      "playLabel": "播放动画"
+    },
+    "end": {
+      "hidden": true,
+      "submits": 476,
+      "playLabel": "播放动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 614,
+      "playLabel": "暂停动画"
+    },
+    "verified": true
+  },
+  "reducedMotion": {
+    "initialBackend": null,
+    "posterLoaded": true,
+    "manualBackend": "webgpu",
+    "manualLabel": "暂停动画"
+  },
+  "media": {
+    "posterBytes": 75562,
+    "loopBytes": 473285,
+    "dimensions": "960x600",
+    "videoCodec": "vp9",
+    "fps": 25,
+    "frames": 188,
+    "durationSeconds": 7.52,
+    "audioStreams": 0,
+    "method": "Actual TSL WebGPU canvas screenshot and captureStream/MediaRecorder recording; speed0.6, first3.76 seconds plus reversal, CRF32. Reversal is media-only; live animation runs forward. Source, backends, final WebP, midpoint and mobile UI visually inspected."
+  },
+  "browserSuite": {
+    "command": "npm run test:browser -- --config output/playwright/crumpled.config.ts --workers=1 --retries=1 --reporter=list,json",
+    "startTime": "2026-10-14T13:02:08.712Z",
+    "duration": 341460.164,
+    "expected": 100,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 2,
+    "skippedReason": "Two pre-existing Pretty Hip mobile sharpness cases require a fixed desktop pixel width.",
+    "cases": [
+      {
+        "project": "desktop-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 3515,
+        "appearance": {
+          "range": 255,
+          "meanRGB": [53.787593059201704, 103.04205528365192, 184.51016450536258],
+          "blueFraction": 0.7040761359488851,
+          "whiteFraction": 0.014074860713516176
+        },
+        "restores": [
+          {
+            "id": "crumpled-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-layers",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-amplitude",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-frequency",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-color-offset",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "desktop-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 3499,
+        "appearance": {
+          "range": 255,
+          "meanRGB": [53.78758646315669, 103.04205528365192, 184.51017220074843],
+          "blueFraction": 0.7040761359488851,
+          "whiteFraction": 0.014074860713516176
+        },
+        "restores": [
+          {
+            "id": "crumpled-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-layers",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-amplitude",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-frequency",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-color-offset",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 4265,
+        "appearance": {
+          "range": 255,
+          "meanRGB": [90.71646318754613, 115.44743526587713, 155.67248114178534],
+          "blueFraction": 0.34356315301223583,
+          "whiteFraction": 0.23883700340598993
+        },
+        "restores": [
+          {
+            "id": "crumpled-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-layers",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-amplitude",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-frequency",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-color-offset",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 4252,
+        "appearance": {
+          "range": 255,
+          "meanRGB": [90.71662654640745, 115.44754149145794, 155.6726237633819],
+          "blueFraction": 0.34356399943120647,
+          "whiteFraction": 0.23883869624393117
+        },
+        "restores": [
+          {
+            "id": "crumpled-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-layers",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-amplitude",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-frequency",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "crumpled-color-offset",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      }
+    ],
+    "retryCases": [
+      {
+        "file": "flux-core.spec.ts",
+        "title": "Flux Core webgl 螺旋结构、五个参数与 CC0 来源",
+        "project": "desktop-chromium",
+        "status": "flaky",
+        "attempts": [
+          {
+            "status": "failed",
+            "durationMs": 2491,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts",
+                  "column": 66,
+                  "line": 104
+                },
+                "message": "Error: flux-speed restore maximum byte error\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m61\u001b[39m\n\n  102 |       );\n  103 |       restores.push({ id, ...difference });\n> 104 |       expect(difference.max, id + ' restore maximum byte error').toBeLessThanOrEqual(2);\n      |                                                                  ^\n  105 |       expect(difference.mean, id + ' restore mean byte error').toBeLessThan(0.001);\n  106 |     }\n  107 |\n    at E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts:104:66"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\crumpled-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\crumpled-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\crumpled-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\trace.zip"
+              }
+            ]
+          },
+          {
+            "status": "passed",
+            "durationMs": 4875,
+            "errors": [],
+            "attachments": []
+          }
+        ]
+      },
+      {
+        "file": "site.spec.ts",
+        "title": "Lens Flare 显式许可、无外部素材及鬼影参数恢复一致",
+        "project": "desktop-chromium",
+        "status": "flaky",
+        "attempts": [
+          {
+            "status": "failed",
+            "durationMs": 1518,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\site.spec.ts",
+                  "column": 35,
+                  "line": 392
+                },
+                "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  390 |     await testInfo.attach('after-reset', { body: restored, contentType: 'image/png' });\n  391 |   }\n> 392 |   expect(restored.equals(before)).toBe(true);\n      |                                   ^\n  393 |   expect(errors).toEqual([]);\n  394 |   expect(externalRequests).toEqual([]);\n  395 | });\n    at E:\\Project\\shaderTutorial\\tests\\browser\\site.spec.ts:392:35"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\crumpled-test-results\\site-Lens-Flare-显式许可、无外部素材及鬼影参数恢复一致-desktop-chromium\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\crumpled-test-results\\site-Lens-Flare-显式许可、无外部素材及鬼影参数恢复一致-desktop-chromium\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\crumpled-test-results\\site-Lens-Flare-显式许可、无外部素材及鬼影参数恢复一致-desktop-chromium\\trace.zip"
+              }
+            ]
+          },
+          {
+            "status": "passed",
+            "durationMs": 1728,
+            "errors": [],
+            "attachments": []
+          }
+        ]
+      }
+    ],
+    "metric": "Frozen original time7 blue folds, RGB/color fractions and bounded white fraction reject blank/wrong-color/whole-image overexposure. Five controls change pixels and restore with maximum RGBA byte error<=2, mean<0.001. The three-pixel screenshot border exclusion applies to appearance metrics only."
+  }
+}
