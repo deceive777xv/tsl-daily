@@ -25,3 +25,4 @@ src/data/shaders/glowing-marbling-black/mirror.json
 src/data/shaders/filtering-procedurals/mirror.json
 src/data/shaders/flux-core/mirror.json
 src/data/shaders/voronoi-distances/mirror.json
+src/data/shaders/crumpled-wave/mirror.json

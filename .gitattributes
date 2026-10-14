@@ -56,3 +56,6 @@ src/data/shaders/flux-core/original.glsl -text -whitespace
 
 src/data/shaders/voronoi-distances/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/voronoi-distances/original.glsl -text -whitespace
+
+src/data/shaders/crumpled-wave/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/crumpled-wave/original.glsl -text -whitespace
