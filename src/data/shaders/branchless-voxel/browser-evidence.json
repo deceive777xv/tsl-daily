@@ -1,0 +1,909 @@
+{
+  "date": "2026-10-15",
+  "nativeTab": {
+    "start": {
+      "hidden": false,
+      "submits": 378,
+      "playLabel": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "submits": 378,
+      "playLabel": "暂停动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 478,
+      "playLabel": "暂停动画"
+    },
+    "verified": false,
+    "note": "Actual foregrounding of another tab reported document.hidden=false. Native Page Visibility pause remains unverified; the controlled event separately validates the runtime path."
+  },
+  "controlled": {
+    "start": {
+      "hidden": true,
+      "submits": 482,
+      "playLabel": "播放动画"
+    },
+    "end": {
+      "hidden": true,
+      "submits": 482,
+      "playLabel": "播放动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 618,
+      "playLabel": "暂停动画"
+    },
+    "verified": true
+  },
+  "reducedMotion": {
+    "initialBackend": null,
+    "posterLoaded": true,
+    "manualBackend": "webgpu",
+    "manualLabel": "暂停动画"
+  },
+  "media": {
+    "posterBytes": 45544,
+    "loopBytes": 3771645,
+    "dimensions": "960x600",
+    "videoCodec": "vp9",
+    "fps": 25,
+    "frames": 188,
+    "durationSeconds": 7.52,
+    "audioStreams": 0,
+    "method": "Actual TSL WebGPU canvas screenshot and captureStream/MediaRecorder recording; speed0.6, first3.76 seconds plus reversal, CRF32. Reversal is media-only; live animation runs forward. Source, backends, final WebP, midpoint and mobile UI visually inspected."
+  },
+  "alignedRaySmoke": {
+    "date": "2026-10-15",
+    "method": "Odd 401x701 drawing buffer puts a row of rays exactly parallel to y grid planes; default central row retains only valid grayscale face values. Combined small-grid/wide-FOV/extreme cavity/contrast smoke also runs without shader errors. Finite budget geometry remains approximate.",
+    "runs": [
+      {
+        "requested": "webgpu",
+        "actual": "webgpu",
+        "width": 401,
+        "height": 701,
+        "invalidCentralRowPixels": 0,
+        "extremeControls": {
+          "cellSize": 0.5,
+          "focus": 0.5,
+          "cavity": 10,
+          "contrast": 1.5
+        }
+      },
+      {
+        "requested": "webgl",
+        "actual": "webgl2",
+        "width": 401,
+        "height": 701,
+        "invalidCentralRowPixels": 0,
+        "extremeControls": {
+          "cellSize": 0.5,
+          "focus": 0.5,
+          "cavity": 10,
+          "contrast": 1.5
+        }
+      }
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "initialBrowserSuite": {
+    "stats": {
+      "startTime": "2026-10-15T14:19:05.389Z",
+      "duration": 356619.971,
+      "expected": 102,
+      "skipped": 2,
+      "unexpected": 2,
+      "flaky": 2
+    },
+    "cases": [
+      {
+        "file": "branchless-voxel.spec.ts",
+        "title": "Branchless Voxel Raycasting webgl 灰阶体素、五个参数与来源",
+        "project": "desktop-chromium",
+        "status": "expected",
+        "attempts": [
+          {
+            "status": "passed",
+            "durationMs": 1365,
+            "errors": [],
+            "attachments": []
+          }
+        ]
+      },
+      {
+        "file": "branchless-voxel.spec.ts",
+        "title": "Branchless Voxel Raycasting webgpu 灰阶体素、五个参数与来源",
+        "project": "desktop-chromium",
+        "status": "expected",
+        "attempts": [
+          {
+            "status": "passed",
+            "durationMs": 1408,
+            "errors": [],
+            "attachments": []
+          }
+        ]
+      },
+      {
+        "file": "branchless-voxel.spec.ts",
+        "title": "Branchless Voxel Raycasting webgl 灰阶体素、五个参数与来源",
+        "project": "mobile-chromium",
+        "status": "unexpected",
+        "attempts": [
+          {
+            "status": "failed",
+            "durationMs": 781,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts",
+                  "column": 44,
+                  "line": 88
+                },
+                "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.98\u001b[39m\nReceived:   \u001b[31m0.9015136510451581\u001b[39m\n\n  86 |       expect(appearance.range).toBeGreaterThan(100);\n  87 |       expect(appearance.chroma).toBeLessThanOrEqual(1);\n> 88 |       expect(appearance.quantizedFraction).toBeGreaterThan(0.98);\n     |                                            ^\n  89 |       for (const fraction of appearance.grayFaceFractions) expect(fraction).toBeGreaterThan(0.02);\n  90 |       expect(appearance.whiteFraction).toBeLessThan(0.7);\n  91 |       const restores: { id: string; max: number; mean: number }[] = [];\n    at E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts:88:44"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium\\trace.zip"
+              }
+            ]
+          },
+          {
+            "status": "failed",
+            "durationMs": 1010,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts",
+                  "column": 44,
+                  "line": 88
+                },
+                "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.98\u001b[39m\nReceived:   \u001b[31m0.9015136510451581\u001b[39m\n\n  86 |       expect(appearance.range).toBeGreaterThan(100);\n  87 |       expect(appearance.chroma).toBeLessThanOrEqual(1);\n> 88 |       expect(appearance.quantizedFraction).toBeGreaterThan(0.98);\n     |                                            ^\n  89 |       for (const fraction of appearance.grayFaceFractions) expect(fraction).toBeGreaterThan(0.02);\n  90 |       expect(appearance.whiteFraction).toBeLessThan(0.7);\n  91 |       const restores: { id: string; max: number; mean: number }[] = [];\n    at E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts:88:44"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium-retry1\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium-retry1\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium-retry1\\trace.zip"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "branchless-voxel.spec.ts",
+        "title": "Branchless Voxel Raycasting webgpu 灰阶体素、五个参数与来源",
+        "project": "mobile-chromium",
+        "status": "unexpected",
+        "attempts": [
+          {
+            "status": "failed",
+            "durationMs": 1088,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts",
+                  "column": 44,
+                  "line": 88
+                },
+                "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.98\u001b[39m\nReceived:   \u001b[31m0.9015085725313344\u001b[39m\n\n  86 |       expect(appearance.range).toBeGreaterThan(100);\n  87 |       expect(appearance.chroma).toBeLessThanOrEqual(1);\n> 88 |       expect(appearance.quantizedFraction).toBeGreaterThan(0.98);\n     |                                            ^\n  89 |       for (const fraction of appearance.grayFaceFractions) expect(fraction).toBeGreaterThan(0.02);\n  90 |       expect(appearance.whiteFraction).toBeLessThan(0.7);\n  91 |       const restores: { id: string; max: number; mean: number }[] = [];\n    at E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts:88:44"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium\\trace.zip"
+              }
+            ]
+          },
+          {
+            "status": "failed",
+            "durationMs": 1087,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts",
+                  "column": 44,
+                  "line": 88
+                },
+                "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.98\u001b[39m\nReceived:   \u001b[31m0.9015085725313344\u001b[39m\n\n  86 |       expect(appearance.range).toBeGreaterThan(100);\n  87 |       expect(appearance.chroma).toBeLessThanOrEqual(1);\n> 88 |       expect(appearance.quantizedFraction).toBeGreaterThan(0.98);\n     |                                            ^\n  89 |       for (const fraction of appearance.grayFaceFractions) expect(fraction).toBeGreaterThan(0.02);\n  90 |       expect(appearance.whiteFraction).toBeLessThan(0.7);\n  91 |       const restores: { id: string; max: number; mean: number }[] = [];\n    at E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts:88:44"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium-retry1\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium-retry1\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium-retry1\\trace.zip"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nonPassing": [
+      {
+        "file": "branchless-voxel.spec.ts",
+        "title": "Branchless Voxel Raycasting webgl 灰阶体素、五个参数与来源",
+        "project": "mobile-chromium",
+        "status": "unexpected",
+        "attempts": [
+          {
+            "status": "failed",
+            "durationMs": 781,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts",
+                  "column": 44,
+                  "line": 88
+                },
+                "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.98\u001b[39m\nReceived:   \u001b[31m0.9015136510451581\u001b[39m\n\n  86 |       expect(appearance.range).toBeGreaterThan(100);\n  87 |       expect(appearance.chroma).toBeLessThanOrEqual(1);\n> 88 |       expect(appearance.quantizedFraction).toBeGreaterThan(0.98);\n     |                                            ^\n  89 |       for (const fraction of appearance.grayFaceFractions) expect(fraction).toBeGreaterThan(0.02);\n  90 |       expect(appearance.whiteFraction).toBeLessThan(0.7);\n  91 |       const restores: { id: string; max: number; mean: number }[] = [];\n    at E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts:88:44"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium\\trace.zip"
+              }
+            ]
+          },
+          {
+            "status": "failed",
+            "durationMs": 1010,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts",
+                  "column": 44,
+                  "line": 88
+                },
+                "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.98\u001b[39m\nReceived:   \u001b[31m0.9015136510451581\u001b[39m\n\n  86 |       expect(appearance.range).toBeGreaterThan(100);\n  87 |       expect(appearance.chroma).toBeLessThanOrEqual(1);\n> 88 |       expect(appearance.quantizedFraction).toBeGreaterThan(0.98);\n     |                                            ^\n  89 |       for (const fraction of appearance.grayFaceFractions) expect(fraction).toBeGreaterThan(0.02);\n  90 |       expect(appearance.whiteFraction).toBeLessThan(0.7);\n  91 |       const restores: { id: string; max: number; mean: number }[] = [];\n    at E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts:88:44"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium-retry1\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium-retry1\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-d49d9-ycasting-webgl-灰阶体素、五个参数与来源-mobile-chromium-retry1\\trace.zip"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "branchless-voxel.spec.ts",
+        "title": "Branchless Voxel Raycasting webgpu 灰阶体素、五个参数与来源",
+        "project": "mobile-chromium",
+        "status": "unexpected",
+        "attempts": [
+          {
+            "status": "failed",
+            "durationMs": 1088,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts",
+                  "column": 44,
+                  "line": 88
+                },
+                "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.98\u001b[39m\nReceived:   \u001b[31m0.9015085725313344\u001b[39m\n\n  86 |       expect(appearance.range).toBeGreaterThan(100);\n  87 |       expect(appearance.chroma).toBeLessThanOrEqual(1);\n> 88 |       expect(appearance.quantizedFraction).toBeGreaterThan(0.98);\n     |                                            ^\n  89 |       for (const fraction of appearance.grayFaceFractions) expect(fraction).toBeGreaterThan(0.02);\n  90 |       expect(appearance.whiteFraction).toBeLessThan(0.7);\n  91 |       const restores: { id: string; max: number; mean: number }[] = [];\n    at E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts:88:44"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium\\trace.zip"
+              }
+            ]
+          },
+          {
+            "status": "failed",
+            "durationMs": 1087,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts",
+                  "column": 44,
+                  "line": 88
+                },
+                "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.98\u001b[39m\nReceived:   \u001b[31m0.9015085725313344\u001b[39m\n\n  86 |       expect(appearance.range).toBeGreaterThan(100);\n  87 |       expect(appearance.chroma).toBeLessThanOrEqual(1);\n> 88 |       expect(appearance.quantizedFraction).toBeGreaterThan(0.98);\n     |                                            ^\n  89 |       for (const fraction of appearance.grayFaceFractions) expect(fraction).toBeGreaterThan(0.02);\n  90 |       expect(appearance.whiteFraction).toBeLessThan(0.7);\n  91 |       const restores: { id: string; max: number; mean: number }[] = [];\n    at E:\\Project\\shaderTutorial\\tests\\browser\\branchless-voxel.spec.ts:88:44"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium-retry1\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium-retry1\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\branchless-voxel-Branchles-2b247-casting-webgpu-灰阶体素、五个参数与来源-mobile-chromium-retry1\\trace.zip"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "filtering-procedurals.spec.ts",
+        "title": "Filtering procedurals webgl 材质过滤、五个参数与 MIT 来源",
+        "project": "mobile-chromium",
+        "status": "flaky",
+        "attempts": [
+          {
+            "status": "failed",
+            "durationMs": 5936,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\filtering-procedurals.spec.ts",
+                  "column": 68,
+                  "line": 106
+                },
+                "message": "Error: filtering-footprint restore maximum byte error\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m54\u001b[39m\n\n  104 |           [before.toString('base64'), restored.toString('base64')],\n  105 |         );\n> 106 |         expect(difference.max, id + ' restore maximum byte error').toBeLessThanOrEqual(2);\n      |                                                                    ^\n  107 |         expect(difference.mean, id + ' restore mean byte error').toBeLessThan(0.001);\n  108 |       }\n  109 |\n    at E:\\Project\\shaderTutorial\\tests\\browser\\filtering-procedurals.spec.ts:106:68"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\filtering-procedurals-Filt-c38b5-als-webgl-材质过滤、五个参数与-MIT-来源-mobile-chromium\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\filtering-procedurals-Filt-c38b5-als-webgl-材质过滤、五个参数与-MIT-来源-mobile-chromium\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\filtering-procedurals-Filt-c38b5-als-webgl-材质过滤、五个参数与-MIT-来源-mobile-chromium\\trace.zip"
+              }
+            ]
+          },
+          {
+            "status": "passed",
+            "durationMs": 7631,
+            "errors": [],
+            "attachments": []
+          }
+        ]
+      },
+      {
+        "file": "flux-core.spec.ts",
+        "title": "Flux Core webgl 螺旋结构、五个参数与 CC0 来源",
+        "project": "desktop-chromium",
+        "status": "flaky",
+        "attempts": [
+          {
+            "status": "failed",
+            "durationMs": 5126,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts",
+                  "column": 66,
+                  "line": 104
+                },
+                "message": "Error: flux-rust restore maximum byte error\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m68\u001b[39m\n\n  102 |       );\n  103 |       restores.push({ id, ...difference });\n> 104 |       expect(difference.max, id + ' restore maximum byte error').toBeLessThanOrEqual(2);\n      |                                                                  ^\n  105 |       expect(difference.mean, id + ' restore mean byte error').toBeLessThan(0.001);\n  106 |     }\n  107 |\n    at E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts:104:66"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-initial-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\trace.zip"
+              }
+            ]
+          },
+          {
+            "status": "passed",
+            "durationMs": 4854,
+            "errors": [],
+            "attachments": []
+          }
+        ]
+      }
+    ],
+    "archive": "output/playwright/voxel-initial-test-results",
+    "diagnosis": "The two new mobile appearance failures were a screenshot sampling error: deviceScaleFactor2.625 interpolated the medium-quality DPR1 canvas into device pixels. Changed only this new test to screenshot scale:css; the original 0.98 grayscale-tone threshold and restore tolerances are unchanged, no shader/runtime/old-case change. Independent four-case run then passed with quantizedFraction1 and zero restore error before the final full rerun."
+  },
+  "isolatedSamplingFix": {
+    "stats": {
+      "startTime": "2026-10-15T14:25:31.354Z",
+      "duration": 7224.458,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "cases": [
+      {
+        "project": "desktop-chromium",
+        "title": "Branchless Voxel Raycasting webgl 灰阶体素、五个参数与来源",
+        "status": "expected",
+        "appearance": {
+          "width": 1280,
+          "height": 720,
+          "range": 128,
+          "chroma": 0,
+          "quantizedFraction": 1,
+          "grayFaceFractions": [0.5543393181448404, 0.32700552748571954, 0.11865515436944009],
+          "whiteFraction": 0.11865515436944009
+        },
+        "restores": [
+          {
+            "id": "voxel-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cell-size",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cavity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-focus",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-contrast",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "Branchless Voxel Raycasting webgpu 灰阶体素、五个参数与来源",
+        "status": "expected",
+        "appearance": {
+          "width": 1280,
+          "height": 720,
+          "range": 128,
+          "chroma": 0,
+          "quantizedFraction": 1,
+          "grayFaceFractions": [0.5543382188040051, 0.32700552748571954, 0.11865625371027531],
+          "whiteFraction": 0.11865625371027531
+        },
+        "restores": [
+          {
+            "id": "voxel-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cell-size",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cavity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-focus",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-contrast",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "title": "Branchless Voxel Raycasting webgl 灰阶体素、五个参数与来源",
+        "status": "expected",
+        "appearance": {
+          "width": 412,
+          "height": 839,
+          "range": 128,
+          "chroma": 0,
+          "quantizedFraction": 1,
+          "grayFaceFractions": [0.28510221822719234, 0.1855776793476011, 0.5293201024252066],
+          "whiteFraction": 0.5293201024252066
+        },
+        "restores": [
+          {
+            "id": "voxel-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cell-size",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cavity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-focus",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-contrast",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "title": "Branchless Voxel Raycasting webgpu 灰阶体素、五个参数与来源",
+        "status": "expected",
+        "appearance": {
+          "width": 412,
+          "height": 839,
+          "range": 128,
+          "chroma": 0,
+          "quantizedFraction": 1,
+          "grayFaceFractions": [0.28510813192271983, 0.1855776793476011, 0.5293141887296791],
+          "whiteFraction": 0.5293141887296791
+        },
+        "restores": [
+          {
+            "id": "voxel-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cell-size",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cavity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-focus",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-contrast",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      }
+    ]
+  },
+  "browserSuite": {
+    "command": "npm run test:browser -- --config output/playwright/voxel.config.ts --workers=1 --retries=1 --reporter=list,json",
+    "startTime": "2026-10-15T14:26:49.702Z",
+    "duration": 339279.351,
+    "expected": 105,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 1,
+    "skippedReason": "Two pre-existing Pretty Hip mobile sharpness cases require a fixed desktop pixel width.",
+    "cases": [
+      {
+        "project": "desktop-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 1341,
+        "appearance": {
+          "width": 1280,
+          "height": 720,
+          "range": 128,
+          "chroma": 0,
+          "quantizedFraction": 1,
+          "grayFaceFractions": [0.5543393181448404, 0.32700552748571954, 0.11865515436944009],
+          "whiteFraction": 0.11865515436944009
+        },
+        "restores": [
+          {
+            "id": "voxel-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cell-size",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cavity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-focus",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-contrast",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "desktop-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 1359,
+        "appearance": {
+          "width": 1280,
+          "height": 720,
+          "range": 128,
+          "chroma": 0,
+          "quantizedFraction": 1,
+          "grayFaceFractions": [0.5543382188040051, 0.32700552748571954, 0.11865625371027531],
+          "whiteFraction": 0.11865625371027531
+        },
+        "restores": [
+          {
+            "id": "voxel-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cell-size",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cavity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-focus",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-contrast",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 1309,
+        "appearance": {
+          "width": 412,
+          "height": 839,
+          "range": 128,
+          "chroma": 0,
+          "quantizedFraction": 1,
+          "grayFaceFractions": [0.28510221822719234, 0.1855776793476011, 0.5293201024252066],
+          "whiteFraction": 0.5293201024252066
+        },
+        "restores": [
+          {
+            "id": "voxel-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cell-size",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cavity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-focus",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-contrast",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 1309,
+        "appearance": {
+          "width": 412,
+          "height": 839,
+          "range": 128,
+          "chroma": 0,
+          "quantizedFraction": 1,
+          "grayFaceFractions": [0.28510813192271983, 0.1855776793476011, 0.5293141887296791],
+          "whiteFraction": 0.5293141887296791
+        },
+        "restores": [
+          {
+            "id": "voxel-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cell-size",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-cavity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-focus",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "voxel-contrast",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      }
+    ],
+    "retryCases": [
+      {
+        "file": "flux-core.spec.ts",
+        "title": "Flux Core webgl 螺旋结构、五个参数与 CC0 来源",
+        "project": "desktop-chromium",
+        "status": "flaky",
+        "attempts": [
+          {
+            "status": "failed",
+            "durationMs": 2411,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts",
+                  "column": 66,
+                  "line": 104
+                },
+                "message": "Error: flux-speed restore maximum byte error\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m68\u001b[39m\n\n  102 |       );\n  103 |       restores.push({ id, ...difference });\n> 104 |       expect(difference.max, id + ' restore maximum byte error').toBeLessThanOrEqual(2);\n      |                                                                  ^\n  105 |       expect(difference.mean, id + ' restore mean byte error').toBeLessThan(0.001);\n  106 |     }\n  107 |\n    at E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts:104:66"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\voxel-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\trace.zip"
+              }
+            ]
+          },
+          {
+            "status": "passed",
+            "durationMs": 4830,
+            "errors": [],
+            "attachments": []
+          }
+        ]
+      }
+    ],
+    "metric": "Frozen original time2 grayscale, three face-tone coverage and bounded white fraction reject blank/wrong-color/whole-image overexposure. Five controls change pixels and restore with maximum RGBA byte error<=2, mean<0.001. The three-pixel screenshot border exclusion applies to appearance metrics only."
+  }
+}

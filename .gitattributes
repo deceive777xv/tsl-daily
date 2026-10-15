@@ -59,3 +59,7 @@ src/data/shaders/voronoi-distances/original.glsl -text -whitespace
 
 src/data/shaders/crumpled-wave/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/crumpled-wave/original.glsl -text -whitespace
+
+src/data/shaders/branchless-voxel/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/branchless-voxel/original.glsl -text -whitespace
+src/data/shaders/branchless-voxel/upstream/* -text -whitespace
