@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-15",
+  "sourceTime": 2,
+  "sourceResult": {
+    "id": "4dX3zl",
+    "time": 2,
+    "width": 1440,
+    "height": 900,
+    "passes": 1,
+    "inputs": 0,
+    "sourceUnmodified": true,
+    "glError": 0,
+    "readError": 0,
+    "blackFraction": 0,
+    "whiteFraction": 0.13470601851851852,
+    "meanRGB": [164.64454320987653, 164.64454320987653, 164.64454320987653],
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36"
+  },
+  "sourceMatches": true,
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 128,
+    "meanRGBByteDifference": 0.00019753086419753085,
+    "fractionChannelsOver10": 0.0000015432098765432098,
+    "boundaryPixels": [
+      {
+        "x": 1365,
+        "y": 139,
+        "first": [127, 127, 127],
+        "second": [255, 255, 255]
+      },
+      {
+        "x": 1079,
+        "y": 786,
+        "first": [255, 255, 255],
+        "second": [127, 127, 127]
+      }
+    ]
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 128,
+    "meanRGBByteDifference": 0.00009876543209876543,
+    "fractionChannelsOver10": 7.716049382716049e-7,
+    "boundaryPixels": [
+      {
+        "x": 1431,
+        "y": 717,
+        "first": [255, 255, 255],
+        "second": [127, 127, 127]
+      }
+    ]
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Unmodified sole Image pass, same defaults at 1440x900 and source time 2. Discrete DDA occupancy, axis ties, camera and grayscale face priority retained; safe finite denominators and hit early exit added. Mean RGB difference guarded below 1/255 and visually reviewed; floating-point differences remain, not a pixel identity claim."
+}
