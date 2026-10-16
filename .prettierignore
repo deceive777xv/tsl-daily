@@ -29,3 +29,5 @@ src/data/shaders/crumpled-wave/mirror.json
 
 src/data/shaders/branchless-voxel/mirror.json
 src/data/shaders/branchless-voxel/upstream/
+
+src/data/shaders/monster/mirror.json
