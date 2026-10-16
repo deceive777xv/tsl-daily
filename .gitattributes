@@ -63,3 +63,6 @@ src/data/shaders/crumpled-wave/original.glsl -text -whitespace
 src/data/shaders/branchless-voxel/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/branchless-voxel/original.glsl -text -whitespace
 src/data/shaders/branchless-voxel/upstream/* -text -whitespace
+
+src/data/shaders/monster/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/monster/original.glsl -text -whitespace

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-16",
+  "sourceTime": 2,
+  "sourceUnmodified": true,
+  "sourceMatches": true,
+  "sourceGlError": 0,
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 255,
+    "meanRGBByteDifference": 0.009685185185185186,
+    "fractionChannelsOver10": 0.0000030864197530864196
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 255,
+    "meanRGBByteDifference": 0.03565149176954732,
+    "fractionChannelsOver10": 0.00010853909465020576
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Unmodified original RGB in an opaque WebGL2 wrapper, same defaults at 1440x900/source time2. TSL adds zero-radius atan and positive-side reciprocal saturation guards, opaque RGB display and teaching controls. Floating-point and threshold/iteration differences remain; no pixel identity claim."
+}

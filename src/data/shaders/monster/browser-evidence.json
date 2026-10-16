@@ -1,0 +1,585 @@
+{
+  "date": "2026-10-16",
+  "nativeTab": {
+    "start": {
+      "hidden": false,
+      "submits": 424,
+      "playLabel": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "submits": 424,
+      "playLabel": "暂停动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 528,
+      "playLabel": "暂停动画"
+    },
+    "verified": false,
+    "note": "Foregrounding another tab still reported document.hidden=false. Native Page Visibility pause remains UNVERIFIED, even though submits stayed constant. The controlled visibility event is separate evidence."
+  },
+  "controlled": {
+    "start": {
+      "hidden": true,
+      "submits": 530,
+      "playLabel": "播放动画"
+    },
+    "end": {
+      "hidden": true,
+      "submits": 530,
+      "playLabel": "播放动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 666,
+      "playLabel": "暂停动画"
+    },
+    "verified": true
+  },
+  "reducedMotion": {
+    "initialBackend": null,
+    "posterLoaded": true,
+    "manualBackend": "webgpu",
+    "manualLabel": "暂停动画"
+  },
+  "media": {
+    "posterBytes": 194808,
+    "loopBytes": 8055621,
+    "width": 960,
+    "height": 600,
+    "videoCodec": "vp9",
+    "fps": 25,
+    "frames": 188,
+    "durationSeconds": 7.52,
+    "audioStreams": 0,
+    "crf": 40,
+    "method": "Actual TSL non-fallback WebGPU canvas screenshot and captureStream/MediaRecorder. Source speed0.6, first3.76s plus reverse for a7.52s loop. Reverse is media-only; live program moves forward. Final compressed midpoint, poster, source/backends and mobile UI visually inspected."
+  },
+  "oddViewportAndExtremes": {
+    "date": "2026-10-16",
+    "purpose": "Odd dimensions include an exact central ray, exercising the zero-radius atan guard. All five controls are also driven to their HTML min/max bounds; frozen source time2. PNG byte observations are output evidence, not raw floating-point GPU readback.",
+    "runs": [
+      {
+        "requested": "webgpu",
+        "backend": "webgpu",
+        "mode": "default",
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [17, 141, 85, 255],
+        "nonblackFraction": 0.7975335812274248
+      },
+      {
+        "requested": "webgpu",
+        "backend": "webgpu",
+        "mode": "min",
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [16, 114, 114, 255],
+        "nonblackFraction": 0.7236041828387918
+      },
+      {
+        "requested": "webgpu",
+        "backend": "webgpu",
+        "mode": "max",
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [37, 255, 183, 255],
+        "nonblackFraction": 0.9965292610883293
+      },
+      {
+        "requested": "webgl",
+        "backend": "webgl2",
+        "mode": "default",
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [17, 141, 85, 255],
+        "nonblackFraction": 0.7975518657714997
+      },
+      {
+        "requested": "webgl",
+        "backend": "webgl2",
+        "mode": "min",
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [16, 114, 114, 255],
+        "nonblackFraction": 0.7235958716823941
+      },
+      {
+        "requested": "webgl",
+        "backend": "webgl2",
+        "mode": "max",
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [37, 255, 183, 255],
+        "nonblackFraction": 0.9965292610883293
+      }
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "isolatedNewCaseSuite": {
+    "stats": {
+      "startTime": "2026-10-16T12:35:31.113Z",
+      "duration": 12130.457,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "cases": [
+      {
+        "project": "desktop-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 3184,
+        "appearance": {
+          "width": 1280,
+          "height": 720,
+          "brightnessRange": 255,
+          "coloredFraction": 0.547789445448509,
+          "blackFraction": 0.20179610305660725,
+          "whiteFraction": 0.008291228579343826,
+          "meanRGB": [20.207965603823947, 119.47946651187948, 74.69058832324139]
+        },
+        "restores": [
+          {
+            "id": "monster-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-sectors",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-folds",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-proximity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-slice",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "desktop-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 2876,
+        "appearance": {
+          "width": 1280,
+          "height": 720,
+          "brightnessRange": 255,
+          "coloredFraction": 0.5478246243552366,
+          "blackFraction": 0.20177081821739684,
+          "whiteFraction": 0.008293427261014296,
+          "meanRGB": [20.20833608168542, 119.47904546433958, 74.69017607042817]
+        },
+        "restores": [
+          {
+            "id": "monster-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-sectors",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-folds",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-proximity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-slice",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 2508,
+        "appearance": {
+          "width": 412,
+          "height": 839,
+          "brightnessRange": 255,
+          "coloredFraction": 0.6896196902406283,
+          "blackFraction": 0.07130142697473078,
+          "whiteFraction": 0.0033175831909118326,
+          "meanRGB": [19.09640506448885, 131.75305590216382, 89.99769661559205]
+        },
+        "restores": [
+          {
+            "id": "monster-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-sectors",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-folds",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-proximity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-slice",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 2200,
+        "appearance": {
+          "width": 412,
+          "height": 839,
+          "brightnessRange": 255,
+          "coloredFraction": 0.6896551724137931,
+          "blackFraction": 0.0712955132792033,
+          "whiteFraction": 0.0033116694953843604,
+          "meanRGB": [19.093944967149422, 131.75056623634674, 89.994405644031]
+        },
+        "restores": [
+          {
+            "id": "monster-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-sectors",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-folds",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-proximity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-slice",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      }
+    ],
+    "nonPassing": [],
+    "maxRestore": 0,
+    "maxMeanRestore": 0
+  },
+  "harnessCorrection": {
+    "initialLog": "output/playwright/monster-extremes-first.log",
+    "reason": "The diagnostic Canvas2D reader caused willReadFrequently advisory warnings, not product errors. Set willReadFrequently:true only in the diagnostic reader and reran all six odd/default/min/max groups; no shader or shared runtime change."
+  },
+  "browserSuite": {
+    "command": "npm run test:browser -- --config output/playwright/monster.config.ts --workers=1 --retries=1 --reporter=list,json",
+    "stats": {
+      "startTime": "2026-10-16T12:42:14.376Z",
+      "duration": 356094.08999999997,
+      "expected": 108,
+      "skipped": 2,
+      "unexpected": 0,
+      "flaky": 2
+    },
+    "cases": [
+      {
+        "project": "desktop-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 2829,
+        "appearance": {
+          "width": 1280,
+          "height": 720,
+          "brightnessRange": 255,
+          "coloredFraction": 0.547789445448509,
+          "blackFraction": 0.20179610305660725,
+          "whiteFraction": 0.008291228579343826,
+          "meanRGB": [20.207965603823947, 119.47946651187948, 74.69058832324139]
+        },
+        "restores": [
+          {
+            "id": "monster-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-sectors",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-folds",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-proximity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-slice",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "desktop-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 2805,
+        "appearance": {
+          "width": 1280,
+          "height": 720,
+          "brightnessRange": 255,
+          "coloredFraction": 0.5478246243552366,
+          "blackFraction": 0.20177081821739684,
+          "whiteFraction": 0.008293427261014296,
+          "meanRGB": [20.20833608168542, 119.47904546433958, 74.69017607042817]
+        },
+        "restores": [
+          {
+            "id": "monster-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-sectors",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-folds",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-proximity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-slice",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "durationMs": 2236,
+        "appearance": {
+          "width": 412,
+          "height": 839,
+          "brightnessRange": 255,
+          "coloredFraction": 0.6896196902406283,
+          "blackFraction": 0.07130142697473078,
+          "whiteFraction": 0.0033175831909118326,
+          "meanRGB": [19.09640506448885, 131.75305590216382, 89.99769661559205]
+        },
+        "restores": [
+          {
+            "id": "monster-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-sectors",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-folds",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-proximity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-slice",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "durationMs": 2185,
+        "appearance": {
+          "width": 412,
+          "height": 839,
+          "brightnessRange": 255,
+          "coloredFraction": 0.6896551724137931,
+          "blackFraction": 0.0712955132792033,
+          "whiteFraction": 0.0033116694953843604,
+          "meanRGB": [19.093944967149422, 131.75056623634674, 89.994405644031]
+        },
+        "restores": [
+          {
+            "id": "monster-speed",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-sectors",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-folds",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-proximity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "monster-slice",
+            "max": 0,
+            "mean": 0
+          }
+        ]
+      }
+    ],
+    "nonPassing": [
+      {
+        "file": "2d-clouds.spec.ts",
+        "title": "2D Clouds webgl 云层可见、无外部素材且五个参数可恢复",
+        "project": "desktop-chromium",
+        "status": "flaky",
+        "attempts": [
+          {
+            "status": "failed",
+            "durationMs": 5022,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\2d-clouds.spec.ts",
+                  "column": 33,
+                  "line": 144
+                },
+                "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.0001\u001b[39m\nReceived:   \u001b[31m0.00011040581597222223\u001b[39m\n\n  142 |         // WebGL2 occasionally rounds sparse channels by 1/255 after uniform changes.\n  143 |         expect(difference.max).toBeLessThanOrEqual(1);\n> 144 |         expect(difference.mean).toBeLessThan(0.0001);\n      |                                 ^\n  145 |       }\n  146 |       expect(errors).toEqual([]);\n  147 |       expect(external).toEqual([]);\n    at E:\\Project\\shaderTutorial\\tests\\browser\\2d-clouds.spec.ts:144:33"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\monster-test-results\\2d-clouds-2D-Clouds-webgl-云层可见、无外部素材且五个参数可恢复-desktop-chromium\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\monster-test-results\\2d-clouds-2D-Clouds-webgl-云层可见、无外部素材且五个参数可恢复-desktop-chromium\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\monster-test-results\\2d-clouds-2D-Clouds-webgl-云层可见、无外部素材且五个参数可恢复-desktop-chromium\\trace.zip"
+              }
+            ]
+          },
+          {
+            "status": "passed",
+            "durationMs": 5264,
+            "errors": [],
+            "attachments": []
+          }
+        ]
+      },
+      {
+        "file": "fast-procedural-ocean.spec.ts",
+        "title": "Very fast procedural ocean webgl 画面、五个参数与素材来源",
+        "project": "desktop-chromium",
+        "status": "flaky",
+        "attempts": [
+          {
+            "status": "failed",
+            "durationMs": 1485,
+            "errors": [
+              {
+                "location": {
+                  "file": "E:\\Project\\shaderTutorial\\tests\\browser\\fast-procedural-ocean.spec.ts",
+                  "column": 59,
+                  "line": 142
+                },
+                "message": "Error: ocean-speed restore max error\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m234\u001b[39m\n\n  140 |           [before.toString('base64'), restored.toString('base64')],\n  141 |         );\n> 142 |         expect(difference.max, id + ' restore max error').toBeLessThanOrEqual(2);\n      |                                                           ^\n  143 |         expect(difference.mean, id + ' restore mean error').toBeLessThan(0.001);\n  144 |       }\n  145 |       // Water must remain visible when the supported wave controls reach their\n    at E:\\Project\\shaderTutorial\\tests\\browser\\fast-procedural-ocean.spec.ts:142:59"
+              }
+            ],
+            "attachments": [
+              {
+                "name": "screenshot",
+                "contentType": "image/png",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\monster-test-results\\fast-procedural-ocean-Very-3ece2-al-ocean-webgl-画面、五个参数与素材来源-desktop-chromium\\test-failed-1.png"
+              },
+              {
+                "name": "error-context",
+                "contentType": "text/markdown",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\monster-test-results\\fast-procedural-ocean-Very-3ece2-al-ocean-webgl-画面、五个参数与素材来源-desktop-chromium\\error-context.md"
+              },
+              {
+                "name": "trace",
+                "contentType": "application/zip",
+                "path": "E:\\Project\\shaderTutorial\\output\\playwright\\monster-test-results\\fast-procedural-ocean-Very-3ece2-al-ocean-webgl-画面、五个参数与素材来源-desktop-chromium\\trace.zip"
+              }
+            ]
+          },
+          {
+            "status": "passed",
+            "durationMs": 3895,
+            "errors": [],
+            "attachments": []
+          }
+        ]
+      }
+    ],
+    "maxRestore": 0,
+    "maxMeanRestore": 0,
+    "skippedReason": "Two pre-existing Pretty Hip mobile sharpness cases require a fixed desktop width.",
+    "metric": "Frozen time2 CSS-pixel screenshot excludes only three outer pixels for appearance analysis. Nonuniform cyan/green colors and bounded black/white coverage reject blank/wrong-color output. All five controls must change pixels and restore with maxRGBA<=2 and mean<0.001; restore comparison uses the complete canvas."
+  }
+}
