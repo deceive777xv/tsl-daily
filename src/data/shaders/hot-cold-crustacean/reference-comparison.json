@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-17",
+  "sourceTime": 7,
+  "sourceUnmodified": true,
+  "sourceMatches": true,
+  "sourceGlError": 0,
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 105,
+    "meanRGBByteDifference": 0.005728652263374485,
+    "fractionChannelsOver10": 0.00000257201646090535
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 105,
+    "meanRGBByteDifference": 0.00020627572016460906,
+    "fractionChannelsOver10": 0.000001286008230452675
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Unmodified original RGB in an opaque WebGL2 wrapper, same defaults at 1440x900/source time7. TSL guards radial division, uses 1 for zero exponent and signed y instead of pow(y,1), preserves sequential RGB coordinate mutation and unbounded mix, and adds five teaching controls. Floating-point and threshold/iteration differences remain; no pixel identity claim."
+}

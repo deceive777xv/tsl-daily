@@ -31,3 +31,4 @@ src/data/shaders/branchless-voxel/mirror.json
 src/data/shaders/branchless-voxel/upstream/
 
 src/data/shaders/monster/mirror.json
+src/data/shaders/hot-cold-crustacean/mirror.json
