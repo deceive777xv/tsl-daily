@@ -66,3 +66,6 @@ src/data/shaders/branchless-voxel/upstream/* -text -whitespace
 
 src/data/shaders/monster/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/monster/original.glsl -text -whitespace
+
+src/data/shaders/hot-cold-crustacean/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/hot-cold-crustacean/original.glsl -text -whitespace
