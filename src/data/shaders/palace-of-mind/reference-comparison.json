@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-18",
+  "sourceTime": 2,
+  "sourceUnmodified": true,
+  "sourceMatches": true,
+  "sourceGlError": 0,
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 222,
+    "meanRGBByteDifference": 0.013640689300411523,
+    "fractionChannelsOver10": 0.0001044238683127572
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 245,
+    "meanRGBByteDifference": 2.9312572016460905,
+    "fractionChannelsOver10": 0.04717618312757202
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Unmodified original RGB in an opaque WebGL2 wrapper, same defaults at 1440x900/source time2. TSL preserves signed steps, transform ordering, camera basis, four folds and source grading; it guards degenerate normal length and saturated reciprocal stripe limits, displays original RGB opaquely and adds five teaching controls. Floating-point and threshold/iteration differences remain; no pixel identity claim.",
+  "visualReview": {
+    "originalAndBothBackendsInspected": true,
+    "defaultSourceTime": 2,
+    "scope": "Default1440x900 only. Main foreground beams, blue grading and light-band idea agree; some distant structures visibly differ in WebGPU. Cross-backend meanRGB byte difference2.9312572016 and fraction over10=0.0471761831 are retained, not described as pixel identity. No single numerical root cause has been proved and no hash/geometry replacement was made."
+  }
+}
