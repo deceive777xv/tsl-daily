@@ -72,3 +72,6 @@ src/data/shaders/hot-cold-crustacean/original.glsl -text -whitespace
 
 src/data/shaders/palace-of-mind/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/palace-of-mind/original.glsl -text -whitespace
+
+src/data/shaders/voronoise/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/voronoise/original.glsl -text -whitespace
