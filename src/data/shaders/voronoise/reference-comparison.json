@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-19",
+  "sourceTime": 4,
+  "sourceUnmodified": true,
+  "sourceMatches": true,
+  "sourceGlError": 0,
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 1,
+    "meanRGBByteDifference": 0.03320447530864198,
+    "fractionChannelsOver10": 0
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 52,
+    "meanRGBByteDifference": 0.0002993827160493827,
+    "fractionChannelsOver10": 0.000006172839506172839
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Unmodified original RGB in an opaque WebGL2 wrapper, same defaults at 1440x900/source time4. TSL preserves hash constants, neighbor order, weights and ratio, cosine driver and three cubic smoothings. An exactly zero weight sum returns finite black. Default no-mouse grayscale is preserved; five teaching controls replace the direct mouse override. Sine hash and high-exponent floating-point differences remain; no pixel identity claim.",
+  "visualReview": {
+    "originalAndBothBackendsInspected": true,
+    "defaultSourceTime": 4,
+    "scope": "Default1440x900 only; irregular grayscale cells, relative brightness and blending agree visually. OriginalGLSL toTSLWebGL2 max1/mean0.0332044753; WebGPU toWebGL2 max52/mean0.0002993827 with6.17284e-6 channel fraction over10. Sparse differences retained; no pixel-identity or single numerical root-cause claim."
+  }
+}

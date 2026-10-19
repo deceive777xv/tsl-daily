@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-19",
+  "browserVersion": "151.0.7922.34",
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "device": "",
+    "description": "",
+    "fallback": false
+  },
+  "runs": [
+    {
+      "mobile": false,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "1440x900",
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": false,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "1440x900",
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": true,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "412x915",
+      "canvas": "618x1372",
+      "effectiveDpr": 1.5,
+      "averageMs": 6.06,
+      "p95Ms": 6.2,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": true,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "412x915",
+      "canvas": "618x1372",
+      "effectiveDpr": 1.5,
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "horizontalOverflow": 0
+    }
+  ],
+  "autoDprUnderLoad": {
+    "before": 1,
+    "after": 0.8,
+    "method": "130 frames with controlled 45ms main-thread load; verifies DPR response, not natural shader cost."
+  },
+  "errors": [],
+  "hardware": {
+    "cpu": "AMD Ryzen 9 7950X3D 16-Core Processor",
+    "gpus": ["AMD Radeon(TM) Graphics", "NVIDIA GeForce RTX 4080 SUPER"],
+    "verified": "2026-10-19T12:39:34.9077809+00:00",
+    "method": "Win32_Processor and Win32_VideoController"
+  },
+  "method": "120 requestAnimationFrame intervals after 3 seconds warmup, one case at a time; browser scheduling only, not GPU timestamps or physical-mobile performance."
+}
