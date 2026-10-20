@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-20",
+  "sourceTime": 7,
+  "sourceUnmodified": true,
+  "sourceMatches": true,
+  "sourceGlError": 0,
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 237,
+    "meanRGBByteDifference": 0.017126028806584363,
+    "fractionChannelsOver10": 0.00022865226337448558
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 237,
+    "meanRGBByteDifference": 0.015777263374485595,
+    "fractionChannelsOver10": 0.00022813786008230453
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Original GLSL RGB preserved in an opaque WebGL2 wrapper, same default 100 particles/source time7. TSL preserves integer division, phase/hash constants, loop order, radial position and incremental color blending. Finite reciprocal and normalization guards plus explicit descending cubic replace undefined center/edge cases; five teaching controls and opaque output. No pixel identity or floating-point cause claim."
+}
