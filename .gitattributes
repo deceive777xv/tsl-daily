@@ -75,3 +75,6 @@ src/data/shaders/palace-of-mind/original.glsl -text -whitespace
 
 src/data/shaders/voronoise/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/voronoise/original.glsl -text -whitespace
+
+src/data/shaders/particle-experiment-7/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/particle-experiment-7/original.glsl -text -whitespace
