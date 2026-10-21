@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-21",
+  "browserVersion": "151.0.7922.34",
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "device": "",
+    "description": "",
+    "fallback": false
+  },
+  "runs": [
+    {
+      "mobile": false,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "1440x900",
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "averageMs": 6.06,
+      "p95Ms": 6.2,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": false,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "1440x900",
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "averageMs": 6.06,
+      "p95Ms": 6.2,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": true,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "412x915",
+      "canvas": "618x1372",
+      "effectiveDpr": 1.5,
+      "averageMs": 6.06,
+      "p95Ms": 6.2,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": true,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "412x915",
+      "canvas": "618x1372",
+      "effectiveDpr": 1.5,
+      "averageMs": 6.06,
+      "p95Ms": 6.2,
+      "horizontalOverflow": 0
+    }
+  ],
+  "autoDprUnderLoad": {
+    "before": 1,
+    "after": 0.8
+  },
+  "errors": [],
+  "hardware": {
+    "cpu": ["AMD Ryzen 9 7950X3D 16-Core Processor          "],
+    "gpus": ["AMD Radeon(TM) Graphics", "NVIDIA GeForce RTX 4080 SUPER"],
+    "capturedUTC": "2026-10-21T12:47:21.2755274+00:00"
+  },
+  "method": "3 second warmup, then 120 independent RAF intervals per configuration; browser scheduling, not GPU timestamps or real phone performance."
+}

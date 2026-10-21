@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-21",
+  "sourceTime": 2,
+  "sourceUnmodified": true,
+  "sourceMatches": true,
+  "sourceGlError": 0,
+  "browserVersion": "151.0.7922.34",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 86,
+    "meanRGBByteDifference": 0.08189634773662552,
+    "fractionChannelsOver10": 0.0011705246913580247
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 19,
+    "meanRGBByteDifference": 0.00036754115226337447,
+    "fractionChannelsOver10": 0.0000028292181069958848
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Unmodified original RGB in opaque WebGL2 at source time2. TSL carries Hit and cumulative glow explicitly, preserving primitive geometry, material IDs, row-vector rotations, ray budgets and four AA samples. Finite guards and opaque/clamped RGB are disclosed; no pixel identity or single-cause claim."
+}
