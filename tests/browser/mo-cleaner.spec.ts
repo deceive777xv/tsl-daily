@@ -4,7 +4,10 @@ for (const backend of ['webgl', 'webgpu'] as const) {
   test(
     'M-O (from Wall-E) ' + backend + ' 清扫机器人、五个参数与来源',
     async ({ page }, testInfo) => {
-      test.setTimeout(120_000);
+      // CI software WebGL renders four AA samples per pixel, including every
+      // clock step and parameter restore. Keep the same image checks and allow
+      // these frames to finish on slower runners.
+      test.setTimeout(process.env.CI ? 180_000 : 120_000);
       const errors: string[] = [];
       const external: string[] = [];
       page.on('pageerror', (error) => errors.push(error.message));
