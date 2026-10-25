@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-25",
+  "sourceTime": 2,
+  "sourceUnmodified": true,
+  "sourceMatches": true,
+  "sourceGlError": 0,
+  "browserVersion": "151.0.7922.34",
+  "input": "The SAME locally generated cubemap in source and TSL; original input image was never fetched.",
+  "sourceToTsl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 8,
+    "meanRGBByteDifference": 0.022192644032921812,
+    "fractionChannelsOver10": 0
+  },
+  "webgpuToWebgl": {
+    "width": 1440,
+    "height": 900,
+    "maxByteDifference": 47,
+    "meanRGBByteDifference": 0.011710390946502058,
+    "fractionChannelsOver10": 0.0000015432098765432098
+  },
+  "errors": [],
+  "warnings": [],
+  "note": "Original 110-line GLSL unchanged. Default camera, arcs, cell orientation, 64-step order and display RGB are compared. Finite guards, display clamping/sRGB decoding and five teaching controls are disclosed; no pixel identity or single-cause claim."
+}

@@ -81,3 +81,6 @@ src/data/shaders/particle-experiment-7/original.glsl -text -whitespace
 
 src/data/shaders/mo-cleaner/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/mo-cleaner/original.glsl -text -whitespace
+
+src/data/shaders/truchet-tentacles/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/truchet-tentacles/original.glsl -text -whitespace
