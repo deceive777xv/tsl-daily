@@ -1,0 +1,816 @@
+{
+  "date": "2026-10-25",
+  "approval": {
+    "title": "Truchet Tentacles",
+    "author": "WAHa_06x36",
+    "id": "ldfGWn",
+    "humanReply": "批准",
+    "context": "Directly following this chat sole exact-title/ID candidate; unique pending target, latest main and all35 PRs checked before branching.",
+    "base": "f9f694105d434a467e61c88fcb8836522adf6646",
+    "branch": "codex/truchet-tentacles",
+    "scope": "One independent case PR; preserve original source and replace unverified original cubemap with a new locally generated deterministic environment. Never merge or publish."
+  },
+  "source": {
+    "mirror": "GabeRundlett/shadertoy-api-shaders",
+    "commit": "f6d538adf936215ccf2d11ba9b4a6c79ccb448c5",
+    "initialDownload": "2024-10-05",
+    "fileCommit": "2025-05-29T06:43:53Z",
+    "retrievedReviewedApproved": "2026-10-25",
+    "historicalLikes": 268,
+    "historicalViews": 41870,
+    "metricsSamplingDate": "unknown",
+    "license": "Shadertoy default CC BY-NC-SA3.0 based on the approved old mirror snapshot, not an explicit header grant/current author confirmation",
+    "fullPassReview": "All110 lines soleImage plus fullmetadata; no customrestriction/declaredcopiedupstream; onlyexternalinput is separately unverified cubemap, never downloaded/copied/hosted",
+    "currentAccess": "HTTP402 via web tool; no bypass; current code, author confirmation and metrics unverified",
+    "mirrorBytes": 5037,
+    "mirrorSHA256": "dee1f020bffa7908626adb98099e214e6ff19d47fcf3f4a0306d757e8e92a452",
+    "sourceBytes": 3094,
+    "sourceSHA256": "4a56036a61dafae5a4c94e2c28b7fa8327149f77c817da57bcea8b1f609aff45",
+    "gitBlob": "9d5ff28cb3690c61a6c2122a701d15e27980f200"
+  },
+  "capture": {
+    "gpu": "webgpu",
+    "gl": "webgl2",
+    "adapter": {
+      "vendor": "nvidia",
+      "architecture": "lovelace",
+      "device": "",
+      "description": "",
+      "fallback": false
+    },
+    "warnings": [],
+    "browserVersion": "151.0.7922.34"
+  },
+  "reference": {
+    "date": "2026-10-25",
+    "sourceTime": 2,
+    "sourceUnmodified": true,
+    "sourceMatches": true,
+    "sourceGlError": 0,
+    "browserVersion": "151.0.7922.34",
+    "input": "The SAME locally generated cubemap in source and TSL; original input image was never fetched.",
+    "sourceToTsl": {
+      "width": 1440,
+      "height": 900,
+      "maxByteDifference": 8,
+      "meanRGBByteDifference": 0.022192644032921812,
+      "fractionChannelsOver10": 0
+    },
+    "webgpuToWebgl": {
+      "width": 1440,
+      "height": 900,
+      "maxByteDifference": 47,
+      "meanRGBByteDifference": 0.011710390946502058,
+      "fractionChannelsOver10": 0.0000015432098765432098
+    },
+    "errors": [],
+    "warnings": [],
+    "note": "Original 110-line GLSL unchanged. Default camera, arcs, cell orientation, 64-step order and display RGB are compared. Finite guards, display clamping/sRGB decoding and five teaching controls are disclosed; no pixel identity or single-cause claim."
+  },
+  "extremes": {
+    "date": "2026-10-25",
+    "purpose": "Odd dimensions exercise continuous tube tracing and both control extremes. All five controls are also driven to their HTML min/max bounds; frozen source time2. PNG byte observations are output evidence, not raw floating-point GPU readback.",
+    "runs": [
+      {
+        "requested": "webgpu",
+        "backend": "webgpu",
+        "mode": "default",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001,
+          "cssHeight": 601
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [25, 28, 30, 255],
+        "nonblackFraction": 1
+      },
+      {
+        "requested": "webgpu",
+        "backend": "webgpu",
+        "mode": "min",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001,
+          "cssHeight": 601
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [0, 0, 0, 255],
+        "nonblackFraction": 0.8535324908037054
+      },
+      {
+        "requested": "webgpu",
+        "backend": "webgpu",
+        "mode": "max",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001,
+          "cssHeight": 601
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [188, 212, 214, 255],
+        "nonblackFraction": 1
+      },
+      {
+        "requested": "webgl",
+        "backend": "webgl2",
+        "mode": "default",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001,
+          "cssHeight": 601
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [25, 28, 30, 255],
+        "nonblackFraction": 1
+      },
+      {
+        "requested": "webgl",
+        "backend": "webgl2",
+        "mode": "min",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001,
+          "cssHeight": 601
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [0, 0, 0, 255],
+        "nonblackFraction": 0.8535391397288236
+      },
+      {
+        "requested": "webgl",
+        "backend": "webgl2",
+        "mode": "max",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001,
+          "cssHeight": 601
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [188, 212, 214, 255],
+        "nonblackFraction": 1
+      }
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "nativeTab": {
+    "start": {
+      "hidden": false,
+      "submits": 458,
+      "playLabel": "暂停动画"
+    },
+    "end": {
+      "hidden": false,
+      "submits": 458,
+      "playLabel": "暂停动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 562,
+      "playLabel": "暂停动画"
+    },
+    "verified": false
+  },
+  "controlled": {
+    "start": {
+      "hidden": true,
+      "submits": 566,
+      "playLabel": "播放动画"
+    },
+    "end": {
+      "hidden": true,
+      "submits": 566,
+      "playLabel": "播放动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 702,
+      "playLabel": "暂停动画"
+    },
+    "verified": true
+  },
+  "reducedMotion": {
+    "initialBackend": null,
+    "posterLoaded": true,
+    "manualBackend": "webgpu",
+    "manualLabel": "暂停动画"
+  },
+  "media": {
+    "poster": "truchet-tentacles.webp",
+    "posterBytes": 86108,
+    "posterWidth": 960,
+    "posterHeight": 600,
+    "posterQuality": 92,
+    "posterSHA256": "0de2824b26193a76c85a1a621a4c2d919a6ede377fc58626022db78bfb04999d",
+    "loop": "truchet-tentacles.webm",
+    "loopBytes": 879514,
+    "loopSHA256": "6a4551a1ba66419662e6159287a061b9e2f030d48c34b4fa135118a29c88b40f",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vp9",
+          "width": 960,
+          "height": 600,
+          "r_frame_rate": "25/1",
+          "nb_read_frames": "188"
+        }
+      ],
+      "format": {
+        "duration": "7.520000",
+        "size": "879514"
+      }
+    },
+    "recordingSpeed": 0.6,
+    "forwardFrames": 94,
+    "reverseFrames": 94,
+    "method": "Actual non-fallback WebGPU TSL canvas captureStream/MediaRecorder, then first94 frames plus reverse, VP9/CRF35, 25fps, no audio. Reverse is preview editing only."
+  },
+  "tests": {
+    "full": {
+      "stats": {
+        "startTime": "2026-10-25T12:48:05.234Z",
+        "duration": 420477.509,
+        "expected": 131,
+        "skipped": 2,
+        "unexpected": 0,
+        "flaky": 3
+      },
+      "cases": [
+        {
+          "project": "desktop-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 3948,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 253.33333333333334,
+            "colorfulFraction": 0.5539710389650365,
+            "blackFraction": 0,
+            "whiteFraction": 0.003996103936079926,
+            "meanRGB": [85.40732776627134, 95.12810179016661, 96.84755220769627]
+          },
+          "restores": [
+            {
+              "id": "truchet-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-thickness",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-section",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-reflection",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "desktop-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4066,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 253.33333333333334,
+            "colorfulFraction": 0.5540523901868439,
+            "blackFraction": 0,
+            "whiteFraction": 0.003998302617750396,
+            "meanRGB": [85.40719144800778, 95.12821282359097, 96.84756320110462]
+          },
+          "restores": [
+            {
+              "id": "truchet-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-thickness",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-section",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-reflection",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 2416,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 253.66666666666666,
+            "colorfulFraction": 0.561990313366726,
+            "blackFraction": 0,
+            "whiteFraction": 0.004346566212691973,
+            "meanRGB": [86.95638945233266, 95.98903896533983, 97.52928757709981]
+          },
+          "restores": [
+            {
+              "id": "truchet-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-thickness",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-section",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-reflection",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 2567,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 253.66666666666666,
+            "colorfulFraction": 0.561978485975671,
+            "blackFraction": 0,
+            "whiteFraction": 0.004349523060455709,
+            "meanRGB": [86.9565816474373, 95.9886575319783, 97.52884404993524]
+          },
+          "restores": [
+            {
+              "id": "truchet-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-thickness",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-section",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-reflection",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        }
+      ],
+      "nonPassing": [
+        {
+          "file": "filtering-procedurals.spec.ts",
+          "title": "Filtering procedurals webgl 材质过滤、五个参数与 MIT 来源",
+          "project": "desktop-chromium",
+          "status": "flaky",
+          "attempts": [
+            {
+              "status": "failed",
+              "durationMs": 2037,
+              "errors": [
+                {
+                  "location": {
+                    "file": "E:\\Project\\shaderTutorial\\tests\\browser\\filtering-procedurals.spec.ts",
+                    "column": 68,
+                    "line": 106
+                  },
+                  "message": "Error: filtering-samples restore maximum byte error\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m3\u001b[39m\n\n  104 |           [before.toString('base64'), restored.toString('base64')],\n  105 |         );\n> 106 |         expect(difference.max, id + ' restore maximum byte error').toBeLessThanOrEqual(2);\n      |                                                                    ^\n  107 |         expect(difference.mean, id + ' restore mean byte error').toBeLessThan(0.001);\n  108 |       }\n  109 |\n    at E:\\Project\\shaderTutorial\\tests\\browser\\filtering-procedurals.spec.ts:106:68"
+                }
+              ],
+              "attachments": [
+                {
+                  "name": "screenshot",
+                  "contentType": "image/png",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\truchet-test-results\\filtering-procedurals-Filt-c38b5-als-webgl-材质过滤、五个参数与-MIT-来源-desktop-chromium\\test-failed-1.png"
+                },
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\truchet-test-results\\filtering-procedurals-Filt-c38b5-als-webgl-材质过滤、五个参数与-MIT-来源-desktop-chromium\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\truchet-test-results\\filtering-procedurals-Filt-c38b5-als-webgl-材质过滤、五个参数与-MIT-来源-desktop-chromium\\trace.zip"
+                }
+              ]
+            },
+            {
+              "status": "passed",
+              "durationMs": 3045,
+              "errors": [],
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "file": "flux-core.spec.ts",
+          "title": "Flux Core webgl 螺旋结构、五个参数与 CC0 来源",
+          "project": "desktop-chromium",
+          "status": "flaky",
+          "attempts": [
+            {
+              "status": "failed",
+              "durationMs": 2487,
+              "errors": [
+                {
+                  "location": {
+                    "file": "E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts",
+                    "column": 66,
+                    "line": 104
+                  },
+                  "message": "Error: flux-speed restore maximum byte error\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m68\u001b[39m\n\n  102 |       );\n  103 |       restores.push({ id, ...difference });\n> 104 |       expect(difference.max, id + ' restore maximum byte error').toBeLessThanOrEqual(2);\n      |                                                                  ^\n  105 |       expect(difference.mean, id + ' restore mean byte error').toBeLessThan(0.001);\n  106 |     }\n  107 |\n    at E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts:104:66"
+                }
+              ],
+              "attachments": [
+                {
+                  "name": "screenshot",
+                  "contentType": "image/png",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\truchet-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\test-failed-1.png"
+                },
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\truchet-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\truchet-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\trace.zip"
+                }
+              ]
+            },
+            {
+              "status": "passed",
+              "durationMs": 4857,
+              "errors": [],
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "file": "flux-core.spec.ts",
+          "title": "Flux Core webgl 螺旋结构、五个参数与 CC0 来源",
+          "project": "mobile-chromium",
+          "status": "flaky",
+          "attempts": [
+            {
+              "status": "failed",
+              "durationMs": 4271,
+              "errors": [
+                {
+                  "location": {
+                    "file": "E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts",
+                    "column": 66,
+                    "line": 104
+                  },
+                  "message": "Error: flux-speed restore maximum byte error\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m40\u001b[39m\n\n  102 |       );\n  103 |       restores.push({ id, ...difference });\n> 104 |       expect(difference.max, id + ' restore maximum byte error').toBeLessThanOrEqual(2);\n      |                                                                  ^\n  105 |       expect(difference.mean, id + ' restore mean byte error').toBeLessThan(0.001);\n  106 |     }\n  107 |\n    at E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts:104:66"
+                }
+              ],
+              "attachments": [
+                {
+                  "name": "screenshot",
+                  "contentType": "image/png",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\truchet-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-mobile-chromium\\test-failed-1.png"
+                },
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\truchet-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-mobile-chromium\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\truchet-test-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-mobile-chromium\\trace.zip"
+                }
+              ]
+            },
+            {
+              "status": "passed",
+              "durationMs": 10890,
+              "errors": [],
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "maxRestore": 0,
+      "maxMeanRestore": 0
+    },
+    "isolated": {
+      "stats": {
+        "startTime": "2026-10-25T12:56:34.739Z",
+        "duration": 15175.846,
+        "expected": 4,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "project": "desktop-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4297,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 253.33333333333334,
+            "colorfulFraction": 0.5539710389650365,
+            "blackFraction": 0,
+            "whiteFraction": 0.003996103936079926,
+            "meanRGB": [85.40732776627134, 95.12810179016661, 96.84755220769627]
+          },
+          "restores": [
+            {
+              "id": "truchet-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-thickness",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-section",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-reflection",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "desktop-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4041,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 253.33333333333334,
+            "colorfulFraction": 0.5540523901868439,
+            "blackFraction": 0,
+            "whiteFraction": 0.003998302617750396,
+            "meanRGB": [85.40719144800778, 95.12821282359097, 96.84756320110462]
+          },
+          "restores": [
+            {
+              "id": "truchet-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-thickness",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-section",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-reflection",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 2766,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 253.66666666666666,
+            "colorfulFraction": 0.561990313366726,
+            "blackFraction": 0,
+            "whiteFraction": 0.004346566212691973,
+            "meanRGB": [86.95638945233266, 95.98903896533983, 97.52928757709981]
+          },
+          "restores": [
+            {
+              "id": "truchet-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-thickness",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-section",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-reflection",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 2588,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 253.66666666666666,
+            "colorfulFraction": 0.561978485975671,
+            "blackFraction": 0,
+            "whiteFraction": 0.004349523060455709,
+            "meanRGB": [86.9565816474373, 95.9886575319783, 97.52884404993524]
+          },
+          "restores": [
+            {
+              "id": "truchet-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-thickness",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-section",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "truchet-reflection",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        }
+      ],
+      "nonPassing": [],
+      "maxRestore": 0,
+      "maxMeanRestore": 0
+    }
+  },
+  "finalMedia": {
+    "date": "2026-10-25",
+    "purpose": "Final media was rebuilt into dist after capture; verify served exact asset bytes, reduced-motion poster/manual GPU and actual WebM decoding in desktop and mobile contexts.",
+    "runs": [
+      {
+        "mobile": false,
+        "reducedBackend": null,
+        "manualBackend": "webgpu",
+        "media": {
+          "poster": {
+            "bytes": 86108,
+            "sha256": "0de2824b26193a76c85a1a621a4c2d919a6ede377fc58626022db78bfb04999d"
+          },
+          "loop": {
+            "bytes": 879514,
+            "sha256": "6a4551a1ba66419662e6159287a061b9e2f030d48c34b4fa135118a29c88b40f"
+          }
+        },
+        "video": {
+          "width": 960,
+          "height": 600,
+          "duration": 7.52,
+          "time": 0.30462,
+          "readyState": 4,
+          "error": null
+        },
+        "errors": []
+      },
+      {
+        "mobile": true,
+        "reducedBackend": null,
+        "manualBackend": "webgpu",
+        "media": {
+          "poster": {
+            "bytes": 86108,
+            "sha256": "0de2824b26193a76c85a1a621a4c2d919a6ede377fc58626022db78bfb04999d"
+          },
+          "loop": {
+            "bytes": 879514,
+            "sha256": "6a4551a1ba66419662e6159287a061b9e2f030d48c34b4fa135118a29c88b40f"
+          }
+        },
+        "video": {
+          "width": 960,
+          "height": 600,
+          "duration": 7.52,
+          "time": 0.1588,
+          "readyState": 4,
+          "error": null
+        },
+        "errors": []
+      }
+    ]
+  }
+}
