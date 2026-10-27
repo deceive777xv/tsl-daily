@@ -1,0 +1,50 @@
+{
+  "mirror": {
+    "bytes": 15232,
+    "sha256": "5178d554b7df57f950b08fc882e0a739f3d2fd4eda82facc6d4dbe0cd2b115a1",
+    "gitBlob": "92e1c560b506abd3a734f26251c9aa93a3c17981"
+  },
+  "sources": [
+    {
+      "file": "original.glsl",
+      "pass": "Image",
+      "type": "image",
+      "bytes": 1548,
+      "sha256": "fc13e2b149858e5f98ed60e46d271a23d86cb5f1a2f6e679db075224186e0047"
+    },
+    {
+      "file": "original-common.glsl",
+      "pass": "Common",
+      "type": "common",
+      "bytes": 5413,
+      "sha256": "4c655e4ff6890c7751b65c74deb22838ee0bea8f713f5d56fb1807f851d50223"
+    },
+    {
+      "file": "original-buffer-a.glsl",
+      "pass": "Buffer A",
+      "type": "buffer",
+      "bytes": 662,
+      "sha256": "d1c978984dc552472b449e2aeb56626a38b67763d55e7a1f0fbd1dc0b3971477"
+    },
+    {
+      "file": "original-buffer-b.glsl",
+      "pass": "Buffer B",
+      "type": "buffer",
+      "bytes": 712,
+      "sha256": "6c57a27286eb7ea9c7df9410d96b24d4e75be83b14ac295325980eb577676287"
+    },
+    {
+      "file": "original-buffer-c.glsl",
+      "pass": "Buffer C",
+      "type": "buffer",
+      "bytes": 594,
+      "sha256": "d4691b78e49bf62616a1a972e2205037df1275799d808230b02276483d69495a"
+    }
+  ],
+  "upstream": {
+    "id": "4djSRW",
+    "pass": "Common",
+    "bytes": 4772,
+    "sha256": "5ff442550613d6fd66318325bc227a4e2952233a9cdb1529557029d21ff450fa"
+  }
+}
