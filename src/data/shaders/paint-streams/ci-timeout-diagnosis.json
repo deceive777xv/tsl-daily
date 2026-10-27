@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-27",
+  "firstHead": "3aa72a6f628a55ff97f4474b267f51aacc0b109d",
+  "run": {
+    "id": 40492588487,
+    "url": "https://github.com/deceive777xv/tsl-daily/actions/runs/40492588487",
+    "status": "completed",
+    "conclusion": "failure"
+  },
+  "mobile": {
+    "jobId": 122149953578,
+    "result": {
+      "passed": 44,
+      "skipped": 25,
+      "failed": 1
+    },
+    "failedTest": "Paint streams webgl",
+    "attempts": 2,
+    "timeoutMs": 180000
+  },
+  "desktop": {
+    "jobId": 122149953186,
+    "result": "cancelled at the 25-minute job limit after two Paint streams WebGL2 180-second test timeouts",
+    "jobStartedAt": "2026-10-27T10:58:24Z",
+    "browserStartedAt": "2026-10-27T11:06:22Z",
+    "cancelledLogAt": "2026-10-27T11:23:39.3732898Z"
+  },
+  "traces": [
+    {
+      "viewport": "desktop",
+      "attempt": 0,
+      "trace": "output\\playwright\\paint-ci-first-failure\\desktop\\output\\playwright\\test-results\\paint-streams-Paint-streams-webgl-反馈液流、暂停、参数重演与重置-desktop-chromium\\trace.zip",
+      "traceSHA256": "92961f66ae9626e248295f4307fb46dd60d2c247826dcc6a8e5a33543b7d5e6f",
+      "completedWaitsMs": {
+        "initialReadiness": 47498.62,
+        "afterGravityInput": 47078.31,
+        "afterPressureInput": 47277.11
+      },
+      "failure": "Overall 180000 ms test deadline while waiting for the canvas after the diffusion input; the completed parameter change and restore assertions had no failures.",
+      "note": "Browser operation wall-clock waits, not GPU profiling. Failed action duration includes interruption/cleanup and is not treated as a completed replay time."
+    },
+    {
+      "viewport": "desktop",
+      "attempt": 1,
+      "trace": "output\\playwright\\paint-ci-first-failure\\desktop\\output\\playwright\\test-results\\paint-streams-Paint-streams-webgl-反馈液流、暂停、参数重演与重置-desktop-chromium-retry1\\trace.zip",
+      "traceSHA256": "7c484dfea3d55c1c4bae5f61ff342811f8da3b21aacfb5a2f09d61fe2ff10095",
+      "completedWaitsMs": {
+        "initialReadiness": 47145.96,
+        "afterGravityInput": 46662.59,
+        "afterPressureInput": 46866.26
+      },
+      "failure": "Overall 180000 ms test deadline while waiting for the canvas after the diffusion input; the completed parameter change and restore assertions had no failures.",
+      "note": "Browser operation wall-clock waits, not GPU profiling. Failed action duration includes interruption/cleanup and is not treated as a completed replay time."
+    },
+    {
+      "viewport": "mobile",
+      "attempt": 0,
+      "trace": "output\\playwright\\paint-ci-first-failure\\mobile\\output\\playwright\\test-results\\paint-streams-Paint-streams-webgl-反馈液流、暂停、参数重演与重置-mobile-chromium\\trace.zip",
+      "traceSHA256": "e699d8bdde30e3093ba497f1ccc201f5ed7ff61b44c4219e177b016dcb0938e4",
+      "completedWaitsMs": {
+        "initialReadiness": 50182.37,
+        "afterGravityInput": 50651.73,
+        "afterPressureInput": 50981.19
+      },
+      "failure": "Overall 180000 ms test deadline while waiting for the canvas after the diffusion input; the completed parameter change and restore assertions had no failures.",
+      "note": "Browser operation wall-clock waits, not GPU profiling. Failed action duration includes interruption/cleanup and is not treated as a completed replay time."
+    },
+    {
+      "viewport": "mobile",
+      "attempt": 1,
+      "trace": "output\\playwright\\paint-ci-first-failure\\mobile\\output\\playwright\\test-results\\paint-streams-Paint-streams-webgl-反馈液流、暂停、参数重演与重置-mobile-chromium-retry1\\trace.zip",
+      "traceSHA256": "894e36f11aca248e789deb29b2ceb1b7403257e966e30557ff094b29589aa43f",
+      "completedWaitsMs": {
+        "initialReadiness": 50604.1,
+        "afterGravityInput": 50731.9,
+        "afterPressureInput": 50625.85
+      },
+      "failure": "Overall 180000 ms test deadline while waiting for the canvas after the diffusion input; the completed parameter change and restore assertions had no failures.",
+      "note": "Browser operation wall-clock waits, not GPU profiling. Failed action duration includes interruption/cleanup and is not treated as a completed replay time."
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 12730578046,
+      "name": "site-preview-37-desktop-chromium",
+      "bytes": 109742037,
+      "expiresAt": "2026-11-10T11:23:39Z",
+      "digest": "sha256:066f949a4d4ad75b8f00f1a1a028d46ddec535228a3ab98a251e37feb9854c5f",
+      "url": "https://github.com/deceive777xv/tsl-daily/actions/runs/40492588487/artifacts/12730578046"
+    },
+    {
+      "id": 12730457474,
+      "name": "site-preview-37-mobile-chromium",
+      "bytes": 141252155,
+      "expiresAt": "2026-11-10T11:19:52Z",
+      "digest": "sha256:f9d7b42091fb716bb23db0456abf02c05e70ef1c0789497080a187fbfa6c52f1",
+      "url": "https://github.com/deceive777xv/tsl-daily/actions/runs/40492588487/artifacts/12730457474"
+    }
+  ],
+  "archive": "output/playwright/paint-ci-first-failure",
+  "adjustment": {
+    "caseTimeoutMs": {
+      "localBefore": 180000,
+      "localAfter": 180000,
+      "ciBefore": 180000,
+      "ciAfter": 360000
+    },
+    "browserJobMinutes": {
+      "before": 25,
+      "after": 35
+    },
+    "productionCodeChanged": false,
+    "resolutionOrStepCountChanged": false,
+    "assertionsOrTolerancesChanged": false,
+    "rationale": "The initial solve and three physical-parameter replays share one test deadline. Four same-sized solves at the repeatedly observed 47-51 second waits are expected to exceed 180 seconds; 360 seconds leaves room for unchanged image checks and playback. The desktop setup already took about eight minutes, while the latest successful main desktop browser step took about sixteen minutes, so the complete job needs space for this additional feedback case.",
+    "finalVerification": "See PR #37 for the final exact-head run; this file preserves the original failures and evidence, not a declaration of final CI success."
+  }
+}

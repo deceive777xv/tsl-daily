@@ -526,5 +526,275 @@
     "src/shaders/runtime.ts": "c6063eb7d62d1159e60c53d3ca0390782c2d1178df0c2347fbd97cf9172bc96c",
     "src/shaders/types.ts": "5c4d5d794f9d97eebd00c60173318b7398edea06761d31d571f12d08a054097b",
     "tests/browser/paint-streams.spec.ts": "8dbc47de3a3dcccf14282ea7808672450d8e68dd04951a52d4b8ce5bd31db71f"
+  },
+  "testedCoreSHA256Scope": "Full local regression before the CI-only test timeout adjustment; final test-file hash and isolated CI-mode results are recorded separately in budgetValidation.",
+  "firstRemoteCIDiagnosis": "ci-timeout-diagnosis.json",
+  "budgetValidation": {
+    "date": "2026-10-27",
+    "environment": {
+      "CI": "1",
+      "ASTRO_PREVIEW_BACKGROUND": "0"
+    },
+    "command": "npm run test:browser -- --config output/playwright/paint-ci-budget.config.ts tests/browser/paint-streams.spec.ts --reporter json",
+    "retries": 0,
+    "quality": {
+      "passed": true,
+      "cases": 33,
+      "unitTests": 5,
+      "astro": {
+        "errors": 0,
+        "warnings": 0,
+        "hints": 56
+      },
+      "log": "output/playwright/paint-quality-budget-clean.log"
+    },
+    "stats": {
+      "startTime": "2026-10-27T11:36:32.390Z",
+      "duration": 18276.253,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "title": "Paint streams webgl 反馈液流、暂停、参数重演与重置",
+        "timeout": 360000,
+        "status": "expected",
+        "project": "desktop-chromium"
+      },
+      {
+        "title": "Paint streams webgpu 反馈液流、暂停、参数重演与重置",
+        "timeout": 360000,
+        "status": "expected",
+        "project": "desktop-chromium"
+      },
+      {
+        "title": "Paint streams webgl 反馈液流、暂停、参数重演与重置",
+        "timeout": 360000,
+        "status": "expected",
+        "project": "mobile-chromium"
+      },
+      {
+        "title": "Paint streams webgpu 反馈液流、暂停、参数重演与重置",
+        "timeout": 360000,
+        "status": "expected",
+        "project": "mobile-chromium"
+      }
+    ],
+    "cases": [
+      {
+        "project": "desktop-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "attemptCount": 1,
+        "firstAttemptStatus": "passed",
+        "durationMs": 3451,
+        "appearance": {
+          "width": 1280,
+          "height": 720,
+          "brightnessRange": 254.66666666666666,
+          "colorfulFraction": 0.18240373072305846,
+          "blackFraction": 0.008585851923186857,
+          "whiteFraction": 0
+        },
+        "restores": [
+          {
+            "id": "paint-gravity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-pressure",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-diffusion",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-highlight",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-speed",
+            "max": 0,
+            "mean": 0
+          }
+        ],
+        "reset": {
+          "max": 0,
+          "mean": 0
+        },
+        "continuation": {
+          "max": 0,
+          "mean": 0
+        }
+      },
+      {
+        "project": "desktop-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "attemptCount": 1,
+        "firstAttemptStatus": "passed",
+        "durationMs": 3391,
+        "appearance": {
+          "width": 1280,
+          "height": 720,
+          "brightnessRange": 254.66666666666666,
+          "colorfulFraction": 0.18239383665554135,
+          "blackFraction": 0.008585851923186857,
+          "whiteFraction": 0
+        },
+        "restores": [
+          {
+            "id": "paint-gravity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-pressure",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-diffusion",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-highlight",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-speed",
+            "max": 0,
+            "mean": 0
+          }
+        ],
+        "reset": {
+          "max": 0,
+          "mean": 0
+        },
+        "continuation": {
+          "max": 0,
+          "mean": 0
+        }
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgl",
+        "status": "passed",
+        "attemptCount": 1,
+        "firstAttemptStatus": "passed",
+        "durationMs": 2896,
+        "appearance": {
+          "width": 412,
+          "height": 839,
+          "brightnessRange": 254.66666666666666,
+          "colorfulFraction": 0.2166423219534119,
+          "blackFraction": 0.004387962081384278,
+          "whiteFraction": 0
+        },
+        "restores": [
+          {
+            "id": "paint-gravity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-pressure",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-diffusion",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-highlight",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-speed",
+            "max": 0,
+            "mean": 0
+          }
+        ],
+        "reset": {
+          "max": 0,
+          "mean": 0
+        },
+        "continuation": {
+          "max": 0,
+          "mean": 0
+        }
+      },
+      {
+        "project": "mobile-chromium",
+        "requested": "webgpu",
+        "status": "passed",
+        "attemptCount": 1,
+        "firstAttemptStatus": "passed",
+        "durationMs": 2789,
+        "appearance": {
+          "width": 412,
+          "height": 839,
+          "brightnessRange": 254.33333333333334,
+          "colorfulFraction": 0.21545662600015375,
+          "blackFraction": 0.004387962081384278,
+          "whiteFraction": 0
+        },
+        "restores": [
+          {
+            "id": "paint-gravity",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-pressure",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-diffusion",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-highlight",
+            "max": 0,
+            "mean": 0
+          },
+          {
+            "id": "paint-speed",
+            "max": 0,
+            "mean": 0
+          }
+        ],
+        "reset": {
+          "max": 0,
+          "mean": 0
+        },
+        "continuation": {
+          "max": 0,
+          "mean": 0
+        }
+      }
+    ],
+    "testedCoreSHA256": {
+      "src/shaders/cases/paint-streams.ts": "691d06fa72ded2efb735d420eaed0537e87dd4d23ded5c6aae524add29cdcb03",
+      "src/shaders/runtime.ts": "c6063eb7d62d1159e60c53d3ca0390782c2d1178df0c2347fbd97cf9172bc96c",
+      "src/shaders/types.ts": "5c4d5d794f9d97eebd00c60173318b7398edea06761d31d571f12d08a054097b",
+      "tests/browser/paint-streams.spec.ts": "d949f5a03c9f10516f3ac59e72b0b2733af64c4aba136d44e3804b82e76790b2",
+      ".github/workflows/ci.yml": "6fb32521c38283840e0203fa380a8812f3ab034a67a23ef440ae93e74d8552fa"
+    },
+    "note": "Only CI test/job budgets changed; production code, grid, steps, media, image assertions and tolerances are unchanged. Full local regression is recorded separately before this adjustment. Initial zero-test preview startup failure was preserved in paint-budget-report.json; the temporary config now sets webServer.cwd explicitly."
   }
 }

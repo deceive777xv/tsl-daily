@@ -4,7 +4,8 @@ for (const backend of ['webgl', 'webgpu'] as const) {
   test(
     'Paint streams ' + backend + ' 反馈液流、暂停、参数重演与重置',
     async ({ page }, testInfo) => {
-      test.setTimeout(180_000);
+      // Software WebGL needs an initial solve and three 600-step parameter replays.
+      test.setTimeout(process.env.CI ? 360_000 : 180_000);
       const errors: string[] = [];
       const external: string[] = [];
       page.on('pageerror', (error) => errors.push(error.message));
