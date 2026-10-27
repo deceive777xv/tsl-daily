@@ -4,8 +4,8 @@ for (const backend of ['webgl', 'webgpu'] as const) {
   test(
     'Paint streams ' + backend + ' 反馈液流、暂停、参数重演与重置',
     async ({ page }, testInfo) => {
-      // Software WebGL needs an initial solve and three 600-step parameter replays.
-      test.setTimeout(process.env.CI ? 360_000 : 180_000);
+      // CI desktop took 5.6 minutes for the initial solve and three 600-step replays.
+      test.setTimeout(process.env.CI ? 480_000 : 180_000);
       const errors: string[] = [];
       const external: string[] = [];
       page.on('pageerror', (error) => errors.push(error.message));
@@ -19,7 +19,7 @@ for (const backend of ['webgl', 'webgpu'] as const) {
       await page.clock.pauseAt(new Date('2026-01-01T01:00:00Z'));
       await page.goto('./shaders/paint-streams/' + (backend === 'webgl' ? '?renderer=webgl' : ''));
       await expect(page.locator('[data-shader-stage]')).toHaveClass(/is-ready/, {
-        timeout: 90_000,
+        timeout: process.env.CI ? 180_000 : 90_000,
       });
       const actual = await page.locator('[data-shader-stage]').getAttribute('data-backend');
       if (backend === 'webgl') expect(actual).toBe('webgl2');
