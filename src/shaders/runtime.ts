@@ -140,7 +140,10 @@ export function bootShaderExperience(root: HTMLElement): void {
   }
 
   function renderOnce(): void {
-    if (renderer && scene && camera) renderer.render(scene, camera);
+    if (renderer && scene && camera) {
+      program?.prepareFrame?.(renderer);
+      renderer.render(scene, camera);
+    }
   }
 
   function applySize(): void {
@@ -254,6 +257,7 @@ export function bootShaderExperience(root: HTMLElement): void {
     timeNode.value = 0;
     pointerNode.value.set(0.5, 0.5);
     resetControls();
+    program?.reset?.();
     renderOnce();
     announce('已恢复默认参数。');
   });

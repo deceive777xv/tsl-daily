@@ -1,0 +1,381 @@
+{
+  "purpose": "All float attachments after the default 600 simulation steps; final diagnostics removed from product source",
+  "runs": [
+    {
+      "requested": "webgpu",
+      "frame": 600,
+      "grid": [400, 250],
+      "buffers": [
+        {
+          "name": "advected",
+          "attachment": 0,
+          "width": 400,
+          "height": 250,
+          "stats": [
+            {
+              "lo": -0.4999847412109375,
+              "hi": 0.4999847412109375,
+              "sum": -11371.560982882977,
+              "nan": 0,
+              "nonzero": 95380
+            },
+            {
+              "lo": -0.4999847412109375,
+              "hi": 0.4999542236328125,
+              "sum": -10884.127496182919,
+              "nan": 0,
+              "nonzero": 99980
+            },
+            {
+              "lo": -1,
+              "hi": 1,
+              "sum": -1678.9613503217697,
+              "nan": 0,
+              "nonzero": 61148
+            },
+            {
+              "lo": -1,
+              "hi": 1,
+              "sum": -7794.220816195011,
+              "nan": 0,
+              "nonzero": 71495
+            }
+          ]
+        },
+        {
+          "name": "advected",
+          "attachment": 1,
+          "width": 400,
+          "height": 250,
+          "stats": [
+            {
+              "lo": 0,
+              "hi": 2.497509241104126,
+              "sum": 9544.97753115582,
+              "nan": 0,
+              "nonzero": 80680
+            },
+            {
+              "lo": 0,
+              "hi": 1.000000238418579,
+              "sum": 24937.679830314188,
+              "nan": 0,
+              "nonzero": 68589
+            },
+            {
+              "lo": 0,
+              "hi": 0,
+              "sum": 0,
+              "nan": 0,
+              "nonzero": 0
+            },
+            {
+              "lo": 0,
+              "hi": 0,
+              "sum": 0,
+              "nan": 0,
+              "nonzero": 0
+            }
+          ]
+        },
+        {
+          "name": "simulated",
+          "attachment": 0,
+          "width": 400,
+          "height": 250,
+          "stats": [
+            {
+              "lo": -0.4999847412109375,
+              "hi": 0.4999847412109375,
+              "sum": -11368.149982094765,
+              "nan": 0,
+              "nonzero": 94731
+            },
+            {
+              "lo": -0.4999847412109375,
+              "hi": 0.4999542236328125,
+              "sum": -10878.911923527718,
+              "nan": 0,
+              "nonzero": 99331
+            },
+            {
+              "lo": -1,
+              "hi": 1,
+              "sum": -1530.5797392725945,
+              "nan": 0,
+              "nonzero": 61294
+            },
+            {
+              "lo": -1,
+              "hi": 1,
+              "sum": -7942.953272640705,
+              "nan": 0,
+              "nonzero": 71057
+            }
+          ]
+        },
+        {
+          "name": "simulated",
+          "attachment": 1,
+          "width": 400,
+          "height": 250,
+          "stats": [
+            {
+              "lo": 0,
+              "hi": 2.497509241104126,
+              "sum": 9560.536949902556,
+              "nan": 0,
+              "nonzero": 80680
+            },
+            {
+              "lo": 0,
+              "hi": 1.000000238418579,
+              "sum": 24938.737771287862,
+              "nan": 0,
+              "nonzero": 68589
+            },
+            {
+              "lo": 0,
+              "hi": 0,
+              "sum": 0,
+              "nan": 0,
+              "nonzero": 0
+            },
+            {
+              "lo": 0,
+              "hi": 0,
+              "sum": 0,
+              "nan": 0,
+              "nonzero": 0
+            }
+          ]
+        },
+        {
+          "name": "density",
+          "attachment": 0,
+          "width": 400,
+          "height": 250,
+          "stats": [
+            {
+              "lo": -3.060051918029785,
+              "hi": 3.335348129272461,
+              "sum": -3109.27810161699,
+              "nan": 0,
+              "nonzero": 61148
+            },
+            {
+              "lo": -2.773913621902466,
+              "hi": 2.9294159412384033,
+              "sum": -13912.629892443474,
+              "nan": 0,
+              "nonzero": 71495
+            },
+            {
+              "lo": 0,
+              "hi": 5.057076454162598,
+              "sum": 17402.673893489457,
+              "nan": 0,
+              "nonzero": 80665
+            },
+            {
+              "lo": 0,
+              "hi": 3.676529884338379,
+              "sum": 45067.44300983276,
+              "nan": 0,
+              "nonzero": 68589
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested": "webgl",
+      "frame": 600,
+      "grid": [400, 250],
+      "buffers": [
+        {
+          "name": "advected",
+          "attachment": 0,
+          "width": 400,
+          "height": 250,
+          "stats": [
+            {
+              "lo": -0.4999847412109375,
+              "hi": 0.4998016357421875,
+              "sum": -10562.118493371643,
+              "nan": 0,
+              "nonzero": 100000
+            },
+            {
+              "lo": -0.4999847412109375,
+              "hi": 0.4999237060546875,
+              "sum": -10038.391694637015,
+              "nan": 0,
+              "nonzero": 100000
+            },
+            {
+              "lo": -1,
+              "hi": 0.999664306640625,
+              "sum": -1629.9473619852215,
+              "nan": 0,
+              "nonzero": 100000
+            },
+            {
+              "lo": -1,
+              "hi": 1,
+              "sum": -7581.274796044454,
+              "nan": 0,
+              "nonzero": 100000
+            }
+          ]
+        },
+        {
+          "name": "advected",
+          "attachment": 1,
+          "width": 400,
+          "height": 250,
+          "stats": [
+            {
+              "lo": 0,
+              "hi": 2.5000102519989014,
+              "sum": 9545.113684150985,
+              "nan": 0,
+              "nonzero": 82652
+            },
+            {
+              "lo": 0,
+              "hi": 1.000000238418579,
+              "sum": 25184.959996766225,
+              "nan": 0,
+              "nonzero": 69523
+            },
+            {
+              "lo": 0,
+              "hi": 0,
+              "sum": 0,
+              "nan": 0,
+              "nonzero": 0
+            },
+            {
+              "lo": 0,
+              "hi": 0,
+              "sum": 0,
+              "nan": 0,
+              "nonzero": 0
+            }
+          ]
+        },
+        {
+          "name": "simulated",
+          "attachment": 0,
+          "width": 400,
+          "height": 250,
+          "stats": [
+            {
+              "lo": -0.4999847412109375,
+              "hi": 0.4998016357421875,
+              "sum": -10557.677714582533,
+              "nan": 0,
+              "nonzero": 100000
+            },
+            {
+              "lo": -0.4999847412109375,
+              "hi": 0.4999237060546875,
+              "sum": -10032.250058212318,
+              "nan": 0,
+              "nonzero": 100000
+            },
+            {
+              "lo": -1,
+              "hi": 1,
+              "sum": -1426.0213603209704,
+              "nan": 0,
+              "nonzero": 100000
+            },
+            {
+              "lo": -1,
+              "hi": 1,
+              "sum": -7763.565141918138,
+              "nan": 0,
+              "nonzero": 100000
+            }
+          ]
+        },
+        {
+          "name": "simulated",
+          "attachment": 1,
+          "width": 400,
+          "height": 250,
+          "stats": [
+            {
+              "lo": 0,
+              "hi": 2.5000102519989014,
+              "sum": 9561.05436963694,
+              "nan": 0,
+              "nonzero": 82654
+            },
+            {
+              "lo": 0,
+              "hi": 1.0000001192092896,
+              "sum": 25187.094845655953,
+              "nan": 0,
+              "nonzero": 69525
+            },
+            {
+              "lo": 0,
+              "hi": 0,
+              "sum": 0,
+              "nan": 0,
+              "nonzero": 0
+            },
+            {
+              "lo": 0,
+              "hi": 0,
+              "sum": 0,
+              "nan": 0,
+              "nonzero": 0
+            }
+          ]
+        },
+        {
+          "name": "density",
+          "attachment": 0,
+          "width": 400,
+          "height": 250,
+          "stats": [
+            {
+              "lo": -2.9502546787261963,
+              "hi": 2.963078498840332,
+              "sum": -3017.0465756711264,
+              "nan": 0,
+              "nonzero": 100000
+            },
+            {
+              "lo": -2.726623058319092,
+              "hi": 3.4339091777801514,
+              "sum": -13588.977359380524,
+              "nan": 0,
+              "nonzero": 100000
+            },
+            {
+              "lo": 0,
+              "hi": 5.165293216705322,
+              "sum": 17396.462524095346,
+              "nan": 0,
+              "nonzero": 82637
+            },
+            {
+              "lo": 0,
+              "hi": 3.843799352645874,
+              "sum": 45494.56489988481,
+              "nan": 0,
+              "nonzero": 69523
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "measuredAt": "2026-10-26",
+  "note": "Captured during the initial diagnostic phase with the same math and separately named i/j loops. The production source now uses the type-supported multidimensional Loop form. Temporary readback globals are removed; final output, checkpoint restore and continuation were revalidated on 2026-10-27."
+}

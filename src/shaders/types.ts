@@ -1,4 +1,4 @@
-import type { Color, Material, Vector2 } from 'three/webgpu';
+import type { Color, Material, Vector2, WebGPURenderer } from 'three/webgpu';
 
 export type MutableUniform<T> = {
   value: T;
@@ -36,6 +36,10 @@ export type ShaderControl = NumberControl | ColorControl;
 export type ShaderProgram = {
   material: Material;
   controls: ShaderControl[];
+  /** Advance offscreen passes before the shared canvas draw. */
+  prepareFrame?: (renderer: WebGPURenderer) => void;
+  /** Restore stateful cases as well as the shared clock and controls. */
+  reset?: () => void;
 };
 
 export type ShaderFactory = (context: ShaderContext) => ShaderProgram;

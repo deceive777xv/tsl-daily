@@ -37,3 +37,4 @@ src/data/shaders/voronoise/mirror.json
 src/data/shaders/particle-experiment-7/mirror.json
 src/data/shaders/mo-cleaner/mirror.json
 src/data/shaders/truchet-tentacles/mirror.json
+src/data/shaders/paint-streams/mirror.json

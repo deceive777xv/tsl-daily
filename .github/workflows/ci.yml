@@ -12,8 +12,8 @@ jobs:
   browser:
     name: Browser (${{ matrix.project }})
     runs-on: ubuntu-latest
-    # Leave room for the complete suite on runners using software WebGL.
-    timeout-minutes: 25
+    # Include Chromium setup and the feedback simulation's software WebGL replays.
+    timeout-minutes: 35
     strategy:
       fail-fast: false
       matrix:
