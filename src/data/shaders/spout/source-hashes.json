@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-29",
+  "title": "Spout",
+  "author": "P_Malin",
+  "id": "lsXGzH",
+  "mirrorRepository": "GabeRundlett/shadertoy-api-shaders",
+  "mirrorCommit": "f6d538adf936215ccf2d11ba9b4a6c79ccb448c5",
+  "initialDownloadDateFromReadme": "2024-10-05",
+  "fileCommitDate": "2025-05-29T06:43:53Z",
+  "retrievedAndReviewed": "2026-10-29",
+  "metrics": {
+    "likes": 378,
+    "views": 47656,
+    "samplingDate": null,
+    "current": false
+  },
+  "approval": {
+    "date": "2026-10-29",
+    "evidence": "Human replied 批准 directly after the sole exact Spout — P_Malin (lsXGzH) proposal in this chat, including deterministic local brick texture replacement.",
+    "scope": "Exactly one independent PR; no merge or publication permission."
+  },
+  "files": [
+    {
+      "file": "mirror.json",
+      "bytes": 26125,
+      "sha256": "b95ebac35d201df3f8a54131c66cd52a588964e8539012b38ec85b8fae730a1c",
+      "gitBlob": "9eb0a90cc4efa67ed19e5538e4af7693db352749"
+    },
+    {
+      "file": "original.glsl",
+      "bytes": 23438,
+      "sha256": "2ab8bc82b53baffca58683cbf4a95e3abc6cec4da9a3eb505b40f383cda32ac8",
+      "decodedMirrorExact": true,
+      "lines": 790
+    }
+  ],
+  "generatedTexture": {
+    "description": "New deterministic 256x256 RGBA8 brick pattern, no source image copied.",
+    "bytes": 262144,
+    "sha256": "9afe766238ab4f3dac4098bb7dabc584b7b092f2e524de36a3a7563a72f56aad",
+    "seed": "0x7319ab",
+    "colorSpace": "NoColorSpace",
+    "flipY": false,
+    "filter": "linear mipmap repeat"
+  }
+}

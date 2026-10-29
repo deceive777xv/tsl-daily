@@ -1,0 +1,894 @@
+{
+  "date": "2026-10-29",
+  "nativeTab": {
+    "attempted": true,
+    "verified": false,
+    "method": "Win32 ShowWindow(SW_MINIMIZE), IsIconic confirmation, then SW_RESTORE on exactly one own Chromium window identified by unique title and executable",
+    "pid": 20260,
+    "windowHandle": 2297466,
+    "title": "TSL Spout Native 20261029",
+    "nativeMinimizedStateConfirmed": true,
+    "start": {
+      "title": "TSL Spout Native 20261029",
+      "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+      "hidden": false,
+      "documentHasHiddenOverride": false,
+      "submits": 4823,
+      "playLabel": "暂停动画",
+      "events": []
+    },
+    "end": {
+      "title": "TSL Spout Native 20261029",
+      "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+      "hidden": false,
+      "documentHasHiddenOverride": false,
+      "submits": 4825,
+      "playLabel": "暂停动画",
+      "events": []
+    },
+    "resumed": {
+      "title": "TSL Spout Native 20261029",
+      "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+      "hidden": false,
+      "documentHasHiddenOverride": false,
+      "submits": 4991,
+      "playLabel": "暂停动画",
+      "events": []
+    }
+  },
+  "controlled": {
+    "start": {
+      "hidden": true,
+      "submits": 335,
+      "playLabel": "播放动画"
+    },
+    "end": {
+      "hidden": true,
+      "submits": 335,
+      "playLabel": "播放动画"
+    },
+    "resumed": {
+      "hidden": false,
+      "submits": 467,
+      "playLabel": "暂停动画"
+    },
+    "verified": true
+  },
+  "reducedMotion": {
+    "initialBackend": null,
+    "posterLoaded": true,
+    "manualBackend": "webgpu",
+    "manualLabel": "暂停动画"
+  },
+  "capture": {
+    "gpu": "webgpu",
+    "gl": "webgl2",
+    "adapter": {
+      "vendor": "nvidia",
+      "architecture": "lovelace",
+      "device": "",
+      "description": "",
+      "fallback": false
+    },
+    "warnings": [],
+    "browserVersion": "151.0.7922.34"
+  },
+  "extremes": {
+    "date": "2026-10-29",
+    "purpose": "Odd dimensions exercise water refraction and both control extremes. All five controls are also driven to their HTML min/max bounds; frozen source time2. PNG byte observations are output evidence, not raw floating-point GPU readback.",
+    "runs": [
+      {
+        "requested": "webgpu",
+        "backend": "webgpu",
+        "mode": "default",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001.1428833007812,
+          "cssHeight": 601.1428833007812
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [154, 117, 96, 255],
+        "nonblackFraction": 1
+      },
+      {
+        "requested": "webgpu",
+        "backend": "webgpu",
+        "mode": "min",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001.1428833007812,
+          "cssHeight": 601.1428833007812
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [92, 82, 77, 255],
+        "nonblackFraction": 1
+      },
+      {
+        "requested": "webgpu",
+        "backend": "webgpu",
+        "mode": "max",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001.1428833007812,
+          "cssHeight": 601.1428833007812
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [153, 116, 96, 255],
+        "nonblackFraction": 1
+      },
+      {
+        "requested": "webgl",
+        "backend": "webgl2",
+        "mode": "default",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001.1428833007812,
+          "cssHeight": 601.1428833007812
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [154, 117, 96, 255],
+        "nonblackFraction": 1
+      },
+      {
+        "requested": "webgl",
+        "backend": "webgl2",
+        "mode": "min",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001.1428833007812,
+          "cssHeight": 601.1428833007812
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [92, 82, 77, 255],
+        "nonblackFraction": 1
+      },
+      {
+        "requested": "webgl",
+        "backend": "webgl2",
+        "mode": "max",
+        "geometry": {
+          "bufferWidth": 1001,
+          "bufferHeight": 601,
+          "cssWidth": 1001.1428833007812,
+          "cssHeight": 601.1428833007812
+        },
+        "width": 1001,
+        "height": 601,
+        "centerRGBA": [153, 116, 96, 255],
+        "nonblackFraction": 1
+      }
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "media": {
+    "poster": {
+      "path": "public/previews/spout.webp",
+      "bytes": 89308,
+      "sha256": "6142e944423bbae5aafe591e314c375fa12ca019d1b4644b8eb8edd1312ef32a",
+      "width": 960,
+      "height": 600,
+      "quality": 92
+    },
+    "loop": {
+      "path": "public/previews/spout.webm",
+      "bytes": 1964127,
+      "sha256": "b5044b3ccb075f54a76f6f9d66e66a521ad86d20dc73d5a7340f3a1b11e6953e",
+      "width": 960,
+      "height": 600,
+      "codec": "VP9",
+      "fps": 25,
+      "frames": 188,
+      "durationSeconds": 7.52,
+      "audio": false,
+      "encoding": "CRF35 yuv420p",
+      "construction": "94 forward frames plus 94 reverse frames; reverse is media-only",
+      "capture": "Actual nonfallback TSL WebGPU canvas via captureStream(25) / MediaRecorder, source speed0.6"
+    }
+  },
+  "implementationSHA256": "02afde75098188f16210b678554aa484d575d6dc485f7c114690ba3c19dedb6f",
+  "visualReview": "Poster, source/default two-backend images, mobile controls, and max controls inspected; compressed poster and loop middle frame inspected separately before final approval handoff.",
+  "limits": [
+    "Native hidden-tab behavior unverified. Controlled visibility event is separate evidence.",
+    "Screenshot bytes are not raw floating-point GPU readback.",
+    "Mobile viewport is simulated; RAF intervals are not GPU render time."
+  ],
+  "browserTests": {
+    "date": "2026-10-29",
+    "final": {
+      "stats": {
+        "startTime": "2026-10-29T13:46:05.117Z",
+        "duration": 444383.987,
+        "expected": 142,
+        "skipped": 2,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "project": "desktop-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4047,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.6345373314160829,
+            "blackFraction": 0.00008245056264263947,
+            "whiteFraction": 0.01735309508418752,
+            "meanRGB": [156.11323870207423, 139.49752978114321, 128.98697720846582]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "desktop-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4196,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.6345428281202591,
+            "blackFraction": 0.00022426553038797938,
+            "whiteFraction": 0.017354194425022756,
+            "meanRGB": [156.108089389602, 139.49158344656544, 128.98012061967646]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 2462,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.727461427920922,
+            "blackFraction": 0.00004139586869230451,
+            "whiteFraction": 0.04943553776190279,
+            "meanRGB": [190.88737662552705, 162.76674315046216, 140.87364502451226]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 2712,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.7274702984642133,
+            "blackFraction": 0.00008279173738460902,
+            "whiteFraction": 0.04943553776190279,
+            "meanRGB": [190.88111402196347, 162.76244685066143, 140.87105186902346]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        }
+      ],
+      "nonPassing": [],
+      "maxRestore": 0,
+      "maxMeanRestore": 0
+    },
+    "appearanceDiagnosis": {
+      "initialFullSuite": {
+        "passed": 140,
+        "failed": 2,
+        "skipped": 2,
+        "reportBytes": 113972170,
+        "reportSHA256": "f0e7ca9c7a489a666dce717575b2756d7440560cd92ade3f9a7f1fd720a6eec6",
+        "initialTestSHA256": "aa479c6b05cb2bc20d1ccb70644beb9feb3f3173e01ab7821ceb7594513a6059",
+        "failures": [
+          {
+            "file": "spout.spec.ts",
+            "title": "Spout webgl 双面折射水柱、五个参数与来源",
+            "project": "mobile-chromium",
+            "status": "unexpected",
+            "attempts": [
+              {
+                "status": "failed",
+                "durationMs": 951,
+                "errors": [
+                  {
+                    "location": {
+                      "file": "E:\\Project\\shaderTutorial\\tests\\browser\\spout.spec.ts",
+                      "column": 35,
+                      "line": 90
+                    },
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m190\u001b[39m\nReceived:   \u001b[31m190.88737662552705\u001b[39m\n\n  88 |     expect(appearance.whiteFraction).toBeLessThan(0.3);\n  89 |     expect(appearance.meanRGB[0]).toBeGreaterThan(35);\n> 90 |     expect(appearance.meanRGB[0]).toBeLessThan(190);\n     |                                   ^\n  91 |     const restores: { id: string; max: number; mean: number }[] = [];\n  92 |     for (const [id, changedValue] of [\n  93 |       ['spout-speed', '2'],\n    at E:\\Project\\shaderTutorial\\tests\\browser\\spout.spec.ts:90:35"
+                  }
+                ],
+                "attachments": [
+                  {
+                    "name": "screenshot",
+                    "contentType": "image/png",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgl-双面折射水柱、五个参数与来源-mobile-chromium\\test-failed-1.png"
+                  },
+                  {
+                    "name": "error-context",
+                    "contentType": "text/markdown",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgl-双面折射水柱、五个参数与来源-mobile-chromium\\error-context.md"
+                  },
+                  {
+                    "name": "trace",
+                    "contentType": "application/zip",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgl-双面折射水柱、五个参数与来源-mobile-chromium\\trace.zip"
+                  }
+                ]
+              },
+              {
+                "status": "failed",
+                "durationMs": 1585,
+                "errors": [
+                  {
+                    "location": {
+                      "file": "E:\\Project\\shaderTutorial\\tests\\browser\\spout.spec.ts",
+                      "column": 35,
+                      "line": 90
+                    },
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m190\u001b[39m\nReceived:   \u001b[31m190.88737662552705\u001b[39m\n\n  88 |     expect(appearance.whiteFraction).toBeLessThan(0.3);\n  89 |     expect(appearance.meanRGB[0]).toBeGreaterThan(35);\n> 90 |     expect(appearance.meanRGB[0]).toBeLessThan(190);\n     |                                   ^\n  91 |     const restores: { id: string; max: number; mean: number }[] = [];\n  92 |     for (const [id, changedValue] of [\n  93 |       ['spout-speed', '2'],\n    at E:\\Project\\shaderTutorial\\tests\\browser\\spout.spec.ts:90:35"
+                  }
+                ],
+                "attachments": [
+                  {
+                    "name": "screenshot",
+                    "contentType": "image/png",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgl-双面折射水柱、五个参数与来源-mobile-chromium-retry1\\test-failed-1.png"
+                  },
+                  {
+                    "name": "error-context",
+                    "contentType": "text/markdown",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgl-双面折射水柱、五个参数与来源-mobile-chromium-retry1\\error-context.md"
+                  },
+                  {
+                    "name": "trace",
+                    "contentType": "application/zip",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgl-双面折射水柱、五个参数与来源-mobile-chromium-retry1\\trace.zip"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "file": "spout.spec.ts",
+            "title": "Spout webgpu 双面折射水柱、五个参数与来源",
+            "project": "mobile-chromium",
+            "status": "unexpected",
+            "attempts": [
+              {
+                "status": "failed",
+                "durationMs": 1472,
+                "errors": [
+                  {
+                    "location": {
+                      "file": "E:\\Project\\shaderTutorial\\tests\\browser\\spout.spec.ts",
+                      "column": 35,
+                      "line": 90
+                    },
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m190\u001b[39m\nReceived:   \u001b[31m190.88111402196347\u001b[39m\n\n  88 |     expect(appearance.whiteFraction).toBeLessThan(0.3);\n  89 |     expect(appearance.meanRGB[0]).toBeGreaterThan(35);\n> 90 |     expect(appearance.meanRGB[0]).toBeLessThan(190);\n     |                                   ^\n  91 |     const restores: { id: string; max: number; mean: number }[] = [];\n  92 |     for (const [id, changedValue] of [\n  93 |       ['spout-speed', '2'],\n    at E:\\Project\\shaderTutorial\\tests\\browser\\spout.spec.ts:90:35"
+                  }
+                ],
+                "attachments": [
+                  {
+                    "name": "screenshot",
+                    "contentType": "image/png",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgpu-双面折射水柱、五个参数与来源-mobile-chromium\\test-failed-1.png"
+                  },
+                  {
+                    "name": "error-context",
+                    "contentType": "text/markdown",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgpu-双面折射水柱、五个参数与来源-mobile-chromium\\error-context.md"
+                  },
+                  {
+                    "name": "trace",
+                    "contentType": "application/zip",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgpu-双面折射水柱、五个参数与来源-mobile-chromium\\trace.zip"
+                  }
+                ]
+              },
+              {
+                "status": "failed",
+                "durationMs": 1456,
+                "errors": [
+                  {
+                    "location": {
+                      "file": "E:\\Project\\shaderTutorial\\tests\\browser\\spout.spec.ts",
+                      "column": 35,
+                      "line": 90
+                    },
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m190\u001b[39m\nReceived:   \u001b[31m190.88111402196347\u001b[39m\n\n  88 |     expect(appearance.whiteFraction).toBeLessThan(0.3);\n  89 |     expect(appearance.meanRGB[0]).toBeGreaterThan(35);\n> 90 |     expect(appearance.meanRGB[0]).toBeLessThan(190);\n     |                                   ^\n  91 |     const restores: { id: string; max: number; mean: number }[] = [];\n  92 |     for (const [id, changedValue] of [\n  93 |       ['spout-speed', '2'],\n    at E:\\Project\\shaderTutorial\\tests\\browser\\spout.spec.ts:90:35"
+                  }
+                ],
+                "attachments": [
+                  {
+                    "name": "screenshot",
+                    "contentType": "image/png",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgpu-双面折射水柱、五个参数与来源-mobile-chromium-retry1\\test-failed-1.png"
+                  },
+                  {
+                    "name": "error-context",
+                    "contentType": "text/markdown",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgpu-双面折射水柱、五个参数与来源-mobile-chromium-retry1\\error-context.md"
+                  },
+                  {
+                    "name": "trace",
+                    "contentType": "application/zip",
+                    "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-test-results\\spout-Spout-webgpu-双面折射水柱、五个参数与来源-mobile-chromium-retry1\\trace.zip"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reference": {
+        "date": "2026-10-29",
+        "hypotheses": [
+          "Inherited Truchet red-mean<190 bound does not fit original bright sky",
+          "Mobile DPR/screenshot resampling",
+          "TSL brightness drift"
+        ],
+        "method": "Same original GLSL, same generated brick texture, same drawing buffer/CSS dimensions, source t2 and TSL reset, same CSS screenshot and 3px interior statistic.",
+        "runs": [
+          {
+            "mobile": false,
+            "geometry": {
+              "width": 1280,
+              "height": 720,
+              "cssWidth": 1280,
+              "cssHeight": 720.0000610351562
+            },
+            "sourceFrame": {
+              "time": 2,
+              "width": 1280,
+              "height": 720,
+              "mouse": [0, 0, 0, 0],
+              "drawError": 0,
+              "readError": 0,
+              "blackFraction": 0.00008246527777777778,
+              "whiteFraction": 0.063154296875,
+              "meanRGB": 142.4163064236111,
+              "uniqueBins": 274
+            },
+            "original": {
+              "width": 1280,
+              "height": 720,
+              "brightnessRange": 255,
+              "colorfulFraction": 0.6363006741158002,
+              "blackFraction": 0.00008354990347787466,
+              "whiteFraction": 0.01757955929624597,
+              "meanRGB": [157.1631113984055, 140.1491992401356, 128.98815790052285]
+            },
+            "tsl": {
+              "width": 1280,
+              "height": 720,
+              "brightnessRange": 255,
+              "colorfulFraction": 0.6345373314160829,
+              "blackFraction": 0.00008245056264263947,
+              "whiteFraction": 0.01735309508418752,
+              "meanRGB": [156.11323870207423, 139.49752978114321, 128.98697720846582]
+            }
+          },
+          {
+            "mobile": true,
+            "geometry": {
+              "width": 412,
+              "height": 839,
+              "cssWidth": 412.0000305175781,
+              "cssHeight": 839.4285888671875
+            },
+            "sourceFrame": {
+              "time": 2,
+              "width": 412,
+              "height": 839,
+              "mouse": [0, 0, 0, 0],
+              "drawError": 0,
+              "readError": 0,
+              "blackFraction": 0.000043394239559345964,
+              "whiteFraction": 0.09959556568730689,
+              "meanRGB": 165.10350297588053,
+              "uniqueBins": 244
+            },
+            "original": {
+              "width": 412,
+              "height": 840,
+              "brightnessRange": 240.33333333333334,
+              "colorfulFraction": 0.7288041487991872,
+              "blackFraction": 0,
+              "whiteFraction": 0.0482835406551606,
+              "meanRGB": [191.3038652821585, 163.013812595244, 140.85556579367048]
+            },
+            "tsl": {
+              "width": 412,
+              "height": 840,
+              "brightnessRange": 240.33333333333334,
+              "colorfulFraction": 0.7281219359487779,
+              "blackFraction": 0,
+              "whiteFraction": 0.04805613637169082,
+              "meanRGB": [190.88146920886936, 162.74056715218958, 140.82838950514466]
+            }
+          }
+        ]
+      },
+      "conclusion": "The inherited Truchet red-mean<190 upper bound was invalid for Spout portrait. Original same-input mobile GLSL is 191.30; TSL190.88 is slightly darker, not overexposed. New case now uses original-reference ±15 envelopes (desktop157 / portrait191). Other appearance assertions and parameter-restore comparisons unchanged; no old case/shared test/shader/runtime change.",
+      "mobileRecheck": {
+        "passed": 2,
+        "retries": 0,
+        "durationSeconds": 6.6
+      }
+    },
+    "implementationSHA256": "02afde75098188f16210b678554aa484d575d6dc485f7c114690ba3c19dedb6f",
+    "testSHA256": "ef488619f9b85e7e542c3623ee8d77fc86d72214850207b715b0b4e98d3b6a39",
+    "finalIsolated": {
+      "stats": {
+        "startTime": "2026-10-29T14:00:05.587Z",
+        "duration": 16043.231,
+        "expected": 4,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "project": "desktop-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4647,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.6345373314160829,
+            "blackFraction": 0.00008245056264263947,
+            "whiteFraction": 0.01735309508418752,
+            "meanRGB": [156.11323870207423, 139.49752978114321, 128.98697720846582]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "desktop-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4295,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.6345428281202591,
+            "blackFraction": 0.00022426553038797938,
+            "whiteFraction": 0.017354194425022756,
+            "meanRGB": [156.108089389602, 139.49158344656544, 128.98012061967646]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 3072,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.727461427920922,
+            "blackFraction": 0.00004139586869230451,
+            "whiteFraction": 0.04943553776190279,
+            "meanRGB": [190.88737662552705, 162.76674315046216, 140.87364502451226]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 2700,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.7274702984642133,
+            "blackFraction": 0.00008279173738460902,
+            "whiteFraction": 0.04943553776190279,
+            "meanRGB": [190.88111402196347, 162.76244685066143, 140.87105186902346]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        }
+      ],
+      "nonPassing": [],
+      "maxRestore": 0,
+      "maxMeanRestore": 0
+    }
+  },
+  "finalMedia": {
+    "date": "2026-10-29",
+    "purpose": "Final media was rebuilt into dist after capture; verify served exact asset bytes, reduced-motion poster/manual GPU and actual WebM decoding in desktop and mobile contexts.",
+    "runs": [
+      {
+        "mobile": false,
+        "reducedBackend": null,
+        "manualBackend": "webgpu",
+        "media": {
+          "poster": {
+            "bytes": 89308,
+            "sha256": "6142e944423bbae5aafe591e314c375fa12ca019d1b4644b8eb8edd1312ef32a"
+          },
+          "loop": {
+            "bytes": 1964127,
+            "sha256": "b5044b3ccb075f54a76f6f9d66e66a521ad86d20dc73d5a7340f3a1b11e6953e"
+          }
+        },
+        "video": {
+          "width": 960,
+          "height": 600,
+          "duration": 7.52,
+          "time": 3.76,
+          "readyState": 4,
+          "error": null
+        },
+        "errors": []
+      },
+      {
+        "mobile": true,
+        "reducedBackend": null,
+        "manualBackend": "webgpu",
+        "media": {
+          "poster": {
+            "bytes": 89308,
+            "sha256": "6142e944423bbae5aafe591e314c375fa12ca019d1b4644b8eb8edd1312ef32a"
+          },
+          "loop": {
+            "bytes": 1964127,
+            "sha256": "b5044b3ccb075f54a76f6f9d66e66a521ad86d20dc73d5a7340f3a1b11e6953e"
+          }
+        },
+        "video": {
+          "width": 960,
+          "height": 600,
+          "duration": 7.52,
+          "time": 3.76,
+          "readyState": 4,
+          "error": null
+        },
+        "errors": []
+      }
+    ]
+  }
+}
