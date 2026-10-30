@@ -205,7 +205,9 @@ const createShader: ShaderFactory = (context) => {
       const smoothness = float(1).toVar(),
         transparency = float(0).toVar();
       If(data.y.lessThan(1.5), () => {
-        const sampled = texture(bricks, data.zw.mul(0.25)).rgb.toVar();
+        // This material branch and its secondary-ray callers are nonuniform.
+        // Explicit LOD avoids undefined implicit derivatives at ray boundaries.
+        const sampled = texture(bricks, data.zw.mul(0.25)).level(float(0)).rgb.toVar();
         albedo.assign(sampled.mul(sampled));
         smoothness.assign(albedo.r);
         roughReflection.assign(0.02);

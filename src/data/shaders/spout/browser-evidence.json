@@ -4,52 +4,96 @@
     "attempted": true,
     "verified": false,
     "method": "Win32 ShowWindow(SW_MINIMIZE), IsIconic confirmation, then SW_RESTORE on exactly one own Chromium window identified by unique title and executable",
-    "pid": 20260,
-    "windowHandle": 2297466,
-    "title": "TSL Spout Native 20261029",
+    "pid": 45492,
+    "windowHandle": 28837602,
+    "title": "TSL Spout Native Default 20261029",
     "nativeMinimizedStateConfirmed": true,
+    "removedDefaultArguments": [
+      "--disable-background-timer-throttling",
+      "--disable-backgrounding-occluded-windows",
+      "--disable-renderer-backgrounding"
+    ],
+    "removedArgumentsAbsenceConfirmed": true,
     "start": {
-      "title": "TSL Spout Native 20261029",
+      "title": "TSL Spout Native Default 20261029",
       "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
       "hidden": false,
       "documentHasHiddenOverride": false,
-      "submits": 4823,
+      "submits": 597,
       "playLabel": "暂停动画",
       "events": []
     },
     "end": {
-      "title": "TSL Spout Native 20261029",
+      "title": "TSL Spout Native Default 20261029",
       "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
       "hidden": false,
       "documentHasHiddenOverride": false,
-      "submits": 4825,
+      "submits": 599,
       "playLabel": "暂停动画",
       "events": []
     },
     "resumed": {
-      "title": "TSL Spout Native 20261029",
+      "title": "TSL Spout Native Default 20261029",
       "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
       "hidden": false,
       "documentHasHiddenOverride": false,
-      "submits": 4991,
+      "submits": 767,
       "playLabel": "暂停动画",
       "events": []
+    },
+    "implementationSHA256": "fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b",
+    "capability": "Playwright ignoreDefaultArgs removed exactly three background behavior flags; OS command line confirmed absent before native minimize.",
+    "priorAttempt": {
+      "attempted": true,
+      "verified": false,
+      "method": "Win32 ShowWindow(SW_MINIMIZE), IsIconic confirmation, then SW_RESTORE on exactly one own Chromium window identified by unique title and executable",
+      "pid": 20260,
+      "windowHandle": 2297466,
+      "title": "TSL Spout Native 20261029",
+      "nativeMinimizedStateConfirmed": true,
+      "start": {
+        "title": "TSL Spout Native 20261029",
+        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+        "hidden": false,
+        "documentHasHiddenOverride": false,
+        "submits": 4823,
+        "playLabel": "暂停动画",
+        "events": []
+      },
+      "end": {
+        "title": "TSL Spout Native 20261029",
+        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+        "hidden": false,
+        "documentHasHiddenOverride": false,
+        "submits": 4825,
+        "playLabel": "暂停动画",
+        "events": []
+      },
+      "resumed": {
+        "title": "TSL Spout Native 20261029",
+        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+        "hidden": false,
+        "documentHasHiddenOverride": false,
+        "submits": 4991,
+        "playLabel": "暂停动画",
+        "events": []
+      }
     }
   },
   "controlled": {
     "start": {
       "hidden": true,
-      "submits": 335,
+      "submits": 341,
       "playLabel": "播放动画"
     },
     "end": {
       "hidden": true,
-      "submits": 335,
+      "submits": 341,
       "playLabel": "播放动画"
     },
     "resumed": {
       "hidden": false,
-      "submits": 467,
+      "submits": 465,
       "playLabel": "暂停动画"
     },
     "verified": true
@@ -89,7 +133,7 @@
         },
         "width": 1001,
         "height": 601,
-        "centerRGBA": [154, 117, 96, 255],
+        "centerRGBA": [152, 114, 94, 255],
         "nonblackFraction": 1
       },
       {
@@ -104,7 +148,7 @@
         },
         "width": 1001,
         "height": 601,
-        "centerRGBA": [92, 82, 77, 255],
+        "centerRGBA": [90, 80, 75, 255],
         "nonblackFraction": 1
       },
       {
@@ -119,7 +163,7 @@
         },
         "width": 1001,
         "height": 601,
-        "centerRGBA": [153, 116, 96, 255],
+        "centerRGBA": [153, 115, 95, 255],
         "nonblackFraction": 1
       },
       {
@@ -134,7 +178,7 @@
         },
         "width": 1001,
         "height": 601,
-        "centerRGBA": [154, 117, 96, 255],
+        "centerRGBA": [152, 114, 94, 255],
         "nonblackFraction": 1
       },
       {
@@ -149,7 +193,7 @@
         },
         "width": 1001,
         "height": 601,
-        "centerRGBA": [92, 82, 77, 255],
+        "centerRGBA": [90, 80, 75, 255],
         "nonblackFraction": 1
       },
       {
@@ -164,7 +208,7 @@
         },
         "width": 1001,
         "height": 601,
-        "centerRGBA": [153, 116, 96, 255],
+        "centerRGBA": [153, 115, 95, 255],
         "nonblackFraction": 1
       }
     ],
@@ -174,16 +218,16 @@
   "media": {
     "poster": {
       "path": "public/previews/spout.webp",
-      "bytes": 89308,
-      "sha256": "6142e944423bbae5aafe591e314c375fa12ca019d1b4644b8eb8edd1312ef32a",
+      "bytes": 106480,
+      "sha256": "02336f1821b28fa61cc7c2922edb0b16a91dfaf640dcb8120271567fbb616b69",
       "width": 960,
       "height": 600,
       "quality": 92
     },
     "loop": {
       "path": "public/previews/spout.webm",
-      "bytes": 1964127,
-      "sha256": "b5044b3ccb075f54a76f6f9d66e66a521ad86d20dc73d5a7340f3a1b11e6953e",
+      "bytes": 1880316,
+      "sha256": "0572ce3977e407d464181efa42cdd0d05bed7690b1d4e4278108ec9670276964",
       "width": 960,
       "height": 600,
       "codec": "VP9",
@@ -196,7 +240,7 @@
       "capture": "Actual nonfallback TSL WebGPU canvas via captureStream(25) / MediaRecorder, source speed0.6"
     }
   },
-  "implementationSHA256": "02afde75098188f16210b678554aa484d575d6dc485f7c114690ba3c19dedb6f",
+  "implementationSHA256": "fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b",
   "visualReview": "Poster, source/default two-backend images, mobile controls, and max controls inspected; compressed poster and loop middle frame inspected separately before final approval handoff.",
   "limits": [
     "Native hidden-tab behavior unverified. Controlled visibility event is separate evidence.",
@@ -207,12 +251,12 @@
     "date": "2026-10-29",
     "final": {
       "stats": {
-        "startTime": "2026-10-29T13:46:05.117Z",
-        "duration": 444383.987,
-        "expected": 142,
+        "startTime": "2026-10-29T15:27:23.753Z",
+        "duration": 435019.843,
+        "expected": 141,
         "skipped": 2,
         "unexpected": 0,
-        "flaky": 0
+        "flaky": 1
       },
       "cases": [
         {
@@ -221,15 +265,15 @@
           "status": "passed",
           "attemptCount": 1,
           "firstAttemptStatus": "passed",
-          "durationMs": 4047,
+          "durationMs": 4035,
           "appearance": {
             "width": 1280,
             "height": 720,
             "brightnessRange": 255,
-            "colorfulFraction": 0.6345373314160829,
+            "colorfulFraction": 0.6326552599061602,
             "blackFraction": 0.00008245056264263947,
             "whiteFraction": 0.01735309508418752,
-            "meanRGB": [156.11323870207423, 139.49752978114321, 128.98697720846582]
+            "meanRGB": [156.0847327942166, 139.4853259985313, 128.98611972261432]
           },
           "restores": [
             {
@@ -265,15 +309,15 @@
           "status": "passed",
           "attemptCount": 1,
           "firstAttemptStatus": "passed",
-          "durationMs": 4196,
+          "durationMs": 4269,
           "appearance": {
             "width": 1280,
             "height": 720,
             "brightnessRange": 255,
-            "colorfulFraction": 0.6345428281202591,
+            "colorfulFraction": 0.6326574585878307,
             "blackFraction": 0.00022426553038797938,
             "whiteFraction": 0.017354194425022756,
-            "meanRGB": [156.108089389602, 139.49158344656544, 128.98012061967646]
+            "meanRGB": [156.0789612548316, 139.4793455843876, 128.97953137298876]
           },
           "restores": [
             {
@@ -309,15 +353,15 @@
           "status": "passed",
           "attemptCount": 1,
           "firstAttemptStatus": "passed",
-          "durationMs": 2462,
+          "durationMs": 2468,
           "appearance": {
             "width": 412,
             "height": 839,
             "brightnessRange": 255,
-            "colorfulFraction": 0.727461427920922,
+            "colorfulFraction": 0.7200515674249995,
             "blackFraction": 0.00004139586869230451,
             "whiteFraction": 0.04943553776190279,
-            "meanRGB": [190.88737662552705, 162.76674315046216, 140.87364502451226]
+            "meanRGB": [190.88732044541953, 162.7921306453616, 140.91444065310853]
           },
           "restores": [
             {
@@ -353,15 +397,15 @@
           "status": "passed",
           "attemptCount": 1,
           "firstAttemptStatus": "passed",
-          "durationMs": 2712,
+          "durationMs": 2692,
           "appearance": {
             "width": 412,
             "height": 839,
             "brightnessRange": 255,
-            "colorfulFraction": 0.7274702984642133,
+            "colorfulFraction": 0.720057481120527,
             "blackFraction": 0.00008279173738460902,
             "whiteFraction": 0.04943553776190279,
-            "meanRGB": [190.88111402196347, 162.76244685066143, 140.87105186902346]
+            "meanRGB": [190.88594846805717, 162.79067291941408, 140.91290013542363]
           },
           "restores": [
             {
@@ -392,7 +436,53 @@
           ]
         }
       ],
-      "nonPassing": [],
+      "nonPassing": [
+        {
+          "file": "fast-procedural-ocean.spec.ts",
+          "title": "Very fast procedural ocean webgl 画面、五个参数与素材来源",
+          "project": "desktop-chromium",
+          "status": "flaky",
+          "attempts": [
+            {
+              "status": "failed",
+              "durationMs": 1484,
+              "errors": [
+                {
+                  "location": {
+                    "file": "E:\\Project\\shaderTutorial\\tests\\browser\\fast-procedural-ocean.spec.ts",
+                    "column": 59,
+                    "line": 142
+                  },
+                  "message": "Error: ocean-speed restore max error\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m234\u001b[39m\n\n  140 |           [before.toString('base64'), restored.toString('base64')],\n  141 |         );\n> 142 |         expect(difference.max, id + ' restore max error').toBeLessThanOrEqual(2);\n      |                                                           ^\n  143 |         expect(difference.mean, id + ' restore mean error').toBeLessThan(0.001);\n  144 |       }\n  145 |       // Water must remain visible when the supported wave controls reach their\n    at E:\\Project\\shaderTutorial\\tests\\browser\\fast-procedural-ocean.spec.ts:142:59"
+                }
+              ],
+              "attachments": [
+                {
+                  "name": "screenshot",
+                  "contentType": "image/png",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\fast-procedural-ocean-Very-3ece2-al-ocean-webgl-画面、五个参数与素材来源-desktop-chromium\\test-failed-1.png"
+                },
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\fast-procedural-ocean-Very-3ece2-al-ocean-webgl-画面、五个参数与素材来源-desktop-chromium\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\fast-procedural-ocean-Very-3ece2-al-ocean-webgl-画面、五个参数与素材来源-desktop-chromium\\trace.zip"
+                }
+              ]
+            },
+            {
+              "status": "passed",
+              "durationMs": 3876,
+              "errors": [],
+              "attachments": []
+            }
+          ]
+        }
+      ],
       "maxRestore": 0,
       "maxMeanRestore": 0
     },
@@ -643,14 +733,15 @@
         "durationSeconds": 6.6
       }
     },
-    "implementationSHA256": "02afde75098188f16210b678554aa484d575d6dc485f7c114690ba3c19dedb6f",
+    "implementationSHA256": "fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b",
     "testSHA256": "ef488619f9b85e7e542c3623ee8d77fc86d72214850207b715b0b4e98d3b6a39",
-    "finalIsolated": {
+    "previousImplementationSHA256": "02afde75098188f16210b678554aa484d575d6dc485f7c114690ba3c19dedb6f",
+    "previousFull": {
       "stats": {
-        "startTime": "2026-10-29T14:00:05.587Z",
-        "duration": 16043.231,
-        "expected": 4,
-        "skipped": 0,
+        "startTime": "2026-10-29T13:46:05.117Z",
+        "duration": 444383.987,
+        "expected": 142,
+        "skipped": 2,
         "unexpected": 0,
         "flaky": 0
       },
@@ -661,7 +752,7 @@
           "status": "passed",
           "attemptCount": 1,
           "firstAttemptStatus": "passed",
-          "durationMs": 4647,
+          "durationMs": 4047,
           "appearance": {
             "width": 1280,
             "height": 720,
@@ -705,7 +796,7 @@
           "status": "passed",
           "attemptCount": 1,
           "firstAttemptStatus": "passed",
-          "durationMs": 4295,
+          "durationMs": 4196,
           "appearance": {
             "width": 1280,
             "height": 720,
@@ -749,7 +840,7 @@
           "status": "passed",
           "attemptCount": 1,
           "firstAttemptStatus": "passed",
-          "durationMs": 3072,
+          "durationMs": 2462,
           "appearance": {
             "width": 412,
             "height": 839,
@@ -793,7 +884,7 @@
           "status": "passed",
           "attemptCount": 1,
           "firstAttemptStatus": "passed",
-          "durationMs": 2700,
+          "durationMs": 2712,
           "appearance": {
             "width": 412,
             "height": 839,
@@ -835,7 +926,525 @@
       "nonPassing": [],
       "maxRestore": 0,
       "maxMeanRestore": 0
+    },
+    "ciSamplingDiagnosis": "ci-render-diagnosis.json",
+    "priorFinalSourceFull": {
+      "stats": {
+        "startTime": "2026-10-29T15:12:43.693Z",
+        "duration": 438179.619,
+        "expected": 140,
+        "skipped": 2,
+        "unexpected": 1,
+        "flaky": 1
+      },
+      "cases": [
+        {
+          "project": "desktop-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 3991,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.6326552599061602,
+            "blackFraction": 0.00008245056264263947,
+            "whiteFraction": 0.01735309508418752,
+            "meanRGB": [156.0847327942166, 139.4853259985313, 128.98611972261432]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "desktop-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4219,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.6326574585878307,
+            "blackFraction": 0.00022426553038797938,
+            "whiteFraction": 0.017354194425022756,
+            "meanRGB": [156.0789612548316, 139.4793455843876, 128.97953137298876]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 2819,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.7200515674249995,
+            "blackFraction": 0.00004139586869230451,
+            "whiteFraction": 0.04943553776190279,
+            "meanRGB": [190.88732044541953, 162.7921306453616, 140.91444065310853]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 2762,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.720057481120527,
+            "blackFraction": 0.00008279173738460902,
+            "whiteFraction": 0.04943553776190279,
+            "meanRGB": [190.88594846805717, 162.79067291941408, 140.91290013542363]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        }
+      ],
+      "nonPassing": [
+        {
+          "file": "flux-core.spec.ts",
+          "title": "Flux Core webgl 螺旋结构、五个参数与 CC0 来源",
+          "project": "desktop-chromium",
+          "status": "unexpected",
+          "attempts": [
+            {
+              "status": "failed",
+              "durationMs": 2388,
+              "errors": [
+                {
+                  "location": {
+                    "file": "E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts",
+                    "column": 66,
+                    "line": 104
+                  },
+                  "message": "Error: flux-speed restore maximum byte error\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m61\u001b[39m\n\n  102 |       );\n  103 |       restores.push({ id, ...difference });\n> 104 |       expect(difference.max, id + ' restore maximum byte error').toBeLessThanOrEqual(2);\n      |                                                                  ^\n  105 |       expect(difference.mean, id + ' restore mean byte error').toBeLessThan(0.001);\n  106 |     }\n  107 |\n    at E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts:104:66"
+                }
+              ],
+              "attachments": [
+                {
+                  "name": "screenshot",
+                  "contentType": "image/png",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\test-failed-1.png"
+                },
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium\\trace.zip"
+                }
+              ]
+            },
+            {
+              "status": "failed",
+              "durationMs": 3317,
+              "errors": [
+                {
+                  "location": {
+                    "file": "E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts",
+                    "column": 66,
+                    "line": 104
+                  },
+                  "message": "Error: flux-structure restore maximum byte error\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m68\u001b[39m\n\n  102 |       );\n  103 |       restores.push({ id, ...difference });\n> 104 |       expect(difference.max, id + ' restore maximum byte error').toBeLessThanOrEqual(2);\n      |                                                                  ^\n  105 |       expect(difference.mean, id + ' restore mean byte error').toBeLessThan(0.001);\n  106 |     }\n  107 |\n    at E:\\Project\\shaderTutorial\\tests\\browser\\flux-core.spec.ts:104:66"
+                }
+              ],
+              "attachments": [
+                {
+                  "name": "screenshot",
+                  "contentType": "image/png",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium-retry1\\test-failed-1.png"
+                },
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium-retry1\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\flux-core-Flux-Core-webgl-螺旋结构、五个参数与-CC0-来源-desktop-chromium-retry1\\trace.zip"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "site.spec.ts",
+          "title": "CineShader Lava 旧镜像许可、后备渲染与参数恢复一致",
+          "project": "mobile-chromium",
+          "status": "flaky",
+          "attempts": [
+            {
+              "status": "failed",
+              "durationMs": 1047,
+              "errors": [
+                {
+                  "location": {
+                    "file": "E:\\Project\\shaderTutorial\\tests\\browser\\site.spec.ts",
+                    "column": 35,
+                    "line": 336
+                  },
+                  "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  334 |     await testInfo.attach('after-reset', { body: restored, contentType: 'image/png' });\n  335 |   }\n> 336 |   expect(restored.equals(before)).toBe(true);\n      |                                   ^\n  337 |   expect(errors).toEqual([]);\n  338 | });\n  339 |\n    at E:\\Project\\shaderTutorial\\tests\\browser\\site.spec.ts:336:35"
+                }
+              ],
+              "attachments": [
+                {
+                  "name": "screenshot",
+                  "contentType": "image/png",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\site-CineShader-Lava-旧镜像许可、后备渲染与参数恢复一致-mobile-chromium\\test-failed-1.png"
+                },
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\site-CineShader-Lava-旧镜像许可、后备渲染与参数恢复一致-mobile-chromium\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "E:\\Project\\shaderTutorial\\output\\playwright\\spout-typed-full-results\\site-CineShader-Lava-旧镜像许可、后备渲染与参数恢复一致-mobile-chromium\\trace.zip"
+                }
+              ]
+            },
+            {
+              "status": "passed",
+              "durationMs": 1287,
+              "errors": [],
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "maxRestore": 0,
+      "maxMeanRestore": 0
+    },
+    "mainArtifactIsolatedBaseline": {
+      "head": "24db8ae35a788869c742cd2a966734deb71c52a1",
+      "runId": 40510684013,
+      "stats": {
+        "startTime": "2026-10-29T15:25:27.523Z",
+        "duration": 20114.019,
+        "expected": 3,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "conclusion": "Three isolated Flux Core runs passed; intermittent trigger undetermined. No root-cause-fix claim."
+    },
+    "finalIsolated": {
+      "stats": {
+        "startTime": "2026-10-29T15:38:26.732Z",
+        "duration": 16149.5,
+        "expected": 4,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "project": "desktop-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4672,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.6326552599061602,
+            "blackFraction": 0.00008245056264263947,
+            "whiteFraction": 0.01735309508418752,
+            "meanRGB": [156.0847327942166, 139.4853259985313, 128.98611972261432]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "desktop-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4318,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.6326574585878307,
+            "blackFraction": 0.00022426553038797938,
+            "whiteFraction": 0.017354194425022756,
+            "meanRGB": [156.0789612548316, 139.4793455843876, 128.97953137298876]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 3128,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.7200515674249995,
+            "blackFraction": 0.00004139586869230451,
+            "whiteFraction": 0.04943553776190279,
+            "meanRGB": [190.88732044541953, 162.7921306453616, 140.91444065310853]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 2713,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.720057481120527,
+            "blackFraction": 0.00008279173738460902,
+            "whiteFraction": 0.04943553776190279,
+            "meanRGB": [190.88594846805717, 162.79067291941408, 140.91290013542363]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        }
+      ],
+      "nonPassing": [],
+      "maxRestore": 0,
+      "maxMeanRestore": 0
     }
+  },
+  "sampling": {
+    "mipLevel": 0,
+    "filter": "Explicit base-mip linear sampling in divergent material and secondary-ray branches",
+    "reason": "Avoid implicit derivatives in nonuniform control flow",
+    "tradeoff": "Distant brick detail and minification aliasing can differ from original implicit-mip sampling."
   },
   "finalMedia": {
     "date": "2026-10-29",
@@ -847,12 +1456,12 @@
         "manualBackend": "webgpu",
         "media": {
           "poster": {
-            "bytes": 89308,
-            "sha256": "6142e944423bbae5aafe591e314c375fa12ca019d1b4644b8eb8edd1312ef32a"
+            "bytes": 106480,
+            "sha256": "02336f1821b28fa61cc7c2922edb0b16a91dfaf640dcb8120271567fbb616b69"
           },
           "loop": {
-            "bytes": 1964127,
-            "sha256": "b5044b3ccb075f54a76f6f9d66e66a521ad86d20dc73d5a7340f3a1b11e6953e"
+            "bytes": 1880316,
+            "sha256": "0572ce3977e407d464181efa42cdd0d05bed7690b1d4e4278108ec9670276964"
           }
         },
         "video": {
@@ -871,12 +1480,12 @@
         "manualBackend": "webgpu",
         "media": {
           "poster": {
-            "bytes": 89308,
-            "sha256": "6142e944423bbae5aafe591e314c375fa12ca019d1b4644b8eb8edd1312ef32a"
+            "bytes": 106480,
+            "sha256": "02336f1821b28fa61cc7c2922edb0b16a91dfaf640dcb8120271567fbb616b69"
           },
           "loop": {
-            "bytes": 1964127,
-            "sha256": "b5044b3ccb075f54a76f6f9d66e66a521ad86d20dc73d5a7340f3a1b11e6953e"
+            "bytes": 1880316,
+            "sha256": "0572ce3977e407d464181efa42cdd0d05bed7690b1d4e4278108ec9670276964"
           }
         },
         "video": {
@@ -890,5 +1499,20 @@
         "errors": []
       }
     ]
+  },
+  "quality": {
+    "validatedDate": "2026-10-29",
+    "command": "npm run quality",
+    "cases": 34,
+    "unitFiles": 2,
+    "unitTests": 5,
+    "pages": 36,
+    "astroFiles": 437,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 58,
+    "hintsScope": "Ignored local helper scripts; clean remote checkout verified separately.",
+    "logBytes": 4293020,
+    "logSHA256": "9ae94170446d5691cad40dbb5796cc58943357354f8b953ffc002b00230f208f"
   }
 }
