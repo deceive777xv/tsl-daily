@@ -1,0 +1,386 @@
+{
+  "date": "2026-10-30",
+  "sourceHead": "4830c31073da76fa3db34df2113c0bbc15acbeac",
+  "implementationSHA256": "fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b",
+  "projectPlaywright": "1.62.1",
+  "sampling": {
+    "initialEventRecorded": true,
+    "settleDelayRequestedMs": 500,
+    "hiddenIntervalRequestedMs": 1200,
+    "reason": "Native visibility event first runs observer before runtime pause callback; sample after transition renderOnce completes."
+  },
+  "init": {
+    "initial": {
+      "title": "TSL Spout Native CDP 20261030",
+      "hidden": false,
+      "ownHiddenOverride": false,
+      "submits": 31
+    },
+    "browserVersion": "151.0.7922.34",
+    "cdp": {
+      "mode": "connectOverCDP",
+      "noDefaults": true,
+      "existingDefaultContextConfirmed": true
+    },
+    "observation": "Passive native visibility listeners/timer; no browser commands while OS window is minimized."
+  },
+  "native": {
+    "title": "TSL Spout Native CDP 20261030",
+    "pid": 39532,
+    "windowHandle": 13961892,
+    "nativeMinimizedStart": true,
+    "nativeMinimizedEnd": true,
+    "minimizeRestoreElapsedMs": 4745.4036,
+    "noBrowserCommandsDuringMinimize": true,
+    "removedArgumentsAbsenceConfirmed": true,
+    "removedDefaultArguments": [
+      "--disable-background-timer-throttling",
+      "--disable-backgrounding-occluded-windows",
+      "--disable-renderer-backgrounding"
+    ]
+  },
+  "page": {
+    "title": "TSL Spout Native CDP 20261030",
+    "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+    "submits": 733,
+    "armed": true,
+    "events": [
+      {
+        "at": 1743.8999999761581,
+        "hidden": true,
+        "visibilityState": "hidden",
+        "ownHiddenOverride": false,
+        "submits": 495,
+        "playLabel": "暂停动画"
+      },
+      {
+        "at": 6468.100000023842,
+        "hidden": false,
+        "visibilityState": "visible",
+        "ownHiddenOverride": false,
+        "submits": 497,
+        "playLabel": "播放动画"
+      }
+    ],
+    "hiddenStart": {
+      "at": 3192.100000023842,
+      "hidden": true,
+      "visibilityState": "hidden",
+      "ownHiddenOverride": false,
+      "submits": 497,
+      "playLabel": "播放动画"
+    },
+    "hiddenEnd": {
+      "at": 5185,
+      "hidden": true,
+      "visibilityState": "hidden",
+      "ownHiddenOverride": false,
+      "submits": 497,
+      "playLabel": "播放动画"
+    },
+    "resumed": {
+      "at": 6868.200000047684,
+      "hidden": false,
+      "visibilityState": "visible",
+      "ownHiddenOverride": false,
+      "submits": 577,
+      "playLabel": "暂停动画"
+    },
+    "verified": true
+  },
+  "verified": true,
+  "method": "Standalone Chromium with fresh dedicated profile and loopback CDP; project Playwright1.62.1 CLI attaches with noDefaults:true to existing default context. Passive document.visibilitychange/timer samples only while a uniquely identified own Windows window is minimized via ShowWindow. IsIconic confirms minimized at both OS endpoints; finally restores. No browser commands while minimized and no document.hidden override.",
+  "hiddenStableIntervalMs": 1992.8999999761581,
+  "rawCaptureSHA256": "578c86e2f921c26002892cdacffcb64aacc8d836047df4ad435a2b62a6e4f4ae",
+  "probeSources": [
+    {
+      "localArchive": "output/playwright/spout-native-cdp-settled-init.cjs",
+      "sha256": "dbf4acc83188b31c9c297c17faf0e8f5e9edab3ae9fdc50d1432dcd40036e10b"
+    },
+    {
+      "localArchive": "output/playwright/spout-native-cdp-settled-window.ps1",
+      "sha256": "61474aea017e6d9f9a0248d59256418544cdf64a9b53d90424f0055431fae119"
+    },
+    {
+      "localArchive": "output/playwright/spout-native-passive-read.cjs",
+      "sha256": "65e2ee5f91e61052e835bfffd7a1402a229a3e1a1cd7c1e45e629170fad0c523"
+    }
+  ],
+  "boundary": "The first native hidden event records the transition before the runtime visibility callback completes its final renderOnce. Frozen submissions are compared only between two settled, still-native-hidden samples with the paused button label. Original transition samples remain in page.events; no byte tolerance or product timing policy was changed.",
+  "previousUnverifiedAttempts": {
+    "original": {
+      "attempted": true,
+      "verified": false,
+      "method": "Win32 ShowWindow(SW_MINIMIZE), IsIconic confirmation, then SW_RESTORE on exactly one own Chromium window identified by unique title and executable",
+      "pid": 45492,
+      "windowHandle": 28837602,
+      "title": "TSL Spout Native Default 20261029",
+      "nativeMinimizedStateConfirmed": true,
+      "removedDefaultArguments": [
+        "--disable-background-timer-throttling",
+        "--disable-backgrounding-occluded-windows",
+        "--disable-renderer-backgrounding"
+      ],
+      "removedArgumentsAbsenceConfirmed": true,
+      "start": {
+        "title": "TSL Spout Native Default 20261029",
+        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+        "hidden": false,
+        "documentHasHiddenOverride": false,
+        "submits": 597,
+        "playLabel": "暂停动画",
+        "events": []
+      },
+      "end": {
+        "title": "TSL Spout Native Default 20261029",
+        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+        "hidden": false,
+        "documentHasHiddenOverride": false,
+        "submits": 599,
+        "playLabel": "暂停动画",
+        "events": []
+      },
+      "resumed": {
+        "title": "TSL Spout Native Default 20261029",
+        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+        "hidden": false,
+        "documentHasHiddenOverride": false,
+        "submits": 767,
+        "playLabel": "暂停动画",
+        "events": []
+      },
+      "implementationSHA256": "fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b",
+      "capability": "Playwright ignoreDefaultArgs removed exactly three background behavior flags; OS command line confirmed absent before native minimize.",
+      "priorAttempt": {
+        "attempted": true,
+        "verified": false,
+        "method": "Win32 ShowWindow(SW_MINIMIZE), IsIconic confirmation, then SW_RESTORE on exactly one own Chromium window identified by unique title and executable",
+        "pid": 20260,
+        "windowHandle": 2297466,
+        "title": "TSL Spout Native 20261029",
+        "nativeMinimizedStateConfirmed": true,
+        "start": {
+          "title": "TSL Spout Native 20261029",
+          "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+          "hidden": false,
+          "documentHasHiddenOverride": false,
+          "submits": 4823,
+          "playLabel": "暂停动画",
+          "events": []
+        },
+        "end": {
+          "title": "TSL Spout Native 20261029",
+          "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+          "hidden": false,
+          "documentHasHiddenOverride": false,
+          "submits": 4825,
+          "playLabel": "暂停动画",
+          "events": []
+        },
+        "resumed": {
+          "title": "TSL Spout Native 20261029",
+          "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+          "hidden": false,
+          "documentHasHiddenOverride": false,
+          "submits": 4991,
+          "playLabel": "暂停动画",
+          "events": []
+        }
+      }
+    },
+    "passiveGlobalCLI": {
+      "date": "2026-10-30",
+      "head": "4830c31073da76fa3db34df2113c0bbc15acbeac",
+      "implementationSHA256": "fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b",
+      "init": {
+        "initial": {
+          "title": "TSL Spout Passive Native 20261030",
+          "hidden": false,
+          "ownHiddenOverride": false,
+          "submits": 75
+        },
+        "browserVersion": "151.0.7922.34",
+        "cdp": {
+          "method": "Emulation.setFocusEmulationEnabled",
+          "enabled": false,
+          "acknowledged": true
+        },
+        "observation": "Passive native visibility listeners/timer; no browser commands while OS window is minimized."
+      },
+      "native": {
+        "title": "TSL Spout Passive Native 20261030",
+        "pid": 42708,
+        "windowHandle": 16845356,
+        "nativeMinimizedStart": true,
+        "nativeMinimizedEnd": true,
+        "minimizeRestoreElapsedMs": 3726.5985,
+        "noBrowserCommandsDuringMinimize": true,
+        "removedArgumentsAbsenceConfirmed": true,
+        "removedDefaultArguments": [
+          "--disable-background-timer-throttling",
+          "--disable-backgrounding-occluded-windows",
+          "--disable-renderer-backgrounding"
+        ]
+      },
+      "page": {
+        "title": "TSL Spout Passive Native 20261030",
+        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+        "submits": 839,
+        "armed": true,
+        "events": [],
+        "hiddenStart": null,
+        "hiddenEnd": null,
+        "resumed": null,
+        "verified": false
+      },
+      "verified": false
+    },
+    "globalCDP": {
+      "date": "2026-10-30",
+      "sourceHead": "4830c31073da76fa3db34df2113c0bbc15acbeac",
+      "implementationSHA256": "fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b",
+      "init": {
+        "initial": {
+          "title": "TSL Spout Native CDP 20261030",
+          "hidden": false,
+          "ownHiddenOverride": false,
+          "submits": 35
+        },
+        "browserVersion": "151.0.7922.34",
+        "cdp": {
+          "mode": "connectOverCDP",
+          "noDefaults": true,
+          "existingDefaultContextConfirmed": true
+        },
+        "observation": "Passive native visibility listeners/timer; no browser commands while OS window is minimized."
+      },
+      "native": {
+        "title": "TSL Spout Native CDP 20261030",
+        "pid": 6244,
+        "windowHandle": 14552564,
+        "nativeMinimizedStart": true,
+        "nativeMinimizedEnd": true,
+        "minimizeRestoreElapsedMs": 3740.2158,
+        "noBrowserCommandsDuringMinimize": true,
+        "removedArgumentsAbsenceConfirmed": true,
+        "removedDefaultArguments": [
+          "--disable-background-timer-throttling",
+          "--disable-backgrounding-occluded-windows",
+          "--disable-renderer-backgrounding"
+        ]
+      },
+      "page": {
+        "title": "TSL Spout Native CDP 20261030",
+        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+        "submits": 733,
+        "armed": true,
+        "events": [],
+        "hiddenStart": null,
+        "hiddenEnd": null,
+        "resumed": null,
+        "verified": false
+      },
+      "verified": false,
+      "correction": "The old helper recorded expected noDefaults:true, but global CLI0.1.14 / Playwright1.61 alpha createCDPBrowser does not pass this option. The expected flag was not actual proof of disabled focus overrides."
+    },
+    "projectCDPEarlyBoundary": {
+      "date": "2026-10-30",
+      "sourceHead": "4830c31073da76fa3db34df2113c0bbc15acbeac",
+      "implementationSHA256": "fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b",
+      "projectPlaywright": "1.62.1",
+      "init": {
+        "initial": {
+          "title": "TSL Spout Native CDP 20261030",
+          "hidden": false,
+          "ownHiddenOverride": false,
+          "submits": 49
+        },
+        "browserVersion": "151.0.7922.34",
+        "cdp": {
+          "mode": "connectOverCDP",
+          "noDefaults": true,
+          "existingDefaultContextConfirmed": true
+        },
+        "observation": "Passive native visibility listeners/timer; no browser commands while OS window is minimized."
+      },
+      "native": {
+        "title": "TSL Spout Native CDP 20261030",
+        "pid": 39532,
+        "windowHandle": 13961892,
+        "nativeMinimizedStart": true,
+        "nativeMinimizedEnd": true,
+        "minimizeRestoreElapsedMs": 3754.1282,
+        "noBrowserCommandsDuringMinimize": true,
+        "removedArgumentsAbsenceConfirmed": true,
+        "removedDefaultArguments": [
+          "--disable-background-timer-throttling",
+          "--disable-backgrounding-occluded-windows",
+          "--disable-renderer-backgrounding"
+        ]
+      },
+      "page": {
+        "title": "TSL Spout Native CDP 20261030",
+        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+        "submits": 729,
+        "armed": true,
+        "events": [
+          {
+            "at": 2463.2999999523163,
+            "hidden": true,
+            "visibilityState": "hidden",
+            "ownHiddenOverride": false,
+            "submits": 479,
+            "playLabel": "暂停动画"
+          },
+          {
+            "at": 6185.100000023842,
+            "hidden": false,
+            "visibilityState": "visible",
+            "ownHiddenOverride": false,
+            "submits": 481,
+            "playLabel": "播放动画"
+          }
+        ],
+        "hiddenStart": {
+          "at": 2463.2999999523163,
+          "hidden": true,
+          "visibilityState": "hidden",
+          "ownHiddenOverride": false,
+          "submits": 479,
+          "playLabel": "暂停动画"
+        },
+        "hiddenEnd": {
+          "at": 3854,
+          "hidden": true,
+          "visibilityState": "hidden",
+          "ownHiddenOverride": false,
+          "submits": 481,
+          "playLabel": "播放动画"
+        },
+        "resumed": {
+          "at": 6585.299999952316,
+          "hidden": false,
+          "visibilityState": "visible",
+          "ownHiddenOverride": false,
+          "submits": 571,
+          "playLabel": "暂停动画"
+        },
+        "verified": false
+      },
+      "verified": false,
+      "note": "Native hidden events were real, but the early comparison included two expected transition submissions. Both raw negative result and transition samples retained."
+    }
+  },
+  "tooling": {
+    "globalCLI": "0.1.14 / Playwright1.61.0-alpha-1781023400000",
+    "projectPlaywright": "1.62.1",
+    "globalCDPFactoryPassedNoDefaults": false,
+    "projectCDPFactoryPassedNoDefaults": true,
+    "reference": "https://playwright.dev/docs/api/class-browsertype#browser-type-connect-over-cdp-option-no-defaults",
+    "installedSource": [
+      "Global CLI playwright-core/lib/coreBundle.js createCDPBrowser:71495-71503 (option absent)",
+      "Project node_modules/playwright-core/lib/coreBundle.js createCDPBrowser:72665 (noDefaults:true)",
+      "Project node_modules/playwright-core/lib/coreBundle.js:37395-37399 (skip focus override for default context)"
+    ]
+  }
+}

@@ -467,5 +467,32 @@
       "flaky": 1
     },
     "commandPolicy": "Same final source, workers1/retries1. No source, test, tolerance or runtime-policy change after failed full regression."
+  },
+  "repairValidatedCI": {
+    "head": "4830c31073da76fa3db34df2113c0bbc15acbeac",
+    "runId": 41051074729,
+    "conclusion": "success",
+    "desktop": {
+      "jobId": 124046978225,
+      "passed": 47,
+      "skipped": 25,
+      "flaky": 0,
+      "failed": 0,
+      "spoutWebGL2FirstPass": true
+    },
+    "mobile": {
+      "jobId": 124046977883,
+      "passed": 46,
+      "skipped": 26,
+      "flaky": 0,
+      "failed": 0,
+      "spoutWebGL2FirstPass": true
+    },
+    "verify": {
+      "jobId": 124054526044,
+      "conclusion": "success"
+    },
+    "remoteWebGPU": "No actual WebGPU backend, cases skipped; separate local nonfallback evidence retained.",
+    "scope": "Native evidence follow-up changes only documentation/JSON; same production TSL SHA256 fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b"
   }
 }

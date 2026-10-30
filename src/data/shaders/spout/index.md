@@ -120,7 +120,7 @@ return mix(mix(diffuse, transmission, transparency), specular, fresnel);
 
 本机 Ryzen 9 7950X3D / RTX 4080 SUPER / Chromium 151 的桌面与模拟移动两后端，各预热 3 秒后采集 120 次 RAF 间隔，平均约 6.06 ms、P95 为 6.1–6.2 ms；受控主线程负载下，自适应 DPR 从 1 降到 0.8。这是浏览器调度基线，不等于 GPU 执行时间或真实手机性能。实际浏览器证据、原作对照与媒体编码记录在同目录 `VALIDATION.md` 和 JSON 档案中。
 
-受控 `hidden=true` 与 `visibilitychange` 事件测试中，800 ms 内 GPU 提交数保持 341，恢复后继续到 465；本机真实窗口最小化且移除自动化工具的三项后台开关后，浏览器仍报告 `document.hidden=false`，所以**原生后台标签页暂停仍未验证**。受控事件只能说明播放器的暂停/恢复路径有效，不能代替浏览器真实隐藏状态的证据。
+2026-10-30 的 Windows / Chromium 151 原生窗口最小化测试中，页面真实报告 `document.hidden=true`；暂停稳定后，约 1.99 秒内 GPU 提交数保持 497，恢复窗口后继续到 577。原生测试与受控事件测试分别保存，验证方法和早期测量盲区见同目录 `VALIDATION.md` 与 `native-visibility.json`。
 
 ## 来源与许可证
 

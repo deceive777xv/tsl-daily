@@ -51,7 +51,9 @@
 
 ## 可见性与特殊尺寸
 
-本次最终实现的受控hidden=true+visibilitychange后800ms内GPU提交341→341，恢复后465；按钮与循环恢复。**原生后台标签页暂停未验证**。新增一次具体能力对照：通过ignoreDefaultArgs只移除Playwright的三项后台行为开关（disable-background-timer-throttling、disable-backgrounding-occluded-windows、disable-renderer-backgrounding），现场确认自有Chromium命令行中三项均已缺席；唯一标题与指定可执行路径的窗口由ShowWindow最小化、IsIconic确认，再在finally恢复。document.hidden仍false、事件为空、800ms提交597→599、恢复后767，无hidden自有属性覆盖。这仍未证明原生暂停；早先9fa2736b的原始尝试也单独保留。
+受控hidden=true+visibilitychange的既有验证保持有效：800ms内GPU提交341→341，恢复后465。**2026-10-30新增的原生隐藏/恢复验证已通过**：外部启动仅本任务使用的新配置目录Chromium151，项目Playwright1.62.1内置CLI通过connectOverCDP(noDefaults:true)连接既有默认上下文。Win32 ShowWindow最小化唯一标题/指定可执行路径的自有窗口，IsIconic在最小化区间两端均为true，并在finally恢复；区间内不发送任何浏览器命令，也不覆盖document.hidden。两个稳定采样点均hidden=true/visibilityState=hidden、按钮为“播放动画”，相隔1992.9ms，GPU提交497→497；恢复后原生visible事件到达，400ms后的采样为hidden=false/“暂停动画”/577提交。完整原始事件与判断条件见native-visibility.json。
+
+旧全局CLI0.1.14所带Playwright1.61 alpha的CDP工厂没有传入noDefaults，之前仅移除后台启动开关或从另一个CDP会话设置focus=false仍不能解除原控制会话的覆盖。改用项目已安装1.62.1的内置CLI后，实际默认上下文不启用该焦点仿真，原生hidden事件成功出现。初次被动采样还位于visibility回调完成前，包含收尾renderOnce的两次提交；最终采样先让过渡完成，再比较两个仍为原生hidden的稳定点，未修改播放器、旧测试、渲染参数、容差或暂停策略。此前所有未验证结果与该过早边界结果保留，不把受控事件当作原生证据。
 
 两后端默认/全部最小/全部最大六组无错误、无警告，完整画面非纯黑；1001×601绘图缓冲区与PNG为奇数尺寸。CSS布局为约1001.143×601.143，存在小于1像素的布局舍入，不宣称CSS与缓冲区数值完全相同。PNG字节统计不是原始浮点GPU缓冲区读回。移动完整水柱、控件、压缩海报、循环中帧和极值截图均已目检。
 
@@ -72,6 +74,6 @@
 
 最终构建的两个媒体在桌面/移动上下文均HTTP200、精确字节和SHA256一致；减少动态海报与手动WebGPU通过。WebM实际解码960×600 / 7.52秒，成功播放并定位3.76秒中点，0错误。详见browser-evidence.json的finalMedia。
 
-最终构建的新案例四项另行复核：4/4首次通过、零重试/零跳过，16.15秒；20次参数恢复最大/均差均0。该次没有重跑无关完整套件；全量141首次通过/1重试通过/2跳过/0最终失败记录保留在上一节。最终生产TSL及测试SHA256与全量、收尾复核一致。
+2026-10-30最终构建的新案例四项另行复核：4/4首次通过、零重试/零跳过，16.19秒；20次参数恢复最大/均差均0。该次没有重跑无关完整套件；全量141首次通过/1重试通过/2跳过/0最终失败记录保留在上一节。最终生产TSL及测试SHA256与全量、收尾复核一致。
 
 来源、批准、许可判断、原图替换和字节证据见 LICENSE.md/source-hashes.json。原始GLSL与TSL采用CC BY-NC-SA3.0（基于旧镜像快照）；中文和新媒体CC BY-NC-SA4.0，框架MIT、站点永久非商业。没有合并、自动合并或修改Pages部署配置。

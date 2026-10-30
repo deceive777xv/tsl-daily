@@ -1,84 +1,44 @@
 {
   "date": "2026-10-29",
   "nativeTab": {
+    "date": "2026-10-30",
     "attempted": true,
-    "verified": false,
-    "method": "Win32 ShowWindow(SW_MINIMIZE), IsIconic confirmation, then SW_RESTORE on exactly one own Chromium window identified by unique title and executable",
-    "pid": 45492,
-    "windowHandle": 28837602,
-    "title": "TSL Spout Native Default 20261029",
-    "nativeMinimizedStateConfirmed": true,
-    "removedDefaultArguments": [
-      "--disable-background-timer-throttling",
-      "--disable-backgrounding-occluded-windows",
-      "--disable-renderer-backgrounding"
-    ],
-    "removedArgumentsAbsenceConfirmed": true,
+    "verified": true,
+    "method": "Standalone Chromium with fresh dedicated profile and loopback CDP; project Playwright1.62.1 CLI attaches with noDefaults:true to existing default context. Passive document.visibilitychange/timer samples only while a uniquely identified own Windows window is minimized via ShowWindow. IsIconic confirms minimized at both OS endpoints; finally restores. No browser commands while minimized and no document.hidden override.",
+    "sourceHead": "4830c31073da76fa3db34df2113c0bbc15acbeac",
+    "implementationSHA256": "fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b",
+    "browserVersion": "151.0.7922.34",
+    "projectPlaywright": "1.62.1",
     "start": {
-      "title": "TSL Spout Native Default 20261029",
-      "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
-      "hidden": false,
-      "documentHasHiddenOverride": false,
-      "submits": 597,
-      "playLabel": "暂停动画",
-      "events": []
+      "at": 3192.100000023842,
+      "hidden": true,
+      "visibilityState": "hidden",
+      "ownHiddenOverride": false,
+      "submits": 497,
+      "playLabel": "播放动画"
     },
     "end": {
-      "title": "TSL Spout Native Default 20261029",
-      "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
-      "hidden": false,
-      "documentHasHiddenOverride": false,
-      "submits": 599,
-      "playLabel": "暂停动画",
-      "events": []
+      "at": 5185,
+      "hidden": true,
+      "visibilityState": "hidden",
+      "ownHiddenOverride": false,
+      "submits": 497,
+      "playLabel": "播放动画"
     },
     "resumed": {
-      "title": "TSL Spout Native Default 20261029",
-      "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
+      "at": 6868.200000047684,
       "hidden": false,
-      "documentHasHiddenOverride": false,
-      "submits": 767,
-      "playLabel": "暂停动画",
-      "events": []
+      "visibilityState": "visible",
+      "ownHiddenOverride": false,
+      "submits": 577,
+      "playLabel": "暂停动画"
     },
-    "implementationSHA256": "fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b",
-    "capability": "Playwright ignoreDefaultArgs removed exactly three background behavior flags; OS command line confirmed absent before native minimize.",
-    "priorAttempt": {
-      "attempted": true,
-      "verified": false,
-      "method": "Win32 ShowWindow(SW_MINIMIZE), IsIconic confirmation, then SW_RESTORE on exactly one own Chromium window identified by unique title and executable",
-      "pid": 20260,
-      "windowHandle": 2297466,
-      "title": "TSL Spout Native 20261029",
-      "nativeMinimizedStateConfirmed": true,
-      "start": {
-        "title": "TSL Spout Native 20261029",
-        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
-        "hidden": false,
-        "documentHasHiddenOverride": false,
-        "submits": 4823,
-        "playLabel": "暂停动画",
-        "events": []
-      },
-      "end": {
-        "title": "TSL Spout Native 20261029",
-        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
-        "hidden": false,
-        "documentHasHiddenOverride": false,
-        "submits": 4825,
-        "playLabel": "暂停动画",
-        "events": []
-      },
-      "resumed": {
-        "title": "TSL Spout Native 20261029",
-        "url": "http://127.0.0.1:18789/tsl-daily/shaders/spout/",
-        "hidden": false,
-        "documentHasHiddenOverride": false,
-        "submits": 4991,
-        "playLabel": "暂停动画",
-        "events": []
-      }
-    }
+    "intervalMs": 1992.8999999761581,
+    "nativeMinimizedStateConfirmed": true,
+    "noBrowserCommandsDuringMinimize": true,
+    "documentHiddenOverridden": false,
+    "evidenceFile": "native-visibility.json",
+    "previousAttemptsPreserved": true
   },
   "controlled": {
     "start": {
@@ -243,7 +203,7 @@
   "implementationSHA256": "fcb033a8e63e0e5ec141b3e3eb8e5fec29d65221112a1fe8eeaedddcfb2f573b",
   "visualReview": "Poster, source/default two-backend images, mobile controls, and max controls inspected; compressed poster and loop middle frame inspected separately before final approval handoff.",
   "limits": [
-    "Native hidden-tab behavior unverified. Controlled visibility event is separate evidence.",
+    "Native document.hidden pause/resume verified on Windows Chromium151 by real window minimization; detailed scope and prior failed instrumentation in native-visibility.json.",
     "Screenshot bytes are not raw floating-point GPU readback.",
     "Mobile viewport is simulated; RAF intervals are not GPU render time."
   ],
@@ -1250,6 +1210,197 @@
     },
     "finalIsolated": {
       "stats": {
+        "startTime": "2026-10-30T12:18:07.189Z",
+        "duration": 16186.963,
+        "expected": 4,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "project": "desktop-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4695,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.6326552599061602,
+            "blackFraction": 0.00008245056264263947,
+            "whiteFraction": 0.01735309508418752,
+            "meanRGB": [156.0847327942166, 139.4853259985313, 128.98611972261432]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "desktop-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 4318,
+          "appearance": {
+            "width": 1280,
+            "height": 720,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.6326574585878307,
+            "blackFraction": 0.00022426553038797938,
+            "whiteFraction": 0.017354194425022756,
+            "meanRGB": [156.0789612548316, 139.4793455843876, 128.97953137298876]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgl",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 3135,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.7200515674249995,
+            "blackFraction": 0.00004139586869230451,
+            "whiteFraction": 0.04943553776190279,
+            "meanRGB": [190.88732044541953, 162.7921306453616, 140.91444065310853]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        },
+        {
+          "project": "mobile-chromium",
+          "requested": "webgpu",
+          "status": "passed",
+          "attemptCount": 1,
+          "firstAttemptStatus": "passed",
+          "durationMs": 2724,
+          "appearance": {
+            "width": 412,
+            "height": 839,
+            "brightnessRange": 255,
+            "colorfulFraction": 0.720057481120527,
+            "blackFraction": 0.00008279173738460902,
+            "whiteFraction": 0.04943553776190279,
+            "meanRGB": [190.88594846805717, 162.79067291941408, 140.91290013542363]
+          },
+          "restores": [
+            {
+              "id": "spout-speed",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-flow",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-ripples",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-framing",
+              "max": 0,
+              "mean": 0
+            },
+            {
+              "id": "spout-refraction",
+              "max": 0,
+              "mean": 0
+            }
+          ]
+        }
+      ],
+      "nonPassing": [],
+      "maxRestore": 0,
+      "maxMeanRestore": 0
+    },
+    "priorFinalIsolated": {
+      "stats": {
         "startTime": "2026-10-29T15:38:26.732Z",
         "duration": 16149.5,
         "expected": 4,
@@ -1438,7 +1589,8 @@
       "nonPassing": [],
       "maxRestore": 0,
       "maxMeanRestore": 0
-    }
+    },
+    "nativeEvidenceBuildVerifiedDate": "2026-10-30"
   },
   "sampling": {
     "mipLevel": 0,
@@ -1501,6 +1653,21 @@
     ]
   },
   "quality": {
+    "validatedDate": "2026-10-30",
+    "command": "npm run quality",
+    "cases": 34,
+    "unitFiles": 2,
+    "unitTests": 5,
+    "pages": 36,
+    "astroFiles": 440,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 58,
+    "hintsScope": "Ignored local helper scripts; clean remote checkout verified separately.",
+    "logBytes": 4293019,
+    "logSHA256": "2c9e8c842b79607c728e31bf09d96646c0428d2ae044d441c4d5e22462c6a5bb"
+  },
+  "previousLocalQuality": {
     "validatedDate": "2026-10-29",
     "command": "npm run quality",
     "cases": 34,
