@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-31",
+  "verified": true,
+  "scope": "Actual Windows minimize/restore of the sole matched own Chromium PID/title/profile, passive default-context CDP observation; no document.hidden override and no browser commands while minimized.",
+  "implementationSHA256": "fd0f1a16d9b7970dd5a289bbddf9ee5f0549f91a6ba45096eebaac74fa7c30fe",
+  "client": {
+    "version": "1.62.1",
+    "cli": "E:\\Project\\shaderTutorial\\node_modules\\playwright-core\\lib\\tools\\cli-client\\program.js",
+    "source": "node_modules/playwright-core/lib/coreBundle.js",
+    "sha256": "9393fa79e1c67c74edc26b610d65a4f7ed73d345a762465cc88340a33a2454ac",
+    "excerpt": "Info);\n  const browser = await playwright.chromium.connectOverCDP(config.browser.cdpEndpoint, {\n    headers: config.browser.cdpHeaders,\n    timeout: config.browser.cdpTimeout,\n    noDefaults: true,\n    artifactsDir\n  });\n  return browser;\n}\nasync function createRemoteBrowser(config) {\n  testDebug3(\"create browser (remote)\");\n  const remote = config.browser.remoteEndpoint;\n  con"
+  },
+  "initial": {
+    "initial": {
+      "title": "TSL Remnant Native CDP 20261031",
+      "hidden": false,
+      "ownHiddenOverride": false,
+      "submits": 36
+    },
+    "browserVersion": "151.0.7922.34",
+    "cdp": {
+      "mode": "connectOverCDP",
+      "noDefaults": true,
+      "existingDefaultContextConfirmed": true
+    },
+    "observation": "Passive native visibility listeners/timer; no browser commands while OS window is minimized."
+  },
+  "window": {
+    "title": "TSL Remnant Native CDP 20261031",
+    "pid": 48484,
+    "windowHandle": 40765662,
+    "nativeMinimizedStart": true,
+    "nativeMinimizedEnd": true,
+    "minimizeRestoreElapsedMs": 4736.7715,
+    "noBrowserCommandsDuringMinimize": true,
+    "removedArgumentsAbsenceConfirmed": true,
+    "removedDefaultArguments": [
+      "--disable-background-timer-throttling",
+      "--disable-backgrounding-occluded-windows",
+      "--disable-renderer-backgrounding"
+    ]
+  },
+  "raw": {
+    "title": "TSL Remnant Native CDP 20261031",
+    "url": "http://127.0.0.1:18794/tsl-daily/shaders/remnant-x/",
+    "submits": 51958,
+    "armed": true,
+    "events": [
+      {
+        "at": 158653,
+        "hidden": true,
+        "visibilityState": "hidden",
+        "ownHiddenOverride": false,
+        "submits": 51756,
+        "playLabel": "暂停动画"
+      },
+      {
+        "at": 163379.79999995232,
+        "hidden": false,
+        "visibilityState": "visible",
+        "ownHiddenOverride": false,
+        "submits": 51758,
+        "playLabel": "播放动画"
+      }
+    ],
+    "hiddenStart": {
+      "at": 159649.5,
+      "hidden": true,
+      "visibilityState": "hidden",
+      "ownHiddenOverride": false,
+      "submits": 51758,
+      "playLabel": "播放动画"
+    },
+    "hiddenEnd": {
+      "at": 161646.29999995232,
+      "hidden": true,
+      "visibilityState": "hidden",
+      "ownHiddenOverride": false,
+      "submits": 51758,
+      "playLabel": "播放动画"
+    },
+    "resumed": {
+      "at": 163780.69999992847,
+      "hidden": false,
+      "visibilityState": "visible",
+      "ownHiddenOverride": false,
+      "submits": 51842,
+      "playLabel": "暂停动画"
+    },
+    "verified": true
+  },
+  "hiddenIntervalMs": 1996.7999999523163,
+  "launch": {
+    "profile": "E:\\Project\\shaderTutorial\\output\\playwright\\remnant-native-profile",
+    "executable": "C:\\Users\\31503\\AppData\\Local\\ms-playwright\\chromium-1234\\chrome-win64\\chrome.exe",
+    "pid": 48484,
+    "port": 18795,
+    "launchedUtc": "2026-10-31T14:51:29.5558275+00:00"
+  },
+  "hiddenLaunchRecovery": {
+    "pid": 48484,
+    "handle": 40765662,
+    "initiallyVisible": false,
+    "visibleAfterRestore": true,
+    "reason": "Start-Process WindowStyle Hidden deliberately hides the new own window; restore only this matched PID/title before the native minimize/resume test."
+  },
+  "transitionNote": "The first native event is retained: two final submissions occur during transition (51756->51758). Both settled hidden samples have 51758, then visible resumes to 51842. No instantaneous-zero claim.",
+  "probeHashes": {
+    "init": "33dd2895650b88b91e290ecf3b3c8536d6c5c0dfff2a0e199b95f3260321826a",
+    "window": "8b56a7d317c230e0dc89fef75a3acc1a0063377dfef7aeeafa9cc93f2ce4181c",
+    "read": "d58e3e22b3a983cd0d1627cd14cb96a6c7d6d85fc73a35d41099d875442ef4d2"
+  },
+  "rawLogSHA256": "b00e0bbfa2401295f8fc4c1226f36eeb077699a38ebd1380b4463e9500f25aae"
+}

@@ -1,0 +1,20 @@
+{
+  "mirror": {
+    "bytes": 18038,
+    "sha256": "7380ebe3ea2ca6f2701fc9b8ade6ec76c93a1e3c41d07817019d1e33d3c2f558"
+  },
+  "passes": [
+    {
+      "name": "Image",
+      "type": "image",
+      "lines": 308,
+      "utf8SHA256": "742d97878a0cd11f2376e5a0d2925b64f8ce91c8e96db9ab9cfe9eb564164022"
+    },
+    {
+      "name": "Sound",
+      "type": "sound",
+      "lines": 278,
+      "utf8SHA256": "bb2cdf9cd888861c81ca532fd78d10155a62f254fcf7d839cd9f73fb24940918"
+    }
+  ]
+}

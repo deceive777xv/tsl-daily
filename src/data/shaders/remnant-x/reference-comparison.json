@@ -1,0 +1,14 @@
+{
+  "scope": "960x600, source time2, same newly generated noise; image RGB-byte comparison, not GPU float identity",
+  "sourceGLSL_vs_TSL_WebGL2": {
+    "max": 69,
+    "mean": 0.012549768518518519,
+    "fractionOver10": 0.00004861111111111111
+  },
+  "TSL_WebGPU_vs_WebGL2": {
+    "max": 187,
+    "mean": 0.009600694444444445,
+    "fractionOver10": 0.0000630787037037037
+  },
+  "note": "Default960x600/source time2, original GLSL unchanged and same locally generated noise. Sparse pixel differences remain; no exact identity or single-cause assertion."
+}
