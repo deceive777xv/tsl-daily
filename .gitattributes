@@ -90,3 +90,6 @@ src/data/shaders/paint-streams/*.glsl -text -whitespace
 
 src/data/shaders/spout/mirror.json -text whitespace=cr-at-eol
 src/data/shaders/spout/original.glsl -text -whitespace
+
+src/data/shaders/remnant-x/mirror.json -text whitespace=cr-at-eol
+src/data/shaders/remnant-x/*.glsl -text -whitespace

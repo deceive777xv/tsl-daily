@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-31",
+  "browserVersion": "151.0.7922.34",
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "device": "",
+    "description": "",
+    "fallback": false
+  },
+  "runs": [
+    {
+      "mobile": false,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "1440x900",
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": false,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "1440x900",
+      "canvas": "1440x900",
+      "effectiveDpr": 1,
+      "averageMs": 6.06,
+      "p95Ms": 6.1,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": true,
+      "requested": "webgpu",
+      "backend": "webgpu",
+      "viewport": "412x915",
+      "canvas": "618x1372",
+      "effectiveDpr": 1.5,
+      "averageMs": 6.06,
+      "p95Ms": 6.2,
+      "horizontalOverflow": 0
+    },
+    {
+      "mobile": true,
+      "requested": "webgl",
+      "backend": "webgl2",
+      "viewport": "412x915",
+      "canvas": "618x1372",
+      "effectiveDpr": 1.5,
+      "averageMs": 6.06,
+      "p95Ms": 6.2,
+      "horizontalOverflow": 0
+    }
+  ],
+  "autoDprUnderLoad": {
+    "before": 1,
+    "after": 0.8
+  },
+  "errors": [],
+  "implementationSHA256": "fd0f1a16d9b7970dd5a289bbddf9ee5f0549f91a6ba45096eebaac74fa7c30fe",
+  "hardware": {
+    "checkedAt": "2026-10-31T23:02:58.2293395+08:00",
+    "cpu": "AMD Ryzen 9 7950X3D 16-Core Processor          ",
+    "gpu": "AMD Radeon(TM) Graphics; NVIDIA GeForce RTX 4080 SUPER"
+  },
+  "method": {
+    "warmupSeconds": 3,
+    "rafIntervalsPerGroup": 120,
+    "meaning": "Browser RAF scheduling intervals, not GPU timestamps or real-phone performance.",
+    "mobile": {
+      "viewport": "412x915",
+      "deviceScaleFactor": 2.625,
+      "isMobile": true,
+      "hasTouch": true
+    },
+    "controlledLoad": {
+      "mainThreadBusyMs": 45,
+      "frames": 130
+    }
+  }
+}
